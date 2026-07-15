@@ -39,7 +39,7 @@ gh label create kill-candidate --description "Learn decision — kill or sunset"
 
 **Board:** https://github.com/orgs/Book-IQ/projects/1 — **BML Experiments**
 
-Created via `docs/BML/create-bml-project.sh`. Uses a custom **Stage** field (GitHub’s built-in Status options are not API-editable).
+Created via `scripts/create-bml-project.sh`. Uses a custom **Stage** field (GitHub’s built-in Status options are not API-editable).
 
 | Stage | Meaning | Rule |
 |-------|---------|------|
@@ -52,7 +52,7 @@ Created via `docs/BML/create-bml-project.sh`. Uses a custom **Stage** field (Git
 **One-time UI click:** Board view → Group by → **Stage**  
 **Filter tip:** `label:experiment`
 
-To recreate later: `bash docs/BML/create-bml-project.sh` (after `gh auth refresh -s project,read:project`).
+To recreate later: `bash scripts/create-bml-project.sh` (after `gh auth refresh -s project,read:project`).
 
 ### 3. Wire Issues → Project
 

@@ -43,5 +43,5 @@ Tag existing routes/actions with `feature.viewed` / `feature.used` / `feature.re
 
 ## Technical Context / References
 
-- `docs/BML/BML_Metrics_Tracking.md` (Feature usage section)
+- `docs/reference/BML_Metrics_Tracking.md` (Feature usage section)
 - Forecast / Runway / cashflow UI entry points

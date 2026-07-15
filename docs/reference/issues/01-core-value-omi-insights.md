@@ -10,7 +10,7 @@ First customers will actively read and act on OMI’s weekly insights (not just 
 
 ## Build (smallest test)
 
-Ship (or confirm) weekly insight delivery + a measurable open/click path for pilot tenants. Prefer existing email/in-app insight surface; add only the minimum events from `docs/BML/BML_Metrics_Tracking.md` (`omi.insight.*`). No new insight product work beyond instrumentation and a clear CTA.
+Ship (or confirm) weekly insight delivery + a measurable open/click path for pilot tenants. Prefer existing email/in-app insight surface; add only the minimum events from `docs/reference/BML_Metrics_Tracking.md` (`omi.insight.*`). No new insight product work beyond instrumentation and a clear CTA.
 
 ## Measure
 
@@ -43,5 +43,5 @@ Ship (or confirm) weekly insight delivery + a measurable open/click path for pil
 
 ## Technical Context / References
 
-- `docs/BML/BML_Metrics_Tracking.md`
+- `docs/reference/BML_Metrics_Tracking.md`
 - OMI / insight delivery + Voyager surfaces (prime grill with actual folders when starting Build)

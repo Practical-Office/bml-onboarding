@@ -5,6 +5,8 @@ title: "BML: "
 labels: ["experiment"]
 ---
 
+<!-- last-synced: 2026-07-15 from bookiqv1-rc -->
+
 ## Hypothesis
 
 One sentence. What customer behavior do we believe will happen?

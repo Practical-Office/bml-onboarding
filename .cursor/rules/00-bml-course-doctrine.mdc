@@ -1,0 +1,13 @@
+---
+description: BML course workspace boundaries — training repo only, not BookIQ product
+alwaysApply: true
+---
+
+# BML course doctrine
+
+- **Write target:** `Practical-Office/bml-onboarding` only.
+- **Do not** commit BML course/training/docs to `Book-IQ/bookiqv1-rc`.
+- **Do not** edit BookIQ services, ledger, or live experiment issues from this workspace.
+- **Issue tracker:** `Practical-Office/bml-onboarding` (see `docs/agents/issue-tracker.md`).
+- **Wayfinder:** one ticket per session; claim before work; refer by linked title.
+- **Lean Startup:** concepts + attribution only — no book excerpts.

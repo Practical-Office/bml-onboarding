@@ -63,3 +63,5 @@ After push, wait 1–2 minutes, then verify:
 ## Contributing
 
 Keep Modules 1–6 product-portable. BookIQ-specific links belong in the appendix and `docs/reference/`.
+
+**Agent / Cursor:** See [`AGENTS.md`](./AGENTS.md) and [`HANDOFF.md`](./HANDOFF.md). Issues: `Practical-Office/bml-onboarding` ([`docs/agents/issue-tracker.md`](./docs/agents/issue-tracker.md)).
