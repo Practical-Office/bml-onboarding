@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BML Mastery — Practical AI Team Onboarding</title>
+  <meta name="description" content="Build–Measure–Learn mastery onboarding for Practical AI teammates. Learn the system, run real experiments, make kill/pivot/persevere decisions from data." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/bml.css" />
+</head>
+<body>
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation">
+      <a class="sidebar-brand" href="#top">
+        <img src="assets/practical-ai-mark.png" alt="" width="40" height="40" />
+        <div class="sidebar-brand-text">
+          <strong>Practical AI</strong>
+          <span>BML Mastery</span>
+        </div>
+      </a>
+
+      <div class="progress-panel">
+        <div class="progress-label">
+          <span>Course progress</span>
+          <strong id="progressPct">0%</strong>
+        </div>
+        <div class="progress-track" aria-hidden="true">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-section-label">Modules</p>
+        <a class="nav-link" data-module="module-1" href="#module-1"><span class="nav-num">1</span> Introduction <span class="nav-meta">10m</span></a>
+        <a class="nav-link" data-module="module-2" href="#module-2"><span class="nav-num">2</span> The BML Loop <span class="nav-meta">15m</span></a>
+        <a class="nav-link" data-module="module-3" href="#module-3"><span class="nav-num">3</span> GitHub Setup <span class="nav-meta">15m</span></a>
+        <a class="nav-link" data-module="module-4" href="#module-4"><span class="nav-num">4</span> Ticket Template <span class="nav-meta">10m</span></a>
+        <a class="nav-link" data-module="module-5" href="#module-5"><span class="nav-num">5</span> First Experiment <span class="nav-meta">25m</span></a>
+        <a class="nav-link" data-module="module-6" href="#module-6"><span class="nav-num">6</span> Operating Board <span class="nav-meta">15m</span></a>
+        <a class="nav-link" data-module="module-7" href="#module-7"><span class="nav-num">7</span> First Project <span class="nav-meta">30m</span></a>
+
+        <p class="nav-section-label">Reference</p>
+        <a class="nav-link" data-module="appendix" href="#appendix"><span class="nav-num">A</span> BookIQ Appendix</a>
+        <a class="nav-link" data-module="next-steps" href="#next-steps"><span class="nav-num">→</span> Next steps</a>
+        <a class="nav-link" data-module="certification" href="#certification"><span class="nav-num">✓</span> Certification</a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="https://github.com/Practical-Office/bml-onboarding" target="_blank" rel="noopener noreferrer">GitHub repo</a>
+        ·
+        <a href="https://p-ai.net" target="_blank" rel="noopener noreferrer">p-ai.net</a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Team onboarding</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+          <a class="btn btn-primary btn-sm" href="https://github.com/Practical-Office/bml-onboarding" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        </div>
+      </header>
+
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Prototype · Practical AI internal</span>
+          <h1>Build–Measure–Learn <em>Mastery</em></h1>
+          <p class="hero-lede">Practical AI team onboarding — learn the system, run real experiments, and make kill / pivot / persevere decisions from data.</p>
+        </section>
+
+        <div class="card-grid">
+          <div class="stat-card">
+            <strong>7 modules</strong>
+            <span>~2 hours guided learning</span>
+          </div>
+          <div class="stat-card">
+            <strong>Sandbox → live board</strong>
+            <span>Lead-reviewed certification</span>
+          </div>
+          <div class="stat-card">
+            <strong>BookIQ-ready</strong>
+            <span>Portable course + product appendix</span>
+          </div>
+          <div class="stat-card">
+            <strong>Progress saved</strong>
+            <span>Checklists persist on this device</span>
+          </div>
+        </div>
+
+        <div class="section-card" id="toc">
+          <p class="eyebrow">Table of contents</p>
+          <div class="table-wrap" style="margin:0;border:none;box-shadow:none">
+            <table>
+              <thead>
+                <tr><th>#</th><th>Module</th><th>Time</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>1</td><td><a href="#module-1">Introduction</a></td><td>~10 min</td></tr>
+                <tr><td>2</td><td><a href="#module-2">The BML Loop</a></td><td>~15 min</td></tr>
+                <tr><td>3</td><td><a href="#module-3">GitHub Setup</a></td><td>~15 min</td></tr>
+                <tr><td>4</td><td><a href="#module-4">Using the BML Ticket Template</a></td><td>~10 min</td></tr>
+                <tr><td>5</td><td><a href="#module-5">Creating &amp; Running Your First Experiment</a></td><td>~25 min</td></tr>
+                <tr><td>6</td><td><a href="#module-6">Operating the Board</a></td><td>~15 min</td></tr>
+                <tr><td>7</td><td><a href="#module-7">Your First Project</a></td><td>~30 min</td></tr>
+                <tr><td>—</td><td><a href="#appendix">BookIQ Appendix</a></td><td>reference</td></tr>
+                <tr><td>—</td><td><a href="#certification">Certification</a></td><td>submit</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="margin:1rem 0 0;font-size:0.9rem;color:var(--ink-faint)">
+            Origin doc:
+            <a href="reference/BML_Kanban_Handoff.md">BML Kanban Handoff</a> —
+            live ops rules in
+            <a href="reference/BML_Implementation_Notes.md">Implementation Notes</a>.
+          </p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Repo layout</p>
+          <p>This course lives in <a href="https://github.com/Practical-Office/bml-onboarding" target="_blank" rel="noopener noreferrer">Practical-Office/bml-onboarding</a>:</p>
+<pre><code>bml-onboarding/
+├── README.md                 → pointer to this course (Pages URL)
+├── docs/
+│   ├── index.html            → you are here (full course)
+│   ├── css/ · js/ · assets/  → branding &amp; progress UX
+│   ├── reference/            → Handoff, Setup, Metrics, Implementation Notes
+│   ├── how-to/               → future step-by-step guides
+│   ├── videos/               → future video embeds
+│   └── examples/bookiq/      → BookIQ-specific pointers
+├── scripts/                  → board setup tooling
+└── .github/ISSUE_TEMPLATE/   → teaching copy of experiment template</code></pre>
+          <p><strong>Share this course:</strong> <a href="https://practical-office.github.io/bml-onboarding/">https://practical-office.github.io/bml-onboarding/</a></p>
+        </div>
+
+        <!-- Module 1 -->
+        <section class="module" id="module-1" data-module="module-1">
+          <div class="module-header">
+            <div class="module-badge">1</div>
+            <div>
+              <h2>Introduction</h2>
+              <p class="module-time">~10 min</p>
+            </div>
+          </div>
+
+          <h3>Why BML for BookIQ (and any product)</h3>
+          <div class="quote">
+            <p>The goal is <strong>not</strong> to ship features faster. The goal is to run disciplined experiments that test whether customers actually get value.</p>
+          </div>
+          <p><strong>BookIQ context:</strong> AI-powered financial platform with OMI (virtual CFO). We are testing whether customers read, trust, and act on insights — not whether we can build more dashboards.</p>
+          <p><strong>Lean Startup lens:</strong> <em>Validated learning</em> — progress is measured by what you learn about risky assumptions, not by lines of code shipped.</p>
+
+          <h3>Risky assumptions we must test</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Assumption</th><th>Why it’s risky</th></tr></thead>
+              <tbody>
+                <tr><td>Customers act on OMI insights</td><td>Core value hypothesis</td></tr>
+                <tr><td>Human review adds trust</td><td>Differentiator vs pure AI</td></tr>
+                <tr><td>Customers renew after 60 days</td><td>Revenue survival</td></tr>
+                <tr><td>Forecast / Runway are top features</td><td>Roadmap bets</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Expected outcomes</h3>
+          <p>After this course you will:</p>
+          <ul>
+            <li>Create a BML experiment issue in under 2 minutes</li>
+            <li>Move tickets through Build → Measure → Learn with clear kill criteria</li>
+            <li>Use Cursor skills on Build without skipping hypothesis work</li>
+            <li>Submit a sandbox experiment for lead review</li>
+          </ul>
+
+          <h3>Module 1 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m1-c1" data-module="module-1" /> I understand BML is about learning, not feature velocity</label></li>
+            <li><label><input type="checkbox" data-progress="m1-c2" data-module="module-1" /> I can name at least one risky assumption for our product</label></li>
+            <li><label><input type="checkbox" data-progress="m1-c3" data-module="module-1" /> I know the Learn phase must produce Persevere / Pivot / Kill decisions</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 1 — self-check</h3>
+            <ol>
+              <li>What is the difference between shipping features and running BML experiments?</li>
+              <li>What happens if Learn never results in killing or pivoting anything?</li>
+            </ol>
+            <p class="hint">Answers in full course version</p>
+          </div>
+        </section>
+
+        <!-- Module 2 -->
+        <section class="module" id="module-2" data-module="module-2">
+          <div class="module-header">
+            <div class="module-badge">2</div>
+            <div>
+              <h2>The BML Loop</h2>
+              <p class="module-time">~15 min</p>
+            </div>
+          </div>
+
+          <h3>The loop</h3>
+<pre class="loop-diagram"><code>     ┌─────────┐
+     │  BUILD  │  Ship the smallest test
+     └────┬────┘
+          ▼
+     ┌─────────┐
+     │ MEASURE │  Collect data against pass/kill thresholds
+     └────┬────┘
+          ▼
+     ┌─────────┐
+     │  LEARN  │  Persevere · Pivot · Kill
+     └────┬────┘
+          │
+          └──────► next experiment</code></pre>
+
+          <h3>Phases (what each means)</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Phase</th><th>You are…</th><th>Exit criteria</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Build</strong></td><td>Shipping the <em>thinnest</em> test</td><td>Instrumentation or manual log path exists</td></tr>
+                <tr><td><strong>Measure</strong></td><td>Clock running; no new scope</td><td>Duration complete; numbers recorded</td></tr>
+                <tr><td><strong>Learn</strong></td><td>Deciding with evidence</td><td>Label: <code>persevere</code> / <code>pivot</code> / <code>kill-candidate</code></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Pitfalls (hard truths)</h3>
+          <div class="quote">
+            <p>If Learn does not regularly kill, change, or pivot features, you are doing <strong>theater</strong>, not BML.</p>
+          </div>
+          <ul>
+            <li><strong>Vanity metrics</strong> — logins and clicks without “acted on insight” signal</li>
+            <li><strong>Skipping Measure</strong> — deciding on vibes before the clock runs</li>
+            <li><strong>Building the full feature</strong> — experiment scope too large to learn fast</li>
+            <li><strong>No kill criteria</strong> — hypothesis unfalsifiable</li>
+          </ul>
+
+          <h3>Module 2 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m2-c1" data-module="module-2" /> I can draw the three phases and what exits each</label></li>
+            <li><label><input type="checkbox" data-progress="m2-c2" data-module="module-2" /> I know why vanity metrics are insufficient</label></li>
+            <li><label><input type="checkbox" data-progress="m2-c3" data-module="module-2" /> I understand Persevere / Pivot / Kill as Learn outputs</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 2 — self-check</h3>
+            <ol>
+              <li>Why is Measure a separate phase instead of “check analytics whenever”?</li>
+              <li>What makes an experiment falsifiable?</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Module 3 -->
+        <section class="module" id="module-3" data-module="module-3">
+          <div class="module-header">
+            <div class="module-badge">3</div>
+            <div>
+              <h2>GitHub Setup</h2>
+              <p class="module-time">~15 min</p>
+            </div>
+          </div>
+
+          <h3>What you need</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Piece</th><th>Role</th></tr></thead>
+              <tbody>
+                <tr><td>GitHub Issues</td><td>One issue = one experiment (source of truth)</td></tr>
+                <tr><td>GitHub Project</td><td>Visual Kanban (columns = phase)</td></tr>
+                <tr><td>Label <code>experiment</code></td><td>Marks every BML ticket</td></tr>
+                <tr><td>Labels <code>persevere</code> / <code>pivot</code> / <code>kill-candidate</code></td><td>Learn decision only</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="quote">
+            <p><strong>Live rule:</strong> We do <strong>not</strong> use <code>hypothesis</code> / <code>measure</code> / <code>learn</code> labels. Columns own the phase.</p>
+          </div>
+
+          <h3>Step-by-step</h3>
+          <ol>
+            <li><strong>Create labels</strong> — <code>[PLACEHOLDER: gh label create commands]</code></li>
+            <li><strong>Create or open Project board</strong> — columns: Backlog · Build · Measure · Learn · Done</li>
+            <li><strong>Wire issue template</strong> — <a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/bml-experiment.md" target="_blank" rel="noopener noreferrer">bml-experiment.md</a> (teaching copy)</li>
+            <li><strong>Group board by Stage</strong> — one-time UI click</li>
+          </ol>
+          <p><strong>Detailed setup:</strong> <a href="reference/BML_Kanban_Setup.md">BML Kanban Setup</a></p>
+
+          <h3>Module 3 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m3-c1" data-module="module-3" /> I know where Issues vs Project board fit</label></li>
+            <li><label><input type="checkbox" data-progress="m3-c2" data-module="module-3" /> I can list the five board columns</label></li>
+            <li><label><input type="checkbox" data-progress="m3-c3" data-module="module-3" /> I know which four labels we use</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 3 — self-check</h3>
+            <ol>
+              <li>Why don’t we use phase labels when we have phase columns?</li>
+              <li>What is the source of truth — the board or the issue?</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Module 4 -->
+        <section class="module" id="module-4" data-module="module-4">
+          <div class="module-header">
+            <div class="module-badge">4</div>
+            <div>
+              <h2>Using the BML Ticket Template</h2>
+              <p class="module-time">~10 min</p>
+            </div>
+          </div>
+
+          <h3>Full template</h3>
+<pre><code>## Hypothesis
+One sentence. What customer behavior do we believe will happen?
+
+## Build (smallest test)
+What is the thinnest thing we ship to test this?
+
+## Measure
+| Metric | Target (pass) | Kill (fail) | How collected |
+|--------|---------------|-------------|----------------|
+|        |               |             |                |
+
+**Duration:** ___ days / weeks
+**Sample:** ___ customers / tenants
+
+## Learn (fill only when deciding)
+- **Decision:** Persevere / Pivot / Kill
+- **Evidence:** (numbers + quotes)
+- **Next action:** (one concrete follow-up)
+
+## Acceptance Criteria
+- [ ] Hypothesis + kill criteria before Build
+- [ ] Instrumentation before Measure
+- [ ] Learn decision with evidence
+- [ ] Decision label applied</code></pre>
+
+          <h3>How to fill each section</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Section</th><th>Rule</th></tr></thead>
+              <tbody>
+                <tr><td><strong>Hypothesis</strong></td><td>One sentence; falsifiable customer behavior</td></tr>
+                <tr><td><strong>Build</strong></td><td>Smallest test — not the full feature</td></tr>
+                <tr><td><strong>Measure</strong></td><td>Pass <em>and</em> kill thresholds; how collected</td></tr>
+                <tr><td><strong>Learn</strong></td><td>Fill only at decision time — numbers, not vibes</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Metrics dictionary:</strong> <a href="reference/BML_Metrics_Tracking.md">BML Metrics Tracking</a></p>
+
+          <h3>Module 4 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m4-c1" data-module="module-4" /> I can write a one-sentence hypothesis</label></li>
+            <li><label><input type="checkbox" data-progress="m4-c2" data-module="module-4" /> I always define kill criteria before Build</label></li>
+            <li><label><input type="checkbox" data-progress="m4-c3" data-module="module-4" /> I know Learn is filled only when deciding</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 4 — self-check</h3>
+            <ol>
+              <li>What’s wrong with a hypothesis that says “users will like the feature”?</li>
+              <li>When do you apply <code>kill-candidate</code>?</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Module 5 -->
+        <section class="module" id="module-5" data-module="module-5">
+          <div class="module-header">
+            <div class="module-badge">5</div>
+            <div>
+              <h2>Creating &amp; Running Your First Experiment</h2>
+              <p class="module-time">~25 min</p>
+            </div>
+          </div>
+
+          <h3>Walkthrough: Core Value Test (portable pattern)</h3>
+          <div class="quote">
+            <p><strong>Hypothesis:</strong> Customers will actively read and act on weekly insights.<br />
+            <strong>Pass:</strong> ≥60% open + click through weekly. <strong>Kill:</strong> &lt;40% after 4 weeks.</p>
+          </div>
+
+          <p><strong>Steps:</strong></p>
+          <ol>
+            <li>Create issue from template → label <code>experiment</code></li>
+            <li>Add to board → <strong>Backlog</strong></li>
+            <li>Move to <strong>Build</strong> when hypothesis + kill criteria are written</li>
+            <li><strong>Cursor workflow (Build only):</strong>
+              <ul>
+                <li><code>/grill-with-docs</code> — prime with issue + context</li>
+                <li>Spec only if non-trivial</li>
+                <li><code>/to-issues</code> or direct implement if tiny slice</li>
+                <li><code>/tdd</code> → <code>/code-review</code></li>
+              </ul>
+            </li>
+            <li>Move to <strong>Measure</strong> — clock starts; no new scope</li>
+            <li>Move to <strong>Learn</strong> — record decision + label</li>
+          </ol>
+
+          <div class="quote">
+            <p><strong>Agent note:</strong> Cursor helps on Build. Humans own Measure and Learn decisions.</p>
+          </div>
+
+          <h3>Module 5 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m5-c1" data-module="module-5" /> I can trace Core Value Test through all five columns</label></li>
+            <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /> I know when to invoke Cursor skills</label></li>
+            <li><label><input type="checkbox" data-progress="m5-c3" data-module="module-5" /> I will not add scope during Measure</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 5 — self-check</h3>
+            <ol>
+              <li>Why grill before build on non-trivial experiments?</li>
+              <li>What triggers moving from Build to Measure?</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Module 6 -->
+        <section class="module" id="module-6" data-module="module-6">
+          <div class="module-header">
+            <div class="module-badge">6</div>
+            <div>
+              <h2>Operating the Board</h2>
+              <p class="module-time">~15 min</p>
+            </div>
+          </div>
+
+          <h3>Moving tickets</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>From → To</th><th>Gate</th></tr></thead>
+              <tbody>
+                <tr><td>Backlog → Build</td><td>Hypothesis + kill criteria written</td></tr>
+                <tr><td>Build → Measure</td><td>Instrumentation or manual log exists</td></tr>
+                <tr><td>Measure → Learn</td><td>Duration complete; numbers in issue</td></tr>
+                <tr><td>Learn → Done</td><td>Decision label + next action filed</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Measurement discipline</h3>
+          <ul>
+            <li>Max <strong>3 active</strong> experiments in Build + Measure combined</li>
+            <li>Week-1 Measure can be a spreadsheet — event IDs defined in <a href="reference/BML_Metrics_Tracking.md">Metrics doc</a></li>
+            <li>Record numbers in the issue body at Learn</li>
+          </ul>
+
+          <h3>Learn-phase decisions</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Label</th><th>Meaning</th></tr></thead>
+              <tbody>
+                <tr><td><code>persevere</code></td><td>Hypothesis supported — continue / expand</td></tr>
+                <tr><td><code>pivot</code></td><td>Signal mixed — change approach, new experiment</td></tr>
+                <tr><td><code>kill-candidate</code></td><td>Hypothesis failed — sunset or stop</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Weekly cadence</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>When</th><th>What</th></tr></thead>
+              <tbody>
+                <tr><td>Monday</td><td>Review board; unblock Measure</td></tr>
+                <tr><td>Wednesday</td><td>Check active experiments still in scope</td></tr>
+                <tr><td>Friday</td><td>Anything in Learn gets a decision or explicit defer</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Module 6 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m6-c1" data-module="module-6" /> I know the gates between columns</label></li>
+            <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /> I understand the 3-active limit</label></li>
+            <li><label><input type="checkbox" data-progress="m6-c3" data-module="module-6" /> I can run the weekly review ritual</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 6 — self-check</h3>
+            <ol>
+              <li>Can you move to Learn without kill/pass numbers? Why not?</li>
+              <li>What do you do when an experiment is in Learn for two weeks with no decision?</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Module 7 -->
+        <section class="module" id="module-7" data-module="module-7">
+          <div class="module-header">
+            <div class="module-badge">7</div>
+            <div>
+              <h2>Your First Project</h2>
+              <p class="module-time">~30 min</p>
+            </div>
+          </div>
+
+          <h3>Mandatory exercise</h3>
+          <p>Create your <strong>real first BML issue</strong> — as a <strong>sandbox</strong> (do not add to live board until a lead graduates it).</p>
+          <p><strong>Requirements:</strong></p>
+          <ol>
+            <li>Use the experiment template completely</li>
+            <li>Hypothesis + pass/kill metrics filled</li>
+            <li>Label <code>experiment</code> applied</li>
+            <li>Issue stays in draft/sandbox until lead promotes it</li>
+          </ol>
+
+          <h3>Submission</h3>
+          <p>Post your issue URL as a comment on this repo’s Discussions (or link channel your lead specifies):</p>
+<pre><code>BML Module 7 submission
+Issue: https://github.com/YOUR-ORG/YOUR-REPO/issues/NNN
+Hypothesis (one line): …</code></pre>
+          <p><strong>BookIQ teammates:</strong> sandbox on <code>Book-IQ/bookiqv1-rc</code>; lead graduates to <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">BML Experiments board</a>.</p>
+
+          <h3>Module 7 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /> Sandbox issue created with full template</label></li>
+            <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /> Pass and kill thresholds defined</label></li>
+            <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /> Submission link posted for lead review</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 7 — self-check</h3>
+            <ol>
+              <li>Why sandbox before adding to the live board?</li>
+              <li>What must a lead check before graduating your issue?</li>
+            </ol>
+          </div>
+        </section>
+
+        <!-- Appendix -->
+        <section class="module" id="appendix" data-module="appendix">
+          <div class="module-header">
+            <div class="module-badge">A</div>
+            <div>
+              <h2>Appendix: BookIQ worked example</h2>
+              <p class="module-time">Reference</p>
+            </div>
+          </div>
+          <p>Portable course above; this appendix is <strong>BookIQ-specific</strong>.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Resource</th><th>Link</th></tr></thead>
+              <tbody>
+                <tr><td>Live BML board</td><td><a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ Projects #1</a></td></tr>
+                <tr><td>Live issue template</td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/blob/main/.github/ISSUE_TEMPLATE/bml-experiment.md" target="_blank" rel="noopener noreferrer">bookiqv1-rc template</a></td></tr>
+                <tr>
+                  <td>Week-1 experiments</td>
+                  <td>
+                    <a href="reference/issues/01-core-value-omi-insights.md">Core Value</a> ·
+                    <a href="reference/issues/02-onboarding-completion-impact.md">Onboarding</a> ·
+                    <a href="reference/issues/03-feature-usage-reality-check.md">Feature usage</a>
+                  </td>
+                </tr>
+                <tr><td>Handoff (origin)</td><td><a href="reference/BML_Kanban_Handoff.md">BML Kanban Handoff</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="quote">
+            <p>Teaching template syncs one-way from live BookIQ template. See <a href="reference/BML_Implementation_Notes.md">Implementation Notes</a>.</p>
+          </div>
+        </section>
+
+        <!-- Next steps -->
+        <section class="module" id="next-steps" data-module="next-steps">
+          <div class="module-header">
+            <div class="module-badge">→</div>
+            <div>
+              <h2>Next steps</h2>
+            </div>
+          </div>
+          <ol>
+            <li>Complete Module 7 sandbox submission</li>
+            <li>Get lead sign-off on certification checklist below</li>
+            <li>Graduate sandbox issue to live board when approved</li>
+            <li>Join weekly BML review</li>
+            <li>Browse <a href="how-to/">how-to/</a> and <a href="videos/">videos/</a> as they publish</li>
+          </ol>
+          <p><strong>Forking for another product:</strong> Swap appendix links; keep Modules 1–6 portable.</p>
+        </section>
+
+        <!-- Certification -->
+        <section class="module" id="certification" data-module="certification">
+          <div class="module-header">
+            <div class="module-badge">✓</div>
+            <div>
+              <h2>Certification checklist</h2>
+            </div>
+          </div>
+
+          <div class="cert-box">
+            <p>Sign off when all are true:</p>
+            <ul class="cert-list">
+              <li><label><input type="checkbox" data-progress="cert-1" data-module="certification" /> Completed all module progress checklists</label></li>
+              <li><label><input type="checkbox" data-progress="cert-2" data-module="certification" /> Answered self-check questions (discussed with lead if unsure)</label></li>
+              <li><label><input type="checkbox" data-progress="cert-3" data-module="certification" /> Created sandbox BML experiment issue with pass/kill metrics</label></li>
+              <li><label><input type="checkbox" data-progress="cert-4" data-module="certification" /> Posted submission link for review</label></li>
+              <li><label><input type="checkbox" data-progress="cert-5" data-module="certification" /> Lead approved graduation to live board (or confirmed sandbox-only practice complete)</label></li>
+              <li><label><input type="checkbox" data-progress="cert-6" data-module="certification" /> I will kill or pivot when data says so — not theater</label></li>
+            </ul>
+            <div class="cert-meta">
+              <strong>Certified by:</strong> <code>[lead name]</code> · <strong>Date:</strong> <code>[YYYY-MM-DD]</code>
+            </div>
+          </div>
+        </section>
+
+        <p class="footer-note">
+          Prototype skeleton for
+          <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1091" target="_blank" rel="noopener noreferrer">Prototype course README skeleton (#1091)</a>.
+          Concepts from Eric Ries, <strong>The Lean Startup</strong> — attribution only, no excerpts.
+          Full prose expansion tracked in
+          <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1092" target="_blank" rel="noopener noreferrer">#1092</a>.
+          <br />© Practical AI · Powered branding aligned with BookIQ product chrome.
+        </p>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/bml.js"></script>
+</body>
+</html>
