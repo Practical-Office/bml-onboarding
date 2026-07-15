@@ -11,7 +11,16 @@
 2. **Folder:** `/Users/richardsawyers/work/p-ai/bml-onboarding`
 3. **Remote:** https://github.com/Practical-Office/bml-onboarding.git
 
-If the profile does not appear until restart: **Profiles → BML-onboarding**, or open the folder and Cursor should associate it automatically.
+If the profile does not appear after restart, **fully quit Cursor (Cmd+Q)** — not just close the window — then run:
+
+```bash
+cd /Users/richardsawyers/work/p-ai/bml-onboarding
+bash scripts/install-cursor-profile.sh
+```
+
+Reopen Cursor → **Profiles → BML-onboarding**, or open `bml-onboarding.code-workspace`.
+
+**Why:** Cursor can overwrite `storage.json` on exit if it was still running when the profile was first created. The install script registers the profile while Cursor is quit.
 
 ---
 
