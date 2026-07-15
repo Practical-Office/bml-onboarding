@@ -1,6 +1,6 @@
-# BML Implementation Notes for Cursor
+# Build Loop Implementation Notes for Cursor
 
-**Goal:** Functional BML system live this week for first customers. No theater.
+**Goal:** Functional Build Loop system live this week for first customers. No theater.
 
 **Status:** Delivered 2026-07-15
 
@@ -8,9 +8,9 @@
 
 | Output | Path |
 |--------|------|
-| Issue template | [`.github/ISSUE_TEMPLATE/bml-experiment.md`](../../.github/ISSUE_TEMPLATE/bml-experiment.md) |
-| Kanban setup | [`BML_Kanban_Setup.md`](./BML_Kanban_Setup.md) |
-| Metrics dictionary | [`BML_Metrics_Tracking.md`](./BML_Metrics_Tracking.md) |
+| Issue template | [`.github/ISSUE_TEMPLATE/build-loop-experiment.md`](../../.github/ISSUE_TEMPLATE/build-loop-experiment.md) |
+| Kanban setup | [`Build_Loop_Kanban_Setup.md`](./Build_Loop_Kanban_Setup.md) |
+| Metrics dictionary | [`Build_Loop_Metrics_Tracking.md`](./Build_Loop_Metrics_Tracking.md) |
 | Issue exports | [`issues/`](./issues/) |
 | Labels on repo | `experiment`, `persevere`, `pivot`, `kill-candidate` |
 

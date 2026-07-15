@@ -1,7 +1,7 @@
 ---
-name: BML Experiment
+name: Build Loop Experiment
 about: Build → Measure → Learn experiment. Hypothesis in, kill/pivot/persevere out.
-title: "BML: "
+title: "Build Loop: "
 labels: ["experiment"]
 ---
 

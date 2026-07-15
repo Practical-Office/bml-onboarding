@@ -1,5 +1,5 @@
 ---
-title: "BML: Onboarding completion vs engagement"
+title: "Build Loop: Onboarding completion vs engagement"
 labels: [experiment]
 github: https://github.com/Book-IQ/bookiqv1-rc/issues/1084
 ---
@@ -44,5 +44,5 @@ Define the required onboarding steps (`invite_accepted` â†’ `tenant_connected` â
 
 ## Technical Context / References
 
-- `docs/reference/BML_Metrics_Tracking.md` (Onboarding section)
+- `docs/reference/Build_Loop_Metrics_Tracking.md` (Onboarding section)
 - Invite / admin onboarding paths in backend + frontend

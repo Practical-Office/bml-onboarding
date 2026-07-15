@@ -21,7 +21,7 @@ Refer to tickets **by linked title**, not bare issue numbers, in map narration a
 
 ## Live BookIQ experiments (separate tracker)
 
-Product experiment issues and the live BML board remain on **`Book-IQ/bookiqv1-rc`**. Do not move or close those from this repo's agent sessions unless explicitly scoped.
+Product experiment issues and the live Build Loop board remain on **`Book-IQ/bookiqv1-rc`**. Do not move or close those from this repo's agent sessions unless explicitly scoped.
 
 ## When a skill says "publish to the issue tracker"
 

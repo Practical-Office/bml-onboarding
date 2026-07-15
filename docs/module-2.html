@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 2 — The Build–Measure–Learn Loop | Build Loop Mastery</title>
+  <meta name="description" content="Three phases, exit criteria, MVP as learning vehicle, actionable vs vanity metrics, and persevere / pivot / kill decisions." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="module-2" data-base="" data-file="module-2.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 2</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="module" id="module-2">
+          <div class="module-header">
+            <div class="module-badge">2</div>
+            <div>
+              <h2>The Build–Measure–Learn Loop</h2>
+              <p class="module-time">~25 min · playbook</p>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Section 1</p>
+            <h3>Why this matters</h3>
+            <p>Module 1 argued that validated learning beats feature velocity under uncertainty. Module 2 gives you the <strong>operating mechanics</strong> of the Build–Measure–Learn Loop — what each phase is for, when you are allowed to leave it, and how Learn produces real decisions.</p>
+            <p>Teams that skip phase discipline drift back into theater: big Builds with fuzzy Measure plans, dashboards full of numbers that never change priorities, and Learn columns that hold narrative without persevere, pivot, or kill. The loop looks right on a board; behavior stays factory-shaped.</p>
+            <p>Getting the phases right is how Build Loop Mastery stays portable across products. The columns are the same whether you are testing pricing, onboarding, or a new agent workflow: Build tests a hypothesis, Measure gathers evidence against pre-registered criteria, Learn commits to a next move. Practical AI’s explicit <strong>kill</strong> path prevents zombie experiments that drain attention after the hypothesis has already failed.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Section 2</p>
+            <h3>Ideas / concepts</h3>
+
+            <h3>Three phases and exit criteria</h3>
+            <p>Each phase has a job and a <strong>gate</strong> — criteria for moving forward. Without gates, work slides through the board on momentum instead of evidence.</p>
+
+            <pre class="loop-diagram">  BACKLOG          BUILD              MEASURE            LEARN / VALIDATE         DONE
+  ───────          ─────              ───────            ────────────────         ────
+  hypothesis  →    smallest build  →  observe vs      →  write learning +    →  archive
+  + risky          that tests the     pre-registered      persevere /
+  assumption       assumption         pass/kill           pivot / kill
+                   │                  thresholds          │
+                   │ exit: shippable  │ exit: window      │ exit: decision
+                   │   to test users  │   closed + data   │   recorded
+                   └──────────────────┴───────────────────┘
+                              faster cycle time = more learning per quarter</pre>
+
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Phase</th><th>Purpose</th><th>Exit criteria (examples)</th></tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Backlog</strong></td>
+                    <td>Hold experiment ideas with a named hypothesis and riskiest assumption.</td>
+                    <td>Ticket states falsification criteria and owner; ready to enter Build.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Build</strong></td>
+                    <td>Produce the MVP — smallest build that starts learning with real users.</td>
+                    <td>Testable artifact deployed or delivered to a defined cohort; instrumentation in place.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Measure</strong></td>
+                    <td>Run the observation window; collect actionable metrics against thresholds.</td>
+                    <td>Pre-defined time window or sample size reached; data sufficient to compare to pass/kill.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Learn / Validate</strong></td>
+                    <td>Interpret results; record validated learning; decide next strategic move.</td>
+                    <td>Written learning + label: <code>persevere</code>, <code>pivot</code>, or <code>kill</code> (Practical AI).</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Done</strong></td>
+                    <td>Close the experiment; feed backlog from the decision.</td>
+                    <td>Decision linked; follow-up ticket or archive note exists.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>If Learn rarely changes what you do next, the loop is broken — regardless of how polished the Kanban looks.</p>
+
+            <h3>MVP as learning vehicle</h3>
+            <p>The <strong>minimum viable product</strong> is not a compromise product for impatient stakeholders. It is the smallest build that lets the team <em>start learning</em> about the core assumption with real users, at the least effort that still produces credible evidence.</p>
+            <p>Good MVP instincts:</p>
+            <ul>
+              <li>Scope to the hypothesis, not the multi-year roadmap.</li>
+              <li>Prefer formats that test value early: concierge, wizard-of-oz, single-flow prototype, limited cohort — when full automation is not what you are learning about yet.</li>
+              <li>Accept rough edges where they do not contaminate the metric (ugly UI is fine if you are testing willingness to complete a task).</li>
+              <li>Reject “we need the whole platform first” unless feasibility is the riskiest assumption.</li>
+            </ul>
+            <p>An MVP that cannot falsify the riskiest assumption is oversized. An MVP that tests multiple unrelated assumptions at once muddies Measure. One loop, one primary assumption.</p>
+
+            <h3>Actionable vs vanity metrics</h3>
+            <p><strong>Vanity metrics</strong> look good in updates but do not tell you what to do next. Totals that only go up (registered users, cumulative downloads, raw page views) often hide flat engagement or weak retention. They are easy to report and hard to act on.</p>
+            <p><strong>Actionable metrics</strong> support a decision and show a plausible cause–effect link to the behavior you changed. They are tied to the hypothesis, measured per cohort or per period, and compared to thresholds you set before Build.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Vanity (avoid as primary)</th><th>Actionable (prefer)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Total signups ever</td><td>Activation rate within 7 days for this cohort</td></tr>
+                  <tr><td>Page views on launch day</td><td>% who completed the core action after seeing the new flow</td></tr>
+                  <tr><td>Number of features shipped</td><td>Repeat usage rate among users who tried the feature once</td></tr>
+                  <tr><td>Social impressions</td><td>Conversion from invite to confirmed participant</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Innovation accounting</strong> (light touch): treat each experiment as a accounting period for learning. Establish a baseline from the MVP, tune the engine with subsequent loops, then decide. You do not need the full textbook system in this module — you need baselines, thresholds, and honest comparison.</p>
+
+            <h3>Persevere, pivot, and kill</h3>
+            <p>After Measure, Learn must produce a <strong>structured decision</strong>. Eric Ries’s public methodology emphasizes <strong>pivot or persevere</strong>. Practical AI adds <strong>kill</strong> as an explicit third outcome for operational clarity.</p>
+            <ul>
+              <li><strong>Persevere</strong> — Evidence supports the current hypothesis and drivers are moving in the right direction. Continue investing along this strategy; next Build deepens or extends what worked.</li>
+              <li><strong>Pivot</strong> — A structured course correction: change strategy, segment, channel, or core hypothesis while keeping the broader vision. One foot anchored, one foot moves. Next ticket states the <em>new</em> risky assumption.</li>
+              <li><strong>Kill</strong> (Practical AI extension) — Stop the experiment or drop the bet. Criteria show the hypothesis failed or the opportunity is too weak to justify more cycles. Archive learning so the team does not revive dead bets through inertia. Kill is not failure of the team; it is success of the system.</li>
+            </ul>
+            <p>Pivot is not a euphemism for kill. Pivot keeps a version of the vision alive with a new testable path. Kill ends the line of inquiry unless leadership explicitly reopens it with new evidence.</p>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Section 3</p>
+            <h3>How to do it</h3>
+            <p>Use this sequence for every experiment ticket. It mirrors the board columns and keeps Measure honest.</p>
+            <ol>
+              <li><strong>Backlog — write the hypothesis block.</strong> One sentence bet, riskiest assumption labeled, falsification statement (“We will consider the hypothesis false if…”).</li>
+              <li><strong>Backlog — pre-register metrics.</strong> Pick one or two actionable metrics. Write pass and kill thresholds numerically. Avoid metrics you cannot influence with this Build.</li>
+              <li><strong>Build — cut to MVP.</strong> List everything the roadmap wants; delete anything that does not serve the current assumption. Ship to a defined cohort or environment.</li>
+              <li><strong>Build — instrument before launch.</strong> Events, funnel steps, or manual tally sheet — whatever matches your maturity. No instrument, no move to Measure.</li>
+              <li><strong>Measure — run the window.</strong> Do not peek for early celebration. Use the sample size or time box you committed to unless there is a safety stop.</li>
+              <li><strong>Measure — compare to thresholds.</strong> Pass, fail, or ambiguous against pre-registered criteria — not against hopes.</li>
+              <li><strong>Learn — write validated learning.</strong> Short prose: what we believed, what happened, what we now believe. Link charts or tables.</li>
+              <li><strong>Learn — label the decision.</strong> Apply <code>persevere</code>, <code>pivot</code>, or <code>kill</code>. Create the follow-up ticket (next hypothesis) or archive with reason.</li>
+              <li><strong>Done — close the loop.</strong> Ensure the board reflects reality; do not start the next oversized Build until the decision is recorded.</li>
+            </ol>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Section 4</p>
+            <h3>How-to micro-scenario</h3>
+            <p><em>Abstract walkthrough — no product names, no book case studies.</em></p>
+            <p>A team offers a digital checklist tool for volunteer coordinators. Usage is flat. A PM proposes adding gamification — badges, streaks, leaderboards — to “make it fun.” A skeptical engineer asks what assumption that tests.</p>
+            <p><strong>Hypothesis:</strong> “Coordinators who see progress badges will return to the tool within seven days at a higher rate than coordinators who do not.”</p>
+            <p><strong>Riskiest assumption:</strong> Value through motivational design — engagement is low because the experience feels unrewarding, not because the checklist itself is wrong.</p>
+            <p><strong>MVP:</strong> Badge on dashboard for “week fully planned,” shown to 50% of active accounts via feature flag. No leaderboard, no streaks — those are a second loop if badges move the metric.</p>
+            <p><strong>Actionable metric:</strong> Seven-day return rate among coordinators who completed at least one checklist in the prior month, badge cohort vs holdout.</p>
+            <p><strong>Pass / kill:</strong> Pass if badge cohort return rate is ≥ 15% relative lift; kill gamification path if lift &lt; 5% after four weeks.</p>
+            <p><strong>Measure:</strong> Window closes at four weeks; badge cohort shows 6% lift — within noise.</p>
+            <p><strong>Learn — kill this hypothesis path:</strong> “Badges did not materially change return behavior. Low engagement likely sits earlier in the workflow (setup friction), not motivational chrome.” Follow-up ticket pivots to testing a one-screen setup wizard — new risky assumption documented.</p>
+            <p>Vanity metric avoided: “10,000 badges displayed” would have looked triumphant while return rate barely moved.</p>
+          </div>
+
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li><strong>Phase blur.</strong> Merging Build and Measure without a shippable gate — debating data before anything reaches users. Fix: explicit Build exit checklist.</li>
+              <li><strong>Moving goalposts.</strong> Changing pass/kill thresholds after results arrive. Fix: thresholds live in the ticket before Build; changes require a new experiment ID.</li>
+              <li><strong>Vanity dashboard.</strong> Reporting cumulative totals that always rise. Fix: cohort rates, period comparisons, behavior tied to hypothesis.</li>
+              <li><strong>Omnibus MVP.</strong> One release testing pricing, onboarding, and referrals simultaneously. Fix: split loops; one primary assumption each.</li>
+              <li><strong>Learn without labels.</strong> Long narrative, no persevere / pivot / kill. Fix: decision label required to leave Learn.</li>
+              <li><strong>Pivot sprawl.</strong> “Pivot” that changes everything at once — no anchor, no new falsifiable ticket. Fix: state what stays, what changes, and the new riskiest assumption.</li>
+              <li><strong>Soft kill.</strong> Deprioritizing without recording kill — bet revives in the next planning cycle. Fix: kill path archives learning and removes from active backlog.</li>
+              <li><strong>Infinite persevere.</strong> Continuing a strategy despite flat or negative drivers because “we already invested.” Fix: pre-register what “no signal” means and when to pivot or kill.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Section 6</p>
+            <h3>Progress checklist</h3>
+            <p>Check each item when you can apply it on a real or practice ticket.</p>
+            <ul class="checklist">
+              <li>
+                <label>
+                  <input type="checkbox" data-progress="m2-c1" data-module="module-2" />
+                  <span>I can state exit criteria for Build, Measure, and Learn on a sample experiment.</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" data-progress="m2-c2" data-module="module-2" />
+                  <span>I can size an MVP to a single riskiest assumption and explain what I cut.</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" data-progress="m2-c3" data-module="module-2" />
+                  <span>I can replace a vanity metric with an actionable one for the same hypothesis.</span>
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" data-progress="m2-c4" data-module="module-2" />
+                  <span>I can explain persevere, pivot, and kill — and when kill is the right call.</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <p class="eyebrow">Section 7</p>
+            <h3>Self-check</h3>
+            <div class="self-check">
+              <p class="hint">Answer in your head first, then expand each item.</p>
+              <ol>
+                <li>What must be true before a ticket moves from Build to Measure?</li>
+                <li>How is an MVP different from a minimal feature release?</li>
+                <li>Give an example of turning a vanity metric into an actionable one.</li>
+                <li>When is kill better than pivot?</li>
+              </ol>
+              <details>
+                <summary>1. Build → Measure gate</summary>
+                <p>The team must have a shippable (or deliverable) test artifact in front of a defined audience, with instrumentation or a data collection plan ready. Without that, you are not measuring customer response — you are still building. Exit criteria should be verifiable: deployed flag, cohort invited, tally sheet assigned, etc.</p>
+              </details>
+              <details>
+                <summary>2. MVP vs minimal release</summary>
+                <p>A minimal release ships the next roadmap slice early. An MVP ships the smallest thing that tests a specific learning goal. An MVP can be manual, ugly, or narrow if that is what falsifies the assumption. A minimal release optimizes for product completeness; an MVP optimizes for learning per effort.</p>
+              </details>
+              <details>
+                <summary>3. Vanity → actionable</summary>
+                <p>Vanity: “5,000 total accounts created.” Actionable: “Of accounts created in this experiment’s two-week window, what percentage added a second item within 72 hours?” The second metric ties to behavior after the change you introduced and supports a persevere / pivot / kill call.</p>
+              </details>
+              <details>
+                <summary>4. Kill vs pivot</summary>
+                <p>Kill when the hypothesis failed against pre-registered criteria and there is no credible adjacent assumption worth testing under the same vision — or when the opportunity is too small to justify more cycles. Pivot when evidence refutes one specific assumption but a related strategy (new segment, channel, or problem slice) remains plausible and testable. Kill stops theater; pivot redirects energy with a new falsifiable ticket.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+
+        <p class="footer-note">
+          Build Loop Mastery — concepts from Eric Ries’s Lean Startup methodology summarized with attribution; not a substitute for the book.
+          See <a href="https://theleanstartup.com/principles" target="_blank" rel="noopener noreferrer">theleanstartup.com/principles</a>.
+          Practical AI adds an explicit <strong>kill</strong> Learn outcome.
+        </p>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>

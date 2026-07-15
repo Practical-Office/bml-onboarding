@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Certification · Build Loop Mastery</title>
+  <meta name="description" content="Build Loop Mastery certification checklist: complete modules, sandbox submission, lead graduation, and commitment to evidence-based Learn decisions." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="certification" data-base="" data-file="certification.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Certification</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Lead-reviewed</span>
+          <h1>Certification <em>checklist</em></h1>
+          <p class="hero-lede">Sign off when you can run the shared experiment system independently — modules complete, sandbox submitted, and a lead confirms graduation or sandbox-only practice.</p>
+        </section>
+
+        <article class="module" id="certification">
+          <div class="module-header">
+            <div class="module-badge">✓</div>
+            <div>
+              <h2>What certification means</h2>
+              <p class="module-time">Submit when all items are true</p>
+            </div>
+          </div>
+          <p>Certification is not a badge for reading the course. It means you can create a falsifiable experiment issue, respect board WIP limits, use the Build skill chain when appropriate, and commit to Learn decisions backed by data — including kill when the hypothesis fails.</p>
+          <p>Your lead initials the checklist (or confirms in your team channel). For BookIQ teammates, graduation to the live board is the usual capstone; other products follow the same checklist with their own board URL in the appendix.</p>
+
+          <div class="cert-box">
+            <p class="eyebrow">Sign off when all are true</p>
+            <ul class="cert-list">
+              <li><label><input type="checkbox" data-progress="cert-1" data-module="certification" /> Completed all module progress checklists (Modules 1–7)</label></li>
+              <li><label><input type="checkbox" data-progress="cert-2" data-module="certification" /> Answered self-check questions (discussed with lead if unsure)</label></li>
+              <li><label><input type="checkbox" data-progress="cert-3" data-module="certification" /> Created sandbox Build Loop experiment issue with pass/kill metrics</label></li>
+              <li><label><input type="checkbox" data-progress="cert-4" data-module="certification" /> Posted submission link for review</label></li>
+              <li><label><input type="checkbox" data-progress="cert-5" data-module="certification" /> Lead approved graduation to live board (or confirmed sandbox-only practice complete)</label></li>
+              <li><label><input type="checkbox" data-progress="cert-6" data-module="certification" /> I will kill or pivot when data says so — not theater</label></li>
+            </ul>
+            <div class="cert-meta">
+              <strong>Certified by:</strong> ________________ · <strong>Date:</strong> YYYY-MM-DD
+            </div>
+          </div>
+
+          <h3>Lead review prompts</h3>
+          <p>Leads can use these questions in a five-minute review:</p>
+          <ol>
+            <li>Can the teammate state the hypothesis in one sentence without reading the issue?</li>
+            <li>Are pass and kill thresholds numeric and tied to a named measure path?</li>
+            <li>Does the teammate know when to use <code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code> vs skip to <code>/implement</code>?</li>
+            <li>Will they move the card through Measure without adding scope?</li>
+            <li>Do they accept kill as a valid Learn outcome?</li>
+          </ol>
+        </article>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+
+        <p class="footer-note">
+          Completed <a href="module-7.html">Module 7</a>? See <a href="next-steps.html">next steps</a> for ongoing ops.
+          Concepts from Eric Ries’s Lean Startup methodology — summarized with attribution; Practical AI adds an explicit <strong>kill</strong> Learn outcome.
+        </p>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>

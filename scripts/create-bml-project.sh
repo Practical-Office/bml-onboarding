@@ -5,7 +5,7 @@
 set -euo pipefail
 
 OWNER="Book-IQ"
-TITLE="BML Experiments"
+TITLE="Build Loop Experiments"
 REPO="Book-IQ/bookiqv1-rc"
 # Live BookIQ product experiment issues (stay on bookiqv1-rc)
 ISSUES=(1083 1084 1085)

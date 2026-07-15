@@ -9,4 +9,4 @@ alwaysApply: false
 - **Modules 1–6:** product-portable prose; no BookIQ-only URLs in core flow.
 - **BookIQ specifics:** `docs/examples/bookiq/`, course appendix section, and `docs/reference/` worked examples only.
 - **Live board/template:** link from appendix; runtime stays on `bookiqv1-rc`.
-- **Teaching template:** `.github/ISSUE_TEMPLATE/bml-experiment.md` mirrors live BookIQ template one-way with `<!-- last-synced: YYYY-MM-DD from bookiqv1-rc -->`.
+- **Teaching template:** `.github/ISSUE_TEMPLATE/build-loop-experiment.md` mirrors live BookIQ template one-way with `<!-- last-synced: YYYY-MM-DD from bookiqv1-rc -->`.

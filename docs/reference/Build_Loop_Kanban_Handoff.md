@@ -45,7 +45,7 @@ We will use **GitHub Issues** as the source of truth and **GitHub Projects** as 
 - **Done**
 
 ### Labels to Create:
-- `experiment` (core label for all BML tickets)
+- `experiment` (core label for all Build Loop experiment tickets)
 - `hypothesis`
 - `measure`
 - `learn`

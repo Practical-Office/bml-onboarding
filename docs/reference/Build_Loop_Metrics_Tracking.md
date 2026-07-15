@@ -1,4 +1,4 @@
-# BML Metrics Tracking (Lightweight)
+# Build Loop Metrics Tracking (Lightweight)
 
 **Principle:** Track outcomes that change product decisions. Logins and undifferentiated clicks are vanity unless tied to insight → action → business result.
 

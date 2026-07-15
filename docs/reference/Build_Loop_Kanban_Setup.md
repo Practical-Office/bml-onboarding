@@ -1,4 +1,4 @@
-# BML Kanban Setup (GitHub)
+# Build Loop Kanban Setup (GitHub)
 
 **Goal:** Stand up a usable Build → Measure → Learn board in under 15 minutes. No ceremony.
 
@@ -8,13 +8,13 @@
 |-------|------|
 | GitHub Issues | Source of truth (one issue = one experiment) |
 | GitHub Project | Visual Kanban only |
-| Label `experiment` | Marks BML tickets |
+| Label `experiment` | Marks Build Loop experiment tickets |
 | Labels `persevere` / `pivot` / `kill-candidate` | Learn decision only |
 
 **Deliberately not created:** `hypothesis`, `measure`, `learn` labels. Columns own the phase; more labels slow creation and create drift.
 
-Issue template: [`.github/ISSUE_TEMPLATE/bml-experiment.md`](../../.github/ISSUE_TEMPLATE/bml-experiment.md)  
-Metrics: [`BML_Metrics_Tracking.md`](./BML_Metrics_Tracking.md)
+Issue template: [`.github/ISSUE_TEMPLATE/build-loop-experiment.md`](../../.github/ISSUE_TEMPLATE/build-loop-experiment.md)  
+Metrics: [`Build_Loop_Metrics_Tracking.md`](./Build_Loop_Metrics_Tracking.md)
 
 ---
 
@@ -29,7 +29,7 @@ gh label list | rg 'experiment|persevere|pivot|kill-candidate'
 If missing:
 
 ```bash
-gh label create experiment --description "BML experiment ticket" --color 0E8A16
+gh label create experiment --description "Build Loop experiment ticket" --color 0E8A16
 gh label create persevere --description "Learn decision — keep going" --color 0E8A16
 gh label create pivot --description "Learn decision — change approach" --color FBCA04
 gh label create kill-candidate --description "Learn decision — kill or sunset" --color D93F0B
@@ -37,7 +37,7 @@ gh label create kill-candidate --description "Learn decision — kill or sunset"
 
 ### 2. Project board (live)
 
-**Board:** https://github.com/orgs/Book-IQ/projects/1 — **BML Experiments**
+**Board:** https://github.com/orgs/Book-IQ/projects/1 — **Build Loop Experiments** (live board title may still show legacy name until BookIQ sync; see [`Build_Loop_BookIQ_sync_note.md`](./Build_Loop_BookIQ_sync_note.md))
 
 Created via `scripts/create-bml-project.sh`. Uses a custom **Stage** field (GitHub’s built-in Status options are not API-editable).
 
@@ -59,12 +59,12 @@ To recreate later: `bash scripts/create-bml-project.sh` (after `gh auth refresh 
 When creating an experiment:
 
 ```bash
-gh issue create --title "BML: …" --label experiment --body-file path/to/body.md
+gh issue create --title "Build Loop: …" --label experiment --body-file path/to/body.md
 # Then add to project via UI, or:
 gh project item-add <PROJECT_NUMBER> --owner Book-IQ --url <ISSUE_URL>
 ```
 
-Or use **New issue → BML Experiment** template (auto-applies `experiment`).
+Or use **New issue → Build Loop Experiment** template (auto-applies `experiment`).
 
 ---
 
@@ -101,9 +101,9 @@ Do **not** replace this with `/to-issues` + bare `/tdd`. Do **not** require full
 
 ## Create an experiment in <2 minutes
 
-1. **New issue** → template **BML Experiment**
+1. **New issue** → template **Build Loop Experiment**
 2. Fill Hypothesis, Build, Measure table (pass/kill), Duration
-3. Label is pre-set; add to **BML Experiments** → **Backlog**
+3. Label is pre-set; add to **Build Loop Experiments** → **Backlog**
 4. Done
 
 Checklist for "ready to leave Backlog":
@@ -111,7 +111,7 @@ Checklist for "ready to leave Backlog":
 - [ ] One-sentence hypothesis
 - [ ] Kill criteria numeric
 - [ ] Duration set
-- [ ] Measure path named (event IDs from `BML_Metrics_Tracking.md` or "manual sheet")
+- [ ] Measure path named (event IDs from `Build_Loop_Metrics_Tracking.md` or "manual sheet")
 
 ---
 

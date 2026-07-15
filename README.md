@@ -1,6 +1,6 @@
-# BML Onboarding
+# Build Loop Onboarding
 
-Shareable **Build–Measure–Learn (BML) Mastery** onboarding course for Practical AI teammates.
+Shareable **Build Loop Mastery** onboarding course for Practical AI teammates.
 
 **Live course (GitHub Pages):** https://practical-office.github.io/bml-onboarding/
 
@@ -12,14 +12,17 @@ Branding matches BookIQ product chrome (dark sidebar, light canvas, `#FCBB48` ac
 bml-onboarding/
 ├── README.md
 ├── docs/
-│   ├── index.html            ← course UI (GitHub Pages entry)
-│   ├── css/bml.css           ← BookIQ / Practical AI tokens
-│   ├── js/bml.js             ← nav + localStorage progress
+│   ├── index.html            ← course hub (GitHub Pages entry)
+│   ├── module-1.html … module-7.html
+│   ├── appendix.html · next-steps.html · certification.html
+│   ├── course-full.html      ← printable full course (Save as PDF)
+│   ├── css/build-loop.css    ← BookIQ / Practical AI tokens
+│   ├── js/build-loop.js      ← nav + localStorage progress
 │   ├── assets/               ← favicon + Practical AI mark
 │   ├── reference/            ← Handoff, Setup, Metrics, Notes, week-1 issues
 │   ├── how-to/ · videos/ · examples/
 ├── scripts/
-└── .github/ISSUE_TEMPLATE/bml-experiment.md
+└── .github/ISSUE_TEMPLATE/build-loop-experiment.md
 ```
 
 ## Local preview
@@ -33,7 +36,7 @@ python3 -m http.server 4173
 
 Open http://localhost:4173/
 
-Progress checklists persist in `localStorage` (`bml-mastery-progress-v1`). Use **Reset progress** in the top bar to clear.
+Progress checklists persist in `localStorage` (`build-loop-mastery-progress-v1`). Use **Reset progress** in the top bar to clear.
 
 ## Deploy (GitHub Pages)
 
@@ -44,12 +47,12 @@ cd "/path/to/bml-onboarding"
 git checkout main
 git pull origin main
 git status
-git add docs/ .github/ISSUE_TEMPLATE/bml-experiment.md README.md
+git add docs/ .github/ISSUE_TEMPLATE/build-loop-experiment.md README.md
 git commit -m "$(cat <<'EOF'
-Redesign BML Mastery course to Practical AI / BookIQ product chrome.
+Expand Build Loop Mastery to multi-page course with shared nav and rename pass.
 
-Replace Jekyll markdown with a branded static index.html, sidebar nav,
-localStorage progress, and reference docs for GitHub Pages.
+Add module pages, certification, appendix, printable course-full stub,
+and rename reference docs from BML_* to Build_Loop_* naming.
 EOF
 )"
 git push origin main

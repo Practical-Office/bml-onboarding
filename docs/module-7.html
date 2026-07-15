@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 7 — Your First Project · Build Loop Mastery</title>
+  <meta name="description" content="Create your first Build Loop experiment in sandbox, submit for lead review, and graduate to the live board when approved." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="module-7" data-base="" data-file="module-7.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 7 — Your first project</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Module 7 · ~30 min</span>
+          <h1>Your first <em>project</em></h1>
+          <p class="hero-lede">Ship a real experiment issue in <strong>sandbox</strong> — practice the full template without polluting the live board. A lead graduates it when the hypothesis and thresholds are sound.</p>
+        </section>
+
+        <article class="module" id="why">
+          <div class="module-header">
+            <span class="module-badge">7</span>
+            <div>
+              <p class="eyebrow">Why</p>
+              <h2>Sandbox before the live board</h2>
+              <p class="module-time">~30 minutes</p>
+            </div>
+          </div>
+          <p>Reading about the Build–Measure–Learn Loop is not the same as writing a falsifiable experiment ticket. Module 7 is the mandatory exercise: create your first real issue using the full template, with numeric pass and kill thresholds, a named measure path, and a duration.</p>
+          <p>Practice issues stay in <strong>sandbox</strong> until a lead promotes them. That protects the operating board’s WIP limit (max three active in Build+Measure combined) and keeps active experiments honest. Leads check template completeness and threshold quality before graduation — not whether you “like” the idea.</p>
+          <div class="quote">
+            <p><strong>Hard truth:</strong> If your sandbox issue could not survive lead review, it should not have been on the live board yet.</p>
+          </div>
+        </article>
+
+        <article class="module" id="how">
+          <div class="module-header">
+            <span class="module-badge">7</span>
+            <div>
+              <p class="eyebrow">How</p>
+              <h2>Create, submit, graduate</h2>
+            </div>
+          </div>
+          <h3>Step 1 — Create the sandbox issue</h3>
+          <ol>
+            <li>Open your product repo (or teaching repo for practice) → <strong>New issue</strong> → <strong>Build Loop Experiment</strong> template.</li>
+            <li>Fill every section: hypothesis (one sentence), Build (smallest test), Measure table (pass + kill + how collected), duration, sample.</li>
+            <li>Apply label <code>experiment</code>.</li>
+            <li>Do <strong>not</strong> add the issue to the live Project board until a lead graduates it.</li>
+          </ol>
+
+          <h3>Step 2 — Post your submission</h3>
+          <p>Share the issue URL where your lead specifies (repo Discussion, Slack, or team channel):</p>
+<pre><code>Build Loop Module 7 submission
+Issue: https://github.com/YOUR-ORG/YOUR-REPO/issues/NNN
+Hypothesis (one line): …</code></pre>
+
+          <h3>Step 3 — Lead graduation</h3>
+          <p>Your lead reviews:</p>
+          <ul>
+            <li>Complete template with falsifiable hypothesis</li>
+            <li>Numeric pass and kill criteria plus duration</li>
+            <li>Named measure path (instrumentation or manual log)</li>
+            <li>Fit under the three-active Build+Measure cap when promoted</li>
+          </ul>
+          <p>When approved, the lead adds the issue to the live board at <strong>Backlog</strong> (or moves an existing draft). If sandbox-only practice is enough for your role, the lead confirms that on the <a href="certification.html">certification checklist</a>.</p>
+
+          <p><strong>BookIQ teammates:</strong> create the sandbox issue on <code>Book-IQ/bookiqv1-rc</code>; lead graduates it to the <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Build Loop Experiments board</a> when ready. See the <a href="appendix.html">BookIQ appendix</a> for week-1 draft examples.</p>
+        </article>
+
+        <article class="module" id="failure-modes">
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li><strong>Live board pollution</strong> — adding practice tickets to the operating Project before review. Crowds WIP and trains the team to ignore Backlog discipline.</li>
+              <li><strong>Vague hypothesis</strong> — “Improve onboarding” is not falsifiable. Name customer behavior you expect to see.</li>
+              <li><strong>Missing kill criteria</strong> — without a numeric fail line, Learn becomes vibes-only theater.</li>
+              <li><strong>Skipping submission</strong> — certification requires a posted link; silent sandbox issues do not count.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="module" id="checklist">
+          <h3>Module 7 — progress checklist</h3>
+          <ul class="checklist">
+            <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /> Sandbox issue created with full template</label></li>
+            <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /> Pass and kill thresholds defined</label></li>
+            <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /> Submission link posted for lead review</label></li>
+          </ul>
+
+          <div class="self-check">
+            <h3 style="margin-top:0">Module 7 — self-check</h3>
+            <ol>
+              <li>Why sandbox before adding to the live board?</li>
+              <li>What must a lead check before graduating your issue?</li>
+              <li>What happens if Learn never produces kill or pivot decisions?</li>
+            </ol>
+            <p class="hint">Try answering aloud before opening the answers.</p>
+            <details>
+              <summary>Answers</summary>
+              <ol>
+                <li>So practice tickets do not crowd the live WIP limit or dilute active experiments. Leads keep the operating board honest.</li>
+                <li>Complete template, falsifiable hypothesis, numeric pass/kill + duration, measure path named, and that the experiment fits under the three-active Build+Measure cap when promoted.</li>
+                <li>The loop is theater — shipping without deciding. The Learn column exists to force persevere, pivot, or kill from evidence.</li>
+              </ol>
+            </details>
+          </div>
+        </article>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+
+        <p class="footer-note">
+          Next: <a href="appendix.html">BookIQ appendix</a> (product pointers) or <a href="certification.html">certification checklist</a>.
+          Teaching template: <a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/build-loop-experiment.md" target="_blank" rel="noopener noreferrer">build-loop-experiment.md</a>.
+        </p>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>

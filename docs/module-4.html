@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 4 — Ticket Template &amp; Build Skills · Build Loop Mastery</title>
+  <meta name="description" content="The Build Loop experiment issue template and the Cursor skill chain: grill-with-docs → to-spec → to-tickets → implement." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="module-4" data-base="" data-file="module-4.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 4 — Ticket Template &amp; Build Skills</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Module 4 · ~25 min</span>
+          <h1>Ticket Template &amp; <em>Build Skills</em></h1>
+          <p class="hero-lede">The experiment issue template forces hypothesis-before-build discipline. In the Build column, a four-skill chain turns that issue into shipped, tested code — one tracer-bullet ticket at a time.</p>
+        </section>
+
+        <article class="module" id="why">
+          <div class="module-header">
+            <span class="module-badge">4</span>
+            <div>
+              <p class="eyebrow">Why</p>
+              <h2>Same shape every time; skills for non-trivial Build</h2>
+              <p class="module-time">~25 minutes</p>
+            </div>
+          </div>
+          <p>Experiments fail quietly when the ticket is vague: no kill criteria, no duration, no measure path. A fixed template makes the minimum bar obvious before anyone writes code.</p>
+          <p>Non-trivial Build work needs more than a template. The skill chain — <strong>grill-with-docs</strong>, <strong>to-spec</strong>, <strong>to-tickets</strong>, <strong>implement</strong> — sharpens the plan, publishes a spec, slices vertical tickets with blocking edges, then builds one ticket at a time with test-driven development and code review. Tiny builds can skip straight to <strong>implement</strong>.</p>
+          <div class="quote">
+            <p><strong>Do not substitute</strong> <code>to-issues</code> plus bare <code>tdd</code> for this chain. <strong>implement</strong> owns <a href="skills/tdd.html">tdd</a> and <a href="skills/code-review.html">code-review</a> at the end of each ticket.</p>
+          </div>
+        </article>
+
+        <article class="module" id="ideas">
+          <div class="module-header">
+            <span class="module-badge">4</span>
+            <div>
+              <p class="eyebrow">Ideas</p>
+              <h2>Experiment template sections</h2>
+            </div>
+          </div>
+          <p>Template path: <code>.github/ISSUE_TEMPLATE/build-loop-experiment.md</code> (teaching copy; auto-applies <code>experiment</code> label).</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Section</th><th>What it forces</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Hypothesis</strong></td><td>One sentence — what customer behavior you believe will happen</td></tr>
+                <tr><td><strong>Build (smallest test)</strong></td><td>Thinnest shippable slice, not the full feature</td></tr>
+                <tr><td><strong>Measure</strong></td><td>Table: metric, pass target, kill threshold, collection method; duration and sample size</td></tr>
+                <tr><td><strong>Learn</strong></td><td>Decision, evidence, next action — filled only at decision time</td></tr>
+                <tr><td><strong>Acceptance criteria</strong></td><td>Checklist: hypothesis before build, instrumentation before measure, labeled learn decision</td></tr>
+                <tr><td><strong>Cursor workflow</strong></td><td>Skill chain for Build column work</td></tr>
+                <tr><td><strong>Technical context</strong></td><td>Short <code>@paths</code> hints for grilling sessions</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Skill chain (Build column)</h3>
+          <pre class="loop-diagram">grill-with-docs → to-spec → to-tickets → implement
+                                              ↓
+                                    tdd + code-review (inside implement)</pre>
+
+          <div class="pill-row">
+            <a class="pill" href="skills/grill-with-docs.html">grill-with-docs</a>
+            <a class="pill" href="skills/grilling.html">grilling</a>
+            <a class="pill" href="skills/to-spec.html">to-spec</a>
+            <a class="pill" href="skills/to-tickets.html">to-tickets</a>
+            <a class="pill" href="skills/implement.html">implement</a>
+            <a class="pill" href="skills/tdd.html">tdd</a>
+            <a class="pill" href="skills/code-review.html">code-review</a>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Skill</th><th>When</th><th>Output</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="skills/grill-with-docs.html">grill-with-docs</a></td>
+                  <td>Backlog → Build; before a spec</td>
+                  <td>Shared understanding; glossary and ADR updates</td>
+                </tr>
+                <tr>
+                  <td><a href="skills/to-spec.html">to-spec</a></td>
+                  <td>After grill; non-trivial build</td>
+                  <td>Published spec on issue tracker with <code>ready-for-agent</code></td>
+                </tr>
+                <tr>
+                  <td><a href="skills/to-tickets.html">to-tickets</a></td>
+                  <td>After spec; multiple slices</td>
+                  <td>Tracer-bullet tickets with blocking edges</td>
+                </tr>
+                <tr>
+                  <td><a href="skills/implement.html">implement</a></td>
+                  <td>One unblocked ticket</td>
+                  <td>Code + tests + commit; runs <a href="skills/tdd.html">tdd</a> and <a href="skills/code-review.html">code-review</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p>Board rhythm reference: <a href="reference/Build_Loop_Kanban_Setup.md">Kanban setup guide</a>.</p>
+        </article>
+
+        <article class="module" id="how-to">
+          <div class="module-header">
+            <span class="module-badge">4</span>
+            <div>
+              <p class="eyebrow">How-to</p>
+              <h2>File and run an experiment build</h2>
+            </div>
+          </div>
+
+          <h3>1. Create the issue (&lt;2 minutes)</h3>
+          <ol>
+            <li><strong>New issue</strong> → template <strong>Build Loop Experiment</strong></li>
+            <li>Fill Hypothesis, Build, Measure table (pass/kill), Duration</li>
+            <li>Label <code>experiment</code> is pre-set; add card to project <strong>Backlog</strong></li>
+          </ol>
+
+          <h3>2. Move to Build — pick a path</h3>
+          <p><strong>Tiny build</strong> (single small PR): optional light <a href="skills/grill-with-docs.html">grill-with-docs</a>, then <a href="skills/implement.html">implement</a> directly.</p>
+          <p><strong>Non-trivial build:</strong></p>
+          <ol>
+            <li><code>/grill-with-docs</code> on the issue — prime folders, sharpen plan, capture glossary/ADRs</li>
+            <li><code>/to-spec</code> — synthesize conversation into a published spec; confirm test seams</li>
+            <li><code>/to-tickets</code> — vertical slices with blockers; publish; work the frontier</li>
+            <li><code>/implement</code> — one ticket at a time; clear context between tickets</li>
+          </ol>
+
+          <h3>3. Measure and Learn (no skill chain)</h3>
+          <ul>
+            <li><strong>Measure:</strong> update the issue with weekly numbers. Code only if instrumentation is broken.</li>
+            <li><strong>Learn:</strong> human decision; optional <code>grill-with-docs</code> if pivoting. Apply decision label; move to Done.</li>
+          </ul>
+        </article>
+
+        <article class="module" id="micro-scenario">
+          <div class="module-header">
+            <span class="module-badge">4</span>
+            <div>
+              <p class="eyebrow">Micro-scenario</p>
+              <h2>Abstract walkthrough</h2>
+            </div>
+          </div>
+          <div class="section-card">
+            <p><strong>Context:</strong> Issue #40 proposes a guided checklist inside an onboarding flow. Build is multi-step (API + UI + analytics).</p>
+            <ol>
+              <li>PM files the template with hypothesis “users who see the checklist complete setup 20% more often,” kill at &lt;5% lift, two-week measure window.</li>
+              <li>Engineer runs <strong>grill-with-docs</strong>: one question at a time until “checklist item” vs “setup step” terms land in <code>CONTEXT.md</code>.</li>
+              <li><strong>to-spec</strong> publishes a spec: user stories, API contract decisions, test seams at the public onboarding API.</li>
+              <li><strong>to-tickets</strong> yields three tracer bullets: (1) API + empty UI shell, (2) checklist render + event, (3) dashboard readout — each blocked only by its predecessor.</li>
+              <li><strong>implement</strong> on ticket 1: <strong>tdd</strong> at the API seam, full suite once, <strong>code-review</strong>, commit. Context cleared; ticket 2 next.</li>
+              <li>Card moves to <strong>Measure</strong>; no further skills until numbers arrive.</li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="module" id="failure-modes">
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li><strong>Full chain for a one-line fix</strong> — Adding analytics to an existing button does not need a spec and five tickets. Use <strong>implement</strong>.</li>
+              <li><strong>Skipping grill on ambiguous scope</strong> — “Improve onboarding” without shared terms produces specs that rewrite themselves mid-build.</li>
+              <li><strong>Horizontal tickets</strong> — “All API work” then “All UI work” cannot demo mid-flight. Use vertical tracer bullets.</li>
+              <li><strong>Implementing multiple tickets in one context</strong> — Context rots; blockers blur. One ticket, then clear.</li>
+              <li><strong>Bare tdd without implement’s review</strong> — Tests land without standards/spec check. Let <strong>implement</strong> run the full close-out.</li>
+              <li><strong>Measure-phase feature creep</strong> — “While we wait, let’s also…” Invalidates the experiment clock.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="module" id="checklist">
+          <div class="module-header">
+            <span class="module-badge">4</span>
+            <div>
+              <p class="eyebrow">Checklist</p>
+              <h2>Module 4 completion</h2>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m4-c1" data-module="module-4" />
+                <span>I can fill every section of the experiment template from memory.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m4-c2" data-module="module-4" />
+                <span>I know when to run the full skill chain vs implement-only.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m4-c3" data-module="module-4" />
+                <span>I can describe what each skill produces and link to its deep-dive page.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m4-c4" data-module="module-4" />
+                <span>I understand that implement owns tdd and code-review at ticket close-out.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m4-c5" data-module="module-4" />
+                <span>I know Measure and Learn do not use the Build skill chain by default.</span>
+              </label>
+            </li>
+          </ul>
+        </article>
+
+        <article class="module" id="self-check">
+          <div class="self-check">
+            <p class="eyebrow">Self-check</p>
+            <ol>
+              <li>What are the four sections you must fill before Build starts?</li>
+              <li>In order, name the four Build skills for a non-trivial experiment.</li>
+              <li>When can you skip to implement directly?</li>
+              <li>What two skills does implement invoke before committing?</li>
+              <li>What is a tracer-bullet ticket?</li>
+            </ol>
+            <p class="hint">Try answering aloud before opening the answers.</p>
+            <details>
+              <summary>Answers</summary>
+              <ol>
+                <li>Hypothesis (one sentence), Build (smallest test), Measure (pass/kill table + duration/sample), and acceptance that kill criteria exist before build — Learn stays empty until decision time.</li>
+                <li>grill-with-docs → to-spec → to-tickets → implement.</li>
+                <li>When the build fits in a single small PR (e.g. tiny instrumentation fix); optional light grill first.</li>
+                <li>tdd (at pre-agreed seams) and code-review (standards + spec axes).</li>
+                <li>A vertical slice that cuts a narrow but complete path through every layer, demoable on its own, sized for one fresh context window.</li>
+              </ol>
+            </details>
+          </div>
+        </article>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+
+        <p class="footer-note">
+          Skill deep-dives:
+          <a href="skills/grill-with-docs.html">grill-with-docs</a> ·
+          <a href="skills/to-spec.html">to-spec</a> ·
+          <a href="skills/to-tickets.html">to-tickets</a> ·
+          <a href="skills/implement.html">implement</a>.
+          Setup: <a href="reference/Build_Loop_Kanban_Setup.md">Kanban setup guide</a>.
+        </p>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>

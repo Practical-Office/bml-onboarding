@@ -1,5 +1,5 @@
 ---
-title: "BML: Feature usage reality check (Forecast / Runway)"
+title: "Build Loop: Feature usage reality check (Forecast / Runway)"
 labels: [experiment]
 github: https://github.com/Book-IQ/bookiqv1-rc/issues/1085
 ---
@@ -44,5 +44,5 @@ Tag existing routes/actions with `feature.viewed` / `feature.used` / `feature.re
 
 ## Technical Context / References
 
-- `docs/reference/BML_Metrics_Tracking.md` (Feature usage section)
+- `docs/reference/Build_Loop_Metrics_Tracking.md` (Feature usage section)
 - Forecast / Runway / cashflow UI entry points

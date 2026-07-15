@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Module 3 — GitHub Setup · Build Loop Mastery</title>
+  <meta name="description" content="Stand up GitHub Issues and a Project board for Build Loop experiments: labels, Stage columns, and gh commands — without phase labels." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="module-3" data-base="" data-file="module-3.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Module 3 — GitHub Setup</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Module 3 · ~20 min</span>
+          <h1>GitHub <em>Setup</em></h1>
+          <p class="hero-lede">Issues hold the truth; the Project board is the view. Learn which labels matter, why we skip phase labels, and how <strong>Stage</strong> columns carry the loop.</p>
+        </section>
+
+        <article class="module" id="why">
+          <div class="module-header">
+            <span class="module-badge">3</span>
+            <div>
+              <p class="eyebrow">Why</p>
+              <h2>One experiment, one issue — visible on a board</h2>
+              <p class="module-time">~20 minutes</p>
+            </div>
+          </div>
+          <p>Validated learning needs a durable record and a shared picture of where work sits in the loop. GitHub Issues give you the record: hypothesis, build plan, metrics, and learn decision live on one ticket. A GitHub Project gives you the picture: columns show whether an experiment is waiting, building, measuring, deciding, or done.</p>
+          <p>Splitting those roles keeps creation fast and prevents drift. If you duplicate phase information in both columns <em>and</em> labels, people update one and forget the other. The board columns own the phase; labels mark <strong>what kind of ticket</strong> it is and <strong>what you decided</strong> at Learn — nothing more.</p>
+          <div class="quote">
+            <p><strong>Rule of thumb:</strong> If you cannot answer “where is this experiment in the loop?” from the Project board alone, your setup is too complicated.</p>
+          </div>
+        </article>
+
+        <article class="module" id="ideas">
+          <div class="module-header">
+            <span class="module-badge">3</span>
+            <div>
+              <p class="eyebrow">Ideas</p>
+              <h2>Issues vs Project, labels vs columns</h2>
+            </div>
+          </div>
+
+          <h3>Two pieces, two jobs</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Piece</th><th>Role</th><th>Source of truth?</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>GitHub Issues</strong></td><td>One issue = one experiment. Body holds hypothesis, build scope, measure table, learn decision.</td><td>Yes</td></tr>
+                <tr><td><strong>GitHub Project</strong></td><td>Visual Kanban. Cards mirror issues; <strong>Stage</strong> field drives columns.</td><td>No — reflects issue state</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Labels we create</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Label</th><th>Purpose</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><code>experiment</code></td><td>Marks Build Loop experiment tickets</td></tr>
+                <tr><td><code>persevere</code></td><td>Learn decision — keep going</td></tr>
+                <tr><td><code>pivot</code></td><td>Learn decision — change approach</td></tr>
+                <tr><td><code>kill-candidate</code></td><td>Learn decision — kill or sunset</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Labels we deliberately skip</h3>
+          <p>Do <strong>not</strong> create <code>hypothesis</code>, <code>measure</code>, or <code>learn</code> labels. Columns already express phase. Extra phase labels slow issue creation and create conflicting signals when someone moves a card but forgets to swap labels.</p>
+
+          <h3>Stage columns (custom field)</h3>
+          <p>GitHub’s built-in Status field is not flexible enough for our workflow, so we use a custom <strong>Stage</strong> field. Group the board by Stage after setup.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Stage</th><th>Meaning</th><th>Rule</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><strong>Backlog</strong></td><td>Idea or assumption not yet building</td><td>Hypothesis + kill criteria required before leaving</td></tr>
+                <tr><td><strong>Build</strong></td><td>Shipping the smallest test</td><td>Cursor skills workflow applies here</td></tr>
+                <tr><td><strong>Measure</strong></td><td>Collecting data — do not skip</td><td>Clock starts; no new scope</td></tr>
+                <tr><td><strong>Learn</strong></td><td>Decision point</td><td>Must leave with a decision label</td></tr>
+                <tr><td><strong>Done</strong></td><td>Decision recorded + next action filed</td><td>Archive when stale</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>Full setup reference: <a href="reference/Build_Loop_Kanban_Setup.md">Kanban setup guide</a> (filename will be renamed later).</p>
+        </article>
+
+        <article class="module" id="how-to">
+          <div class="module-header">
+            <span class="module-badge">3</span>
+            <div>
+              <p class="eyebrow">How-to</p>
+              <h2>One-time setup with <code>gh</code></h2>
+            </div>
+          </div>
+
+          <h3>1. Verify labels</h3>
+          <pre><code>gh label list | rg 'experiment|persevere|pivot|kill-candidate'</code></pre>
+          <p>If any are missing, create them:</p>
+          <pre><code>gh label create experiment --description "Build Loop experiment ticket" --color 0E8A16
+gh label create persevere --description "Learn decision — keep going" --color 0E8A16
+gh label create pivot --description "Learn decision — change approach" --color FBCA04
+gh label create kill-candidate --description "Learn decision — kill or sunset" --color D93F0B</code></pre>
+
+          <h3>2. Create the Project board</h3>
+          <p>From the repo root, run the project script (requires <code>gh auth refresh -s project,read:project</code> first):</p>
+          <pre><code>bash scripts/create-bml-project.sh</code></pre>
+          <p>Then in the board UI: <strong>View → Group by → Stage</strong>. Filter tip: <code>label:experiment</code>.</p>
+
+          <h3>3. Wire Issues → Project</h3>
+          <p>Create an experiment issue, then add it to the project:</p>
+          <pre><code>gh issue create --title "Build Loop: …" --label experiment --body-file path/to/body.md
+gh project item-add &lt;PROJECT_NUMBER&gt; --owner &lt;ORG&gt; --url &lt;ISSUE_URL&gt;</code></pre>
+          <p>Or use <strong>New issue → Build Loop Experiment</strong> template (auto-applies <code>experiment</code>) and add the card to <strong>Backlog</strong> in the UI.</p>
+
+          <h3>4. Ready to leave Backlog</h3>
+          <ul>
+            <li>One-sentence hypothesis</li>
+            <li>Kill criteria are numeric</li>
+            <li>Duration set</li>
+            <li>Measure path named (event IDs from metrics doc or “manual sheet”)</li>
+          </ul>
+        </article>
+
+        <article class="module" id="micro-scenario">
+          <div class="module-header">
+            <span class="module-badge">3</span>
+            <div>
+              <p class="eyebrow">Micro-scenario</p>
+              <h2>Abstract walkthrough</h2>
+            </div>
+          </div>
+          <div class="section-card">
+            <p><strong>Context:</strong> A product team adopts Build Loop for the first time on a greenfield repo.</p>
+            <ol>
+              <li>They run <code>gh label create</code> for the four labels and confirm with <code>gh label list</code>.</li>
+              <li>They execute <code>create-bml-project.sh</code>, open the board, and group by <strong>Stage</strong>.</li>
+              <li>A PM files issue #12: “Will self-serve onboarding reduce support tickets?” with pass/kill numbers and a two-week duration. Label <code>experiment</code> is applied; the card sits in <strong>Backlog</strong>.</li>
+              <li>After review, the card moves to <strong>Build</strong>. No one adds a <code>hypothesis</code> label — the column already says they are building.</li>
+              <li>When the build ships, the card moves to <strong>Measure</strong>. Weekly numbers go on the issue body, not in Slack threads.</li>
+              <li>At Learn, they apply <code>pivot</code> and move to <strong>Done</strong> with evidence and a follow-up issue linked.</li>
+            </ol>
+          </div>
+        </article>
+
+        <article class="module" id="failure-modes">
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li><strong>Phase labels + columns</strong> — Card in Measure still tagged <code>hypothesis</code>. Pick one system; we use columns.</li>
+              <li><strong>Board without issues</strong> — Cards that are not backed by an issue lose hypothesis and metrics. Always create the issue first.</li>
+              <li><strong>Skipping Measure</strong> — Moving straight from Build to Learn because “we know it worked.” The clock and kill criteria exist for a reason.</li>
+              <li><strong>Learn without a decision label</strong> — Vague comments on the issue. Apply exactly one of <code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code>.</li>
+              <li><strong>Too many active builds</strong> — More than three experiments in Build+Measure for a small team. Finish measuring before starting more.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="module" id="checklist">
+          <div class="module-header">
+            <span class="module-badge">3</span>
+            <div>
+              <p class="eyebrow">Checklist</p>
+              <h2>Module 3 completion</h2>
+            </div>
+          </div>
+          <ul class="checklist">
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m3-c1" data-module="module-3" />
+                <span>I can explain why Issues are source of truth and the Project is the view.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m3-c2" data-module="module-3" />
+                <span>I know the four labels we use and why we skip phase labels.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m3-c3" data-module="module-3" />
+                <span>I can name all five Stage columns and the rule for leaving each.</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" data-progress="m3-c4" data-module="module-3" />
+                <span>I can create an experiment issue and add it to the project with <code>gh</code>.</span>
+              </label>
+            </li>
+          </ul>
+        </article>
+
+        <article class="module" id="self-check">
+          <div class="self-check">
+            <p class="eyebrow">Self-check</p>
+            <ol>
+              <li>What is the difference between a GitHub Issue and a GitHub Project card in this system?</li>
+              <li>Why do we not create <code>hypothesis</code>, <code>measure</code>, or <code>learn</code> labels?</li>
+              <li>Which label do you apply at Learn, and when?</li>
+              <li>What must be true before an experiment leaves Backlog?</li>
+            </ol>
+            <p class="hint">Try answering aloud before opening the answers.</p>
+            <details>
+              <summary>Answers</summary>
+              <ol>
+                <li>The issue is the durable record (hypothesis, metrics, decision). The project card is a visual pointer to that issue, positioned by Stage column.</li>
+                <li>Stage columns already express phase. Duplicate phase labels create drift — people update one signal and forget the other.</li>
+                <li>Exactly one decision label: <code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code>, applied when recording the Learn decision with evidence.</li>
+                <li>One-sentence hypothesis, numeric kill criteria, duration set, and a named measure path (instrumentation or manual log).</li>
+              </ol>
+            </details>
+          </div>
+        </article>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+
+        <p class="footer-note">
+          Next: <a href="module-4.html">Module 4 — Ticket template &amp; Build skills</a>.
+          Setup reference: <a href="reference/Build_Loop_Kanban_Setup.md">Kanban setup guide</a>.
+        </p>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>

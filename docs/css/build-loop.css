@@ -1,4 +1,4 @@
-/* BML Mastery — Practical AI / BookIQ product chrome */
+/* Build Loop Mastery — Practical AI / BookIQ product chrome */
 :root {
   --brand: #fcbb48;
   --brand-dark: #e0a53b;
@@ -786,11 +786,56 @@ body.nav-open .sidebar {
   }
 }
 
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.page-nav .page-nav-next {
+  margin-left: auto;
+}
+
+.skill-hero .module-badge {
+  font-size: 0.75rem;
+}
+
+.content-block {
+  margin: 1.25rem 0;
+}
+
+.failure-modes {
+  margin: 1.25rem 0;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(190, 18, 60, 0.2);
+  background: rgba(255, 241, 242, 0.5);
+}
+
+.failure-modes h3 {
+  margin-top: 0;
+  color: var(--danger);
+}
+
+.print-actions {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--brand-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(252, 187, 72, 0.35);
+}
+
 @media print {
   .sidebar,
   .topbar,
   .overlay,
-  .menu-btn {
+  .menu-btn,
+  .page-nav,
+  .print-actions,
+  .no-print {
     display: none !important;
   }
 
@@ -800,5 +845,19 @@ body.nav-open .sidebar {
 
   .content {
     max-width: none;
+    padding: 0;
+  }
+
+  .module {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  details {
+    open: open;
+  }
+
+  details summary {
+    display: none;
   }
 }

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BookIQ Appendix · Build Loop Mastery</title>
+  <meta name="description" content="BookIQ-specific Build Loop pointers: live board, templates, week-1 experiment drafts, and product risky assumptions." />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="appendix" data-base="" data-file="appendix.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">BookIQ appendix</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="hero">
+          <span class="status-chip">Appendix · reference</span>
+          <h1>BookIQ <em>appendix</em></h1>
+          <p class="hero-lede">Modules 1–6 are portable. This page is <strong>BookIQ-specific</strong> — product assumptions, the live board, canonical templates, and week-1 experiment drafts on <code>Book-IQ/bookiqv1-rc</code>.</p>
+        </section>
+
+        <article class="module" id="appendix">
+          <div class="module-header">
+            <div class="module-badge">A</div>
+            <div>
+              <h2>Worked example: BookIQ</h2>
+              <p class="module-time">Product pointers only — not required for other teams</p>
+            </div>
+          </div>
+
+          <p><strong>BookIQ</strong> (bookiq.io) is Practical AI’s AI-powered financial platform with OMI (virtual CFO). First customers onboard with real money and real trust on the line — the Build Loop board exists to test whether they get value, not whether we ship features.</p>
+
+          <h3>BookIQ risky assumptions</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Assumption</th><th>Why it’s risky</th></tr></thead>
+              <tbody>
+                <tr><td>Customers act on OMI insights</td><td>Core value hypothesis</td></tr>
+                <tr><td>Human review adds trust</td><td>Differentiator vs pure AI</td></tr>
+                <tr><td>Customers renew after 60 days</td><td>Revenue survival</td></tr>
+                <tr><td>Forecast / Runway are top features</td><td>Roadmap bets</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>Live resources</h3>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Resource</th><th>Link</th></tr></thead>
+              <tbody>
+                <tr><td>Live Build Loop board</td><td><a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ Projects #1</a></td></tr>
+                <tr><td>Live issue template (canonical)</td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/blob/main/.github/ISSUE_TEMPLATE/bml-experiment.md" target="_blank" rel="noopener noreferrer">bookiqv1-rc template</a> — runtime naming sync pending; see <a href="reference/Build_Loop_BookIQ_sync_note.md">sync note</a></td></tr>
+                <tr><td>Teaching template (mirror)</td><td><a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/build-loop-experiment.md" target="_blank" rel="noopener noreferrer">bml-onboarding copy</a></td></tr>
+                <tr>
+                  <td>Week-1 experiment drafts</td>
+                  <td>
+                    <a href="reference/issues/01-core-value-omi-insights.md">Core Value</a> ·
+                    <a href="reference/issues/02-onboarding-completion-impact.md">Onboarding</a> ·
+                    <a href="reference/issues/03-feature-usage-reality-check.md">Feature usage</a>
+                  </td>
+                </tr>
+                <tr><td>Handoff (origin)</td><td><a href="reference/Build_Loop_Kanban_Handoff.md">Build Loop Kanban handoff</a></td></tr>
+                <tr><td>Metrics dictionary</td><td><a href="reference/Build_Loop_Metrics_Tracking.md">Build Loop metrics tracking</a></td></tr>
+                <tr><td>Appendix index (repo)</td><td><a href="examples/bookiq/">examples/bookiq/</a></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="quote">
+            <p>Teaching template syncs <strong>one-way</strong> from the live BookIQ template (<code>&lt;!-- last-synced: YYYY-MM-DD from bookiqv1-rc --&gt;</code>). See <a href="reference/Build_Loop_Implementation_Notes.md">Implementation notes</a> and <a href="reference/Build_Loop_BookIQ_sync_note.md">BookIQ sync note</a> for strings the live repo should adopt.</p>
+          </div>
+
+          <h3>Live experiment issues (reference)</h3>
+          <p>Product experiment issues <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a>, <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a>, and <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a> map to the week-1 drafts above. Do not edit those from this training repo.</p>
+
+          <h3>Module 7 for BookIQ teammates</h3>
+          <p>Create your sandbox issue on <code>Book-IQ/bookiqv1-rc</code>. Post the submission URL to your lead. When approved, the lead adds it to <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Projects #1</a> at Backlog. Full exercise: <a href="module-7.html">Module 7</a>.</p>
+        </article>
+
+        <div class="page-nav no-print" id="pageNav"></div>
+
+        <p class="footer-note">
+          Portable core: <a href="module-1.html">Module 1</a> onward — no BookIQ URLs required.
+          Repo: <a href="https://github.com/Practical-Office/bml-onboarding" target="_blank" rel="noopener noreferrer">Practical-Office/bml-onboarding</a>
+        </p>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>
