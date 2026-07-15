@@ -656,6 +656,27 @@ tr:last-child td {
   font-style: italic;
 }
 
+.self-check details {
+  margin-top: 0.75rem;
+  font-size: 0.92rem;
+}
+
+.self-check details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.self-check details ol {
+  margin: 0.65rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.self-check details li {
+  margin-bottom: 0.5rem;
+  color: var(--ink-soft);
+}
+
 .loop-diagram {
   font-family: var(--font-mono);
   white-space: pre;
