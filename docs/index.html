@@ -393,7 +393,13 @@ What is the thinnest thing we ship to test this?
 - [ ] Hypothesis + kill criteria before Build
 - [ ] Instrumentation before Measure
 - [ ] Learn decision with evidence
-- [ ] Decision label applied</code></pre>
+- [ ] Decision label applied
+
+## Cursor workflow (when in Build)
+1. /grill-with-docs — prime with this issue + relevant folders
+2. /to-spec — publish a spec from the grilled conversation
+3. /to-tickets — split the spec into vertical-slice tickets
+4. /implement — build one ticket at a time (uses /tdd + /code-review)</code></pre>
 
           <h3>How to fill each section</h3>
           <div class="table-wrap">
@@ -407,6 +413,39 @@ What is the thinnest thing we ship to test this?
               </tbody>
             </table>
           </div>
+
+          <h3>Cursor skills (Build only)</h3>
+          <p>Use Matt Pocock’s skills in this order for non-trivial Builds. Skip ahead only when the Build fits a single tiny PR.</p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Skill</th><th>What it does</th><th>When to use</th></tr></thead>
+              <tbody>
+                <tr>
+                  <td><code>/grill-with-docs</code></td>
+                  <td>Runs a <code>/grilling</code> interview and captures ADRs / glossary via domain modeling. Sharpens the experiment before you write a spec.</td>
+                  <td>Backlog → Build, and whenever Build is non-trivial. Prime with the issue + relevant folders.</td>
+                </tr>
+                <tr>
+                  <td><code>/to-spec</code></td>
+                  <td>Synthesizes the <em>current conversation</em> into a published spec (problem, solution, user stories, implementation + testing decisions, out of scope). Confirms test seams with you; does <strong>not</strong> re-interview.</td>
+                  <td>After grilling, when Build needs a written plan. Skip if the slice is already one clear PR.</td>
+                </tr>
+                <tr>
+                  <td><code>/to-tickets</code></td>
+                  <td>Breaks the spec (or conversation) into tracer-bullet vertical-slice tickets with blocking edges. Quizzes you on granularity, then publishes tickets and works the frontier.</td>
+                  <td>After <code>/to-spec</code>, when Build must split into multiple agent-sized slices.</td>
+                </tr>
+                <tr>
+                  <td><code>/implement</code></td>
+                  <td>Implements one ticket (or the whole tiny Build). Uses <code>/tdd</code> at agreed seams, then <code>/code-review</code>, and commits on the current branch.</td>
+                  <td>One unblocked ticket at a time after <code>/to-tickets</code>. For a tiny Build, call <code>/implement</code> directly after a light grill (or skip grill).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="quote">
+            <p><strong>Do not</strong> replace this chain with <code>/to-issues</code> + bare <code>/tdd</code>. <code>/implement</code> already runs TDD and code-review. Clear context between tickets.</p>
+          </div>
           <p>Ready to leave Backlog: one-sentence hypothesis, numeric kill criteria, duration set, measure path named.</p>
           <p><strong>Metrics dictionary:</strong> <a href="reference/BML_Metrics_Tracking.md">BML Metrics Tracking</a> · <strong>Teaching template:</strong> <a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/bml-experiment.md" target="_blank" rel="noopener noreferrer">bml-experiment.md</a></p>
 
@@ -415,6 +454,7 @@ What is the thinnest thing we ship to test this?
             <li><label><input type="checkbox" data-progress="m4-c1" data-module="module-4" /> I can write a one-sentence hypothesis</label></li>
             <li><label><input type="checkbox" data-progress="m4-c2" data-module="module-4" /> I always define kill criteria before Build</label></li>
             <li><label><input type="checkbox" data-progress="m4-c3" data-module="module-4" /> I know Learn is filled only when deciding</label></li>
+            <li><label><input type="checkbox" data-progress="m4-c4" data-module="module-4" /> I can name the Build skill chain: grill → to-spec → to-tickets → implement</label></li>
           </ul>
 
           <div class="self-check">
@@ -455,12 +495,12 @@ What is the thinnest thing we ship to test this?
             <li>Create issue from template → label <code>experiment</code> (pre-set on the template)</li>
             <li>Add to board → <strong>Backlog</strong></li>
             <li>Move to <strong>Build</strong> only when hypothesis + kill criteria + duration are written</li>
-            <li><strong>Cursor workflow (Build only):</strong>
+            <li><strong>Cursor workflow (Build only)</strong> — see Module 4 for detail:
               <ul>
-                <li><code>/grill-with-docs</code> — prime with the issue + relevant folders (skip if Build is a tiny slice)</li>
-                <li>Spec only if non-trivial</li>
-                <li><code>/to-issues</code> or implement directly if the Build fits in one PR</li>
-                <li><code>/tdd</code> → <code>/code-review</code></li>
+                <li><code>/grill-with-docs</code> — prime with the issue + relevant folders</li>
+                <li><code>/to-spec</code> — publish a spec from the grilled conversation (skip if tiny)</li>
+                <li><code>/to-tickets</code> — vertical-slice tickets with blockers (skip if one PR)</li>
+                <li><code>/implement</code> — one ticket at a time (<code>/tdd</code> + <code>/code-review</code> inside)</li>
               </ul>
             </li>
             <li>Move to <strong>Measure</strong> — clock starts; no new scope; update the issue with weekly numbers</li>
@@ -488,7 +528,7 @@ What is the thinnest thing we ship to test this?
             <details>
               <summary>Show answers</summary>
               <ol>
-                <li>Experiment quality depends on crisp assumptions and a thin Build. Grilling surfaces missing kill criteria, vanity metrics, and scope that would make learning too slow — before you spend engineering time.</li>
+                <li>Experiment quality depends on crisp assumptions and a thin Build. Grilling surfaces missing kill criteria, vanity metrics, and scope that would make learning too slow — before <code>/to-spec</code> and tickets.</li>
                 <li>The thinnest test is shipped <em>and</em> a measurement path exists (instrumentation or a named manual log). Then the clock starts; new feature scope waits for a new experiment.</li>
               </ol>
             </details>

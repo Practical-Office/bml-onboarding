@@ -38,8 +38,9 @@ Ship (or confirm) weekly insight delivery + a measurable open/click path for pil
 ## Cursor workflow (when in Build)
 
 1. `/grill-with-docs` — this issue + OMI / insight delivery paths
-2. Implement thinnest `omi.insight.*` events if missing
-3. `/tdd` → `/code-review`
+2. `/to-spec` — if Build is non-trivial (e.g. new `omi.insight.*` event paths)
+3. `/to-tickets` — if the Build splits into multiple slices
+4. `/implement` — thinnest instrumentation; one ticket at a time (`/tdd` + `/code-review` inside)
 
 ## Technical Context / References
 

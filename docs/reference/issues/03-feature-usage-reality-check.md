@@ -38,8 +38,9 @@ Tag existing routes/actions with `feature.viewed` / `feature.used` / `feature.re
 ## Cursor workflow (when in Build)
 
 1. `/grill-with-docs` — Voyager routes for forecast/runway/cashflow
-2. Add thin client or API usage events only
-3. `/tdd` → `/code-review`
+2. `/to-spec` — if Build is non-trivial
+3. `/to-tickets` — if the Build splits into multiple slices
+4. `/implement` — thin client/API usage events only; one ticket at a time (`/tdd` + `/code-review` inside)
 
 ## Technical Context / References
 

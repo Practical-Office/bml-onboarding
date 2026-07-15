@@ -84,16 +84,17 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
 
 ## 5. Recommended Workflow (Cursor + Skills)
 
-We use Matt Pocock’s skills in this order:
+We use Matt Pocock’s skills in this order for non-trivial Builds:
 
-1. `/grill-with-docs` (with proper context priming)
-2. `/to-spec`
-3. `/to-tickets` (creates actual GitHub Issues)
-4. `/implement` (includes TDD internally)
-5. `/code-review`
+1. `/grill-with-docs` — prime with the issue + folders; sharpen assumptions (runs grilling + domain modeling)
+2. `/to-spec` — synthesize the conversation into a published spec (problem, stories, implementation + testing decisions); confirm seams — does **not** re-interview
+3. `/to-tickets` — break the spec into tracer-bullet vertical-slice tickets with blockers; quiz on granularity; publish
+4. `/implement` — one unblocked ticket at a time; uses `/tdd` at seams, then `/code-review`, then commits
+
+Tiny Builds: skip to `/implement` (optional light grill). Do **not** substitute `/to-issues` + bare `/tdd` for this chain — `/implement` already owns TDD and review.
 
 **Important:**  
-Do **not** jump straight to building. The quality of the experiment depends heavily on the quality of the grilling and spec phase.
+Do **not** jump straight to building on non-trivial work. Experiment quality depends on grilling and a clear spec before tickets.
 
 ---
 

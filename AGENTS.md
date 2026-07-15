@@ -23,7 +23,7 @@ Live BookIQ product experiments (#1083–#1085), the BML Experiments Project boa
 
 ## Skills
 
-Use global Matt/Cursor skills: `/wayfinder`, `/grilling`, `/research`, `/prototype`, `/to-issues`, `/tdd` as ticket type requires.
+Use global Matt/Cursor skills: `/wayfinder`, `/grilling`, `/grill-with-docs`, `/research`, `/prototype`, `/to-spec`, `/to-tickets`, `/implement`, `/tdd` as ticket type requires.
 
 ## Live course
 

@@ -80,12 +80,22 @@ Or use **New issue → BML Experiment** template (auto-applies `experiment`).
 
 | Column | Skill / action |
 |--------|----------------|
-| Backlog → Build | `/grill-with-docs` on the issue |
-| Build | `/tdd` (or `/to-issues` if Build splits), then `/code-review` |
+| Backlog → Build | `/grill-with-docs` on the issue (primes folders + sharpens the plan) |
+| Build (non-trivial) | `/to-spec` → `/to-tickets` → `/implement` (one ticket at a time; `/implement` runs `/tdd` + `/code-review`) |
+| Build (tiny) | `/implement` directly (optional light grill first) |
 | Measure | No code unless instrumentation is broken — update the issue with weekly numbers |
 | Learn | Human decision; optional `/grill-with-docs` if pivoting |
 
-Do **not** require full grill → spec → tickets for tiny Measure instrumentation. Skip to implement if the Build section fits in one PR.
+### What each Build skill does
+
+| Skill | Role |
+|-------|------|
+| `/grill-with-docs` | Relentless interview + ADR/glossary capture. Use before writing a spec. |
+| `/to-spec` | Synthesize the conversation into a published spec (no re-interview). Confirm test seams. |
+| `/to-tickets` | Break the spec into tracer-bullet vertical slices with blocking edges; publish; work the frontier. |
+| `/implement` | Build one ticket; use `/tdd` at agreed seams; `/code-review`; commit. Clear context between tickets. |
+
+Do **not** replace this with `/to-issues` + bare `/tdd`. Do **not** require full grill → spec → tickets for tiny Measure instrumentation — skip to `/implement` if the Build fits in one PR.
 
 ---
 

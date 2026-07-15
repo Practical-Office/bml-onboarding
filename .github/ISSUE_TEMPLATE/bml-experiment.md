@@ -5,7 +5,7 @@ title: "BML: "
 labels: ["experiment"]
 ---
 
-<!-- last-synced: 2026-07-15 from bookiqv1-rc -->
+<!-- last-synced: 2026-07-15 from bookiqv1-rc; Cursor workflow corrected 2026-07-15 to Matt /to-spec → /to-tickets → /implement -->
 
 ## Hypothesis
 
@@ -40,9 +40,11 @@ What is the thinnest thing we ship to test this? Not the full feature.
 ## Cursor workflow (when in Build)
 
 1. `/grill-with-docs` — prime with this issue + relevant folders
-2. Spec only if Build is non-trivial
-3. `/to-issues` or implement directly if slice is tiny
-4. `/tdd` → `/code-review`
+2. `/to-spec` — publish a spec from the grilled conversation (skip if Build is a single tiny PR)
+3. `/to-tickets` — split the spec into vertical-slice tickets with blockers (skip if one ticket)
+4. `/implement` — one unblocked ticket at a time (runs `/tdd` at seams, then `/code-review`, commits)
+
+Do not substitute `/to-issues` + bare `/tdd` for this chain.
 
 ## Technical Context / References
 
