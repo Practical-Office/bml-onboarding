@@ -1,22 +1,26 @@
 (() => {
-  const STORAGE_KEY = "build-loop-mastery-progress-v1";
+  const STORAGE_KEY = "bml-onboarding-progress-v2";
+  const THEME_KEY = "bml-onboarding-theme";
 
   const MODULES = [
-    { id: "module-1", href: "module-1.html", num: "1", label: "Introduction", meta: "25m" },
-    { id: "module-2", href: "module-2.html", num: "2", label: "The Build Loop", meta: "25m" },
-    { id: "module-3", href: "module-3.html", num: "3", label: "GitHub Setup", meta: "20m" },
-    { id: "module-4", href: "module-4.html", num: "4", label: "Ticket Template", meta: "25m" },
-    { id: "module-5", href: "module-5.html", num: "5", label: "First Experiment", meta: "30m" },
-    { id: "module-6", href: "module-6.html", num: "6", label: "Operating Board", meta: "25m" },
-    { id: "module-7", href: "module-7.html", num: "7", label: "First Project", meta: "30m" },
+    { id: "module-1", href: "module-1.html", num: "1", label: "Introduction", meta: "20m" },
+    { id: "module-2", href: "module-2.html", num: "2", label: "BML Loop & Board", meta: "20m" },
+    { id: "module-3", href: "module-3.html", num: "3", label: "GitHub Setup", meta: "15m" },
+    { id: "module-4", href: "module-4.html", num: "4", label: "Template & Skills", meta: "25m" },
+    { id: "module-5", href: "module-5.html", num: "5", label: "Run Experiment", meta: "25m" },
+    { id: "module-6", href: "module-6.html", num: "6", label: "Operate Board", meta: "20m" },
+    { id: "module-7", href: "module-7.html", num: "7", label: "Sandbox", meta: "30m" },
   ];
 
-  const SKILLS = [
+  const SKILLS_CORE = [
     { id: "skill-grill-with-docs", href: "skills/grill-with-docs.html", label: "grill-with-docs" },
-    { id: "skill-grilling", href: "skills/grilling.html", label: "grilling" },
     { id: "skill-to-spec", href: "skills/to-spec.html", label: "to-spec" },
     { id: "skill-to-tickets", href: "skills/to-tickets.html", label: "to-tickets" },
     { id: "skill-implement", href: "skills/implement.html", label: "implement" },
+  ];
+
+  const SKILLS_OPTIONAL = [
+    { id: "skill-grilling", href: "skills/grilling.html", label: "grilling" },
     { id: "skill-tdd", href: "skills/tdd.html", label: "tdd" },
     { id: "skill-code-review", href: "skills/code-review.html", label: "code-review" },
     { id: "skill-prototype", href: "skills/prototype.html", label: "prototype" },
@@ -24,30 +28,50 @@
   ];
 
   const REFERENCE = [
-    { id: "appendix", href: "appendix.html", num: "A", label: "BookIQ Appendix" },
+    { id: "appendix", href: "appendix.html", num: "A", label: "BookIQ links" },
     { id: "next-steps", href: "next-steps.html", num: "→", label: "Next steps" },
     { id: "certification", href: "certification.html", num: "✓", label: "Certification" },
   ];
 
   const PROGRESS_IDS = [
-    "m1-c1", "m1-c2", "m1-c3", "m1-c4",
-    "m2-c1", "m2-c2", "m2-c3", "m2-c4",
-    "m3-c1", "m3-c2", "m3-c3", "m3-c4",
-    "m4-c1", "m4-c2", "m4-c3", "m4-c4", "m4-c5",
-    "m5-c1", "m5-c2", "m5-c3", "m5-c4",
-    "m6-c1", "m6-c2", "m6-c3", "m6-c4",
+    "m1-c1", "m1-c2", "m1-c3",
+    "m2-c1", "m2-c2", "m2-c3",
+    "m3-c1", "m3-c2", "m3-c3",
+    "m4-c1", "m4-c2", "m4-c3", "m4-c4",
+    "m5-c1", "m5-c2", "m5-c3",
+    "m6-c1", "m6-c2", "m6-c3",
     "m7-c1", "m7-c2", "m7-c3",
-    "cert-1", "cert-2", "cert-3", "cert-4", "cert-5", "cert-6",
+    "cert-1", "cert-2", "cert-3", "cert-4", "cert-5",
   ];
 
   const PAGE_ORDER = [
     "index.html",
+    "quick-reference.html",
     ...MODULES.map((m) => m.href),
-    ...SKILLS.map((s) => s.href),
+    ...SKILLS_CORE.map((s) => s.href),
+    ...SKILLS_OPTIONAL.map((s) => s.href),
     "appendix.html",
     "next-steps.html",
     "certification.html",
   ];
+
+  const BML_TEMPLATE = `## Hypothesis
+What do we believe will happen?
+
+## Build
+What exactly are we building? What is the smallest version we can ship to test this?
+
+## Measure
+What specific metrics or data will we collect? How will we know if the hypothesis is validated or invalidated?
+
+## Learn
+What did we actually learn? What decision are we making? (Persevere / Pivot / Kill)
+
+## Acceptance Criteria
+- [ ] ...
+
+## Technical Context / References
+@relevant-files @folders (for /grill-with-docs)`;
 
   const body = document.body;
   const base = body.dataset.base || "";
@@ -70,22 +94,10 @@
     localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
   }
 
-  function moduleComplete(moduleId) {
-    const checks = [...document.querySelectorAll(`input[data-module="${moduleId}"]`)];
-    if (checks.length === 0) {
-      const state = load();
-      return Object.keys(state).some((k) => k.startsWith(moduleId.replace("module-", "m")) && state[k]);
-    }
-    const state = load();
-    const ids = checks.map((c) => c.dataset.progress);
-    return ids.length > 0 && ids.every((id) => state[id]);
-  }
-
   function updateGlobalProgress() {
     const state = load();
-    const unique = PROGRESS_IDS;
-    const done = unique.filter((id) => state[id]).length;
-    const pct = unique.length ? Math.round((done / unique.length) * 100) : 0;
+    const done = PROGRESS_IDS.filter((id) => state[id]).length;
+    const pct = PROGRESS_IDS.length ? Math.round((done / PROGRESS_IDS.length) * 100) : 0;
     const progressFill = document.getElementById("progressFill");
     const progressPct = document.getElementById("progressPct");
     if (progressFill) progressFill.style.width = `${pct}%`;
@@ -105,14 +117,14 @@
   function updateNavComplete() {
     const state = load();
     const byModule = {
-      "module-1": ["m1-c1", "m1-c2", "m1-c3", "m1-c4"],
-      "module-2": ["m2-c1", "m2-c2", "m2-c3", "m2-c4"],
-      "module-3": ["m3-c1", "m3-c2", "m3-c3", "m3-c4"],
-      "module-4": ["m4-c1", "m4-c2", "m4-c3", "m4-c4", "m4-c5"],
-      "module-5": ["m5-c1", "m5-c2", "m5-c3", "m5-c4"],
-      "module-6": ["m6-c1", "m6-c2", "m6-c3", "m6-c4"],
+      "module-1": ["m1-c1", "m1-c2", "m1-c3"],
+      "module-2": ["m2-c1", "m2-c2", "m2-c3"],
+      "module-3": ["m3-c1", "m3-c2", "m3-c3"],
+      "module-4": ["m4-c1", "m4-c2", "m4-c3", "m4-c4"],
+      "module-5": ["m5-c1", "m5-c2", "m5-c3"],
+      "module-6": ["m6-c1", "m6-c2", "m6-c3"],
       "module-7": ["m7-c1", "m7-c2", "m7-c3"],
-      certification: ["cert-1", "cert-2", "cert-3", "cert-4", "cert-5", "cert-6"],
+      certification: ["cert-1", "cert-2", "cert-3", "cert-4", "cert-5"],
     };
     document.querySelectorAll(".nav-link[data-module]").forEach((link) => {
       const moduleId = link.dataset.module;
@@ -131,9 +143,14 @@
         `<a class="nav-link${pageId === m.id ? " is-active" : ""}" data-module="${m.id}" href="${href(m.href)}"><span class="nav-num">${m.num}</span> ${m.label} <span class="nav-meta">${m.meta}</span></a>`
     ).join("");
 
-    const skillLinks = SKILLS.map(
+    const skillCoreLinks = SKILLS_CORE.map(
       (s) =>
         `<a class="nav-link${pageId === s.id ? " is-active" : ""}" data-module="${s.id}" href="${href(s.href)}"><span class="nav-num">/</span> ${s.label}</a>`
+    ).join("");
+
+    const skillOptionalLinks = SKILLS_OPTIONAL.map(
+      (s) =>
+        `<a class="nav-link${pageId === s.id ? " is-active" : ""}" data-module="${s.id}" href="${href(s.href)}"><span class="nav-num">·</span> ${s.label}</a>`
     ).join("");
 
     const refLinks = REFERENCE.map(
@@ -146,7 +163,7 @@
         <img src="${href("assets/practical-ai-mark.png")}" alt="" width="40" height="40" />
         <div class="sidebar-brand-text">
           <strong>Practical AI</strong>
-          <span>Build Loop Mastery</span>
+          <span>Build-Measure-Learn</span>
         </div>
       </a>
       <div class="progress-panel">
@@ -161,15 +178,19 @@
       <nav class="sidebar-nav">
         <p class="nav-section-label">Start</p>
         <a class="nav-link${pageId === "hub" ? " is-active" : ""}" data-module="hub" href="${href("index.html")}"><span class="nav-num">⌂</span> Course hub</a>
+        <a class="nav-link${pageId === "quick-reference" ? " is-active" : ""}" data-module="quick-reference" href="${href("quick-reference.html")}"><span class="nav-num">⚡</span> Quick reference</a>
         <p class="nav-section-label">Modules</p>
         ${moduleLinks}
-        <p class="nav-section-label">Cursor skills</p>
-        ${skillLinks}
+        <p class="nav-section-label">Build skills (required)</p>
+        ${skillCoreLinks}
+        <p class="nav-section-label">Optional deep-dives</p>
+        ${skillOptionalLinks}
         <p class="nav-section-label">Reference</p>
         ${refLinks}
         <a class="nav-link" href="${href("course-full.html")}"><span class="nav-num">PDF</span> Save as PDF</a>
       </nav>
       <div class="sidebar-footer">
+        <button type="button" class="btn btn-ghost btn-sm" id="themeToggle" style="width:100%;margin-bottom:0.5rem">Toggle theme</button>
         <a href="https://github.com/Practical-Office/bml-onboarding" target="_blank" rel="noopener noreferrer">GitHub repo</a>
         ·
         <a href="https://p-ai.net" target="_blank" rel="noopener noreferrer">p-ai.net</a>
@@ -229,12 +250,78 @@
     document.getElementById("printCourse")?.addEventListener("click", () => window.print());
   }
 
+  function bindTheme() {
+    const stored = localStorage.getItem(THEME_KEY);
+    if (stored === "dark" || stored === "light") {
+      document.documentElement.setAttribute("data-theme", stored);
+    }
+    const toggle = () => {
+      const current = document.documentElement.getAttribute("data-theme");
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const isDark = current === "dark" || (!current && prefersDark);
+      const next = isDark ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem(THEME_KEY, next);
+    };
+    document.getElementById("themeToggle")?.addEventListener("click", toggle);
+    document.getElementById("topbarTheme")?.addEventListener("click", toggle);
+  }
+
+  async function copyText(text, feedbackEl) {
+    try {
+      await navigator.clipboard.writeText(text);
+      if (feedbackEl) {
+        feedbackEl.textContent = "Copied!";
+        feedbackEl.classList.add("is-visible");
+        setTimeout(() => feedbackEl.classList.remove("is-visible"), 2000);
+      }
+    } catch {
+      if (feedbackEl) {
+        feedbackEl.textContent = "Copy failed — select manually";
+        feedbackEl.classList.add("is-visible");
+      }
+    }
+  }
+
+  function bindCopyButtons() {
+    document.querySelectorAll("[data-copy-target]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const targetId = btn.dataset.copyTarget;
+        const el = document.getElementById(targetId);
+        const feedback = btn.parentElement?.querySelector(".copy-feedback");
+        const text = el?.textContent || el?.innerText || BML_TEMPLATE;
+        copyText(text.trim(), feedback);
+      });
+    });
+    document.querySelectorAll("[data-copy-template]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const feedback = btn.parentElement?.querySelector(".copy-feedback");
+        copyText(BML_TEMPLATE, feedback);
+      });
+    });
+  }
+
+  function bindRevealButtons() {
+    document.querySelectorAll("[data-reveal]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const answer = document.getElementById(btn.dataset.reveal);
+        if (!answer) return;
+        const open = answer.classList.toggle("is-open");
+        btn.textContent = open ? "Hide answer" : "Show answer";
+        btn.setAttribute("aria-expanded", String(open));
+      });
+    });
+  }
+
   if (!isPrintPage) {
     buildSidebar();
     setupPrevNext();
     bindChecks();
     bindMobileNav();
     bindReset();
+    bindTheme();
+    bindCopyButtons();
+    bindRevealButtons();
     applyChecks();
   }
   bindPrint();

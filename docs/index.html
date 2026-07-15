@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Build Loop Mastery — Practical AI Team Onboarding</title>
-  <meta name="description" content="Build–Measure–Learn Loop mastery for Practical AI teammates. Learn why and how to run Build Loop experiments without reading the book first." />
+  <title>Build-Measure-Learn Onboarding — Practical AI</title>
+  <meta name="description" content="Official Build-Measure-Learn onboarding for Practical AI / BookIQ. Run disciplined experiments on GitHub — not feature theater." />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,7 @@
         <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
         <div class="topbar-title">Course hub</div>
         <div class="topbar-actions">
+          <button type="button" class="btn btn-ghost btn-sm" id="topbarTheme" aria-label="Toggle theme">Theme</button>
           <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
           <a class="btn btn-primary btn-sm" href="module-1.html">Start module 1 →</a>
         </div>
@@ -27,20 +28,20 @@
       <main class="content" id="top">
         <section class="hero">
           <span class="status-chip">Practical AI team onboarding</span>
-          <h1>Build Loop <em>Mastery</em></h1>
-          <p class="hero-lede">Learn the <strong>Build–Measure–Learn Loop</strong> as a shared experiment system — why validated learning beats feature velocity, how to run Build Loop experiments on GitHub, and when to use each Cursor skill in the Build phase.</p>
+          <h1>Build-Measure-Learn <em>Onboarding</em></h1>
+          <p class="hero-lede">Learn the <strong>Build → Measure → Learn</strong> loop as Practical AI’s shared experiment system. Create strong tickets, respect the Learn column, and kill features when data says so. (~2.5–3 hours)</p>
         </section>
 
         <div class="card-grid">
-          <div class="stat-card"><strong>7 modules + 9 skills</strong><span>~3–4 hours guided learning</span></div>
-          <div class="stat-card"><strong>Sandbox → live board</strong><span>Lead-reviewed certification</span></div>
-          <div class="stat-card"><strong>Portable core</strong><span>Product appendix optional</span></div>
-          <div class="stat-card"><strong>Save as PDF</strong><span>Full course printable</span></div>
+          <div class="stat-card"><strong>7 modules</strong><span>~2.5–3 hours guided</span></div>
+          <div class="stat-card"><strong>BookIQ examples</strong><span>Five real experiment tickets</span></div>
+          <div class="stat-card"><strong>Quick reference</strong><span>Template + gates + WIP</span></div>
+          <div class="stat-card"><strong>Save as PDF</strong><span>Printable full course</span></div>
         </div>
 
         <div class="section-card">
           <p class="eyebrow">Naming</p>
-          <p><strong>Build Loop Mastery</strong> is this course. The full loop is the <strong>Build–Measure–Learn Loop</strong>. We say <strong>Build Loop</strong> instead of the old acronym. Kanban columns stay <em>Build</em>, <em>Measure</em>, and <em>Learn</em>.</p>
+          <p><strong>Build-Measure-Learn</strong> is the system name. <em>Build Loop</em> is shorthand only. Kanban columns: Backlog, Build, Measure, <strong>Learn / Validate</strong>, Done.</p>
         </div>
 
         <div class="section-card" id="toc">
@@ -49,36 +50,37 @@
             <table>
               <thead><tr><th>#</th><th>Module</th><th>Time</th></tr></thead>
               <tbody>
-                <tr><td>1</td><td><a href="module-1.html">Introduction — why Build Loop</a></td><td>~25 min</td></tr>
-                <tr><td>2</td><td><a href="module-2.html">The Build–Measure–Learn Loop</a></td><td>~25 min</td></tr>
-                <tr><td>3</td><td><a href="module-3.html">GitHub Setup</a></td><td>~20 min</td></tr>
-                <tr><td>4</td><td><a href="module-4.html">Ticket Template &amp; Build skills</a></td><td>~25 min</td></tr>
-                <tr><td>5</td><td><a href="module-5.html">Running an experiment</a></td><td>~30 min</td></tr>
-                <tr><td>6</td><td><a href="module-6.html">Operating the board</a></td><td>~25 min</td></tr>
-                <tr><td>7</td><td><a href="module-7.html">Your first project</a></td><td>~30 min</td></tr>
-                <tr><td>—</td><td><a href="appendix.html">BookIQ appendix</a></td><td>reference</td></tr>
+                <tr><td>1</td><td><a href="module-1.html">Introduction — why BML</a></td><td>~20 min</td></tr>
+                <tr><td>2</td><td><a href="module-2.html">The loop &amp; board</a></td><td>~20 min</td></tr>
+                <tr><td>3</td><td><a href="module-3.html">GitHub setup</a></td><td>~15 min</td></tr>
+                <tr><td>4</td><td><a href="module-4.html">Ticket template &amp; Build skills</a></td><td>~25 min</td></tr>
+                <tr><td>5</td><td><a href="module-5.html">Running an experiment</a></td><td>~25 min</td></tr>
+                <tr><td>6</td><td><a href="module-6.html">Operating the board</a></td><td>~20 min</td></tr>
+                <tr><td>7</td><td><a href="module-7.html">Sandbox — your first ticket</a></td><td>~30 min</td></tr>
+                <tr><td>—</td><td><a href="quick-reference.html">Quick reference</a></td><td>print</td></tr>
+                <tr><td>—</td><td><a href="appendix.html">BookIQ live links</a></td><td>reference</td></tr>
                 <tr><td>—</td><td><a href="certification.html">Certification</a></td><td>submit</td></tr>
               </tbody>
             </table>
           </div>
           <p style="margin:1rem 0 0;font-size:0.9rem;color:var(--ink-faint)">
-            Cursor skills deep-dives: <a href="skills/grill-with-docs.html">grill-with-docs</a> ·
-            <a href="skills/to-spec.html">to-spec</a> ·
-            <a href="skills/implement.html">implement</a> ·
-            <a href="skills/wayfinder.html">wayfinder</a> (see sidebar).
+            Build skills: <a href="skills/grill-with-docs.html">grill-with-docs</a> →
+            <a href="skills/to-spec.html">to-spec</a> →
+            <a href="skills/to-tickets.html">to-tickets</a> →
+            <a href="skills/implement.html">implement</a>
           </p>
         </div>
 
         <div class="print-actions no-print">
           <p class="eyebrow">Save as PDF</p>
-          <p>Open the <a href="course-full.html">full course page</a>, then use your browser: <strong>Print → Save as PDF</strong> (Chrome, Safari, or Edge).</p>
+          <p>Open the <a href="course-full.html">full course page</a>, then <strong>Print → Save as PDF</strong>.</p>
           <button type="button" class="btn btn-primary" id="printCourse" onclick="location.href='course-full.html'">Open printable course →</button>
         </div>
 
         <div class="page-nav no-print" id="pageNav"></div>
 
         <p class="footer-note">
-          Build Loop Mastery — concepts from Eric Ries’s Lean Startup methodology summarized with attribution; not a substitute for the book.
+          Build-Measure-Learn Onboarding — concepts from Eric Ries’s Lean Startup methodology summarized with attribution; not a substitute for the book.
           Practical AI adds an explicit <strong>kill</strong> Learn outcome.
         </p>
       </main>

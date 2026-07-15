@@ -1,14 +1,14 @@
 ---
-title: "Build Loop: Core Value — OMI weekly insights engagement"
+title: "BML: Core Value — OMI weekly insights engagement"
 labels: [experiment]
 github: https://github.com/Book-IQ/bookiqv1-rc/issues/1083
 ---
 
 ## Hypothesis
 
-First customers will actively read and act on OMI’s weekly insights (not just glance at the dashboard).
+Customers will actively read and act on OMI’s weekly insights (not just glance at the dashboard).
 
-## Build (smallest test)
+## Build
 
 Ship (or confirm) weekly insight delivery + a measurable open/click path for pilot tenants. Prefer existing email/in-app insight surface; add only the minimum events from `docs/reference/Build_Loop_Metrics_Tracking.md` (`omi.insight.*`). No new insight product work beyond instrumentation and a clear CTA.
 
@@ -22,7 +22,7 @@ Ship (or confirm) weekly insight delivery + a measurable open/click path for pil
 **Duration:** 4 weeks  
 **Sample:** All first-customer / pilot tenants onboarded this cohort
 
-## Learn (fill only when deciding)
+## Learn
 
 - **Decision:** Persevere / Pivot / Kill
 - **Evidence:**
@@ -34,13 +34,6 @@ Ship (or confirm) weekly insight delivery + a measurable open/click path for pil
 - [ ] Instrumentation or manual weekly log exists before Measure starts
 - [ ] Learn decision recorded with evidence after 4 weeks (or earlier if clearly dead)
 - [ ] Decision label applied: `persevere` | `pivot` | `kill-candidate`
-
-## Cursor workflow (when in Build)
-
-1. `/grill-with-docs` — this issue + OMI / insight delivery paths
-2. `/to-spec` — if Build is non-trivial (e.g. new `omi.insight.*` event paths)
-3. `/to-tickets` — if the Build splits into multiple slices
-4. `/implement` — thinnest instrumentation; one ticket at a time (`/tdd` + `/code-review` inside)
 
 ## Technical Context / References
 

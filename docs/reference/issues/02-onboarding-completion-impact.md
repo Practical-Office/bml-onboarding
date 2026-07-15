@@ -1,5 +1,5 @@
 ---
-title: "Build Loop: Onboarding completion vs engagement"
+title: "BML: Onboarding completion vs engagement"
 labels: [experiment]
 github: https://github.com/Book-IQ/bookiqv1-rc/issues/1084
 ---
@@ -8,7 +8,7 @@ github: https://github.com/Book-IQ/bookiqv1-rc/issues/1084
 
 Customers who complete full onboarding will have significantly higher engagement (insight acts / meaningful feature use) than those who do not.
 
-## Build (smallest test)
+## Build
 
 Define the required onboarding steps (`invite_accepted` → `tenant_connected` → `first_dashboard_view` → `first_omi_interaction`). Instrument `onboarding.*` events (or a manual checklist per tenant). Do **not** redesign onboarding UX until Measure shows completion <50% or no engagement lift.
 
@@ -22,7 +22,7 @@ Define the required onboarding steps (`invite_accepted` → `tenant_connected` �
 **Duration:** 3–4 weeks (overlap with Core Value cohort)  
 **Sample:** Same first-customer cohort
 
-## Learn (fill only when deciding)
+## Learn
 
 - **Decision:** Persevere / Pivot / Kill
 - **Evidence:**
@@ -34,13 +34,6 @@ Define the required onboarding steps (`invite_accepted` → `tenant_connected` �
 - [ ] Per-tenant completion status tracked (events or sheet)
 - [ ] Engagement compare posted at Learn
 - [ ] Decision label applied: `persevere` | `pivot` | `kill-candidate`
-
-## Cursor workflow (when in Build)
-
-1. `/grill-with-docs` — onboarding + invite flows
-2. `/to-spec` — if Build is non-trivial
-3. `/to-tickets` — if the Build splits into multiple slices
-4. `/implement` — thinnest instrumentation only; skip to `/implement` for sheet/config-only changes
 
 ## Technical Context / References
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Build Loop Mastery — Full Course (Print)</title>
-  <meta name="description" content="Printable full Build Loop Mastery course — Save as PDF via browser print." />
+  <title>Build-Measure-Learn Onboarding — Full Course (Print)</title>
+  <meta name="description" content="Printable full BML onboarding course — Save as PDF via browser print." />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,1454 +17,667 @@
       <main class="content" id="top">
         <section class="hero">
           <span class="status-chip">Printable edition</span>
-          <h1>Build Loop <em>Mastery</em></h1>
-          <p class="hero-lede">Full course — Build–Measure–Learn Loop playbook for Practical AI teammates. Save as PDF uses your browser Print dialog.</p>
+          <h1>Build-Measure-Learn <em>Onboarding</em></h1>
+          <p class="hero-lede">Full course — ~2.5–3 hours. Use browser Print → Save as PDF.</p>
         </section>
         <div class="print-actions no-print">
-          <p class="eyebrow">Save as PDF</p>
-          <p>Chrome, Safari, or Edge: <strong>Print → Save as PDF</strong>. Navigation is hidden in print view.</p>
           <button type="button" class="btn btn-primary" id="printCourse">Print this page →</button>
           <a class="btn btn-ghost" href="index.html" style="margin-left:0.5rem">← Course hub</a>
         </div>
-
-        <!-- Module 1 -->
+        <!-- module-1.html -->
 <section class="module" id="module-1">
           <div class="module-header">
             <div class="module-badge">1</div>
             <div>
-              <h2>Introduction — why Build Loop</h2>
-              <p class="module-time">~25 min · playbook</p>
+              <h2>Introduction — why Build-Measure-Learn</h2>
+              <p class="module-time">~20 min</p>
             </div>
           </div>
 
-          <div class="section-card">
-            <p class="eyebrow">Section 1</p>
-            <h3>Why this matters</h3>
-            <p>Most teams can ship software. The harder question — especially for new products and major bets — is whether anyone wants what you built enough to sustain a business around it. That question lives in <strong>extreme uncertainty</strong>. You do not know yet if the problem is real, if your solution fits, or if customers will pay, adopt, or return.</p>
-            <p>Under uncertainty, shipping more features is not the same as making progress. A team can close dozens of tickets, hit sprint velocity targets, and still learn nothing decisive about the bet they are running. Activity looks productive; the business model stays unproven.</p>
-            <p><strong>Validated learning</strong> is the unit of progress that matters here: evidence, from real-world contact with customers or users, that a belief about value, growth, or feasibility is true or false. Not opinions in a roadmap doc. Not internal applause for a launch. Learning you can point to and act on.</p>
-            <p>Build Loop Mastery exists because Practical AI teams need a shared experiment system — not a feature factory with prettier standups. The <strong>Build–Measure–Learn Loop</strong> is that system: turn an idea into something testable, measure how people respond, then decide whether to continue, change course, or stop. Faster cycles through that loop beat longer cycles through a backlog of unvalidated assumptions.</p>
-            <p>This module frames the mindset. Later modules show you how to run experiments on GitHub, write tickets, and operate the board. Start here so every experiment you run has a clear <em>why</em>.</p>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>Most teams say they do Build-Measure-Learn but never kill anything. If Learn does not regularly produce kill, pivot, or persevere decisions from real data, you are doing <strong>theater</strong> — not learning.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 2</p>
-            <h3>Ideas / concepts</h3>
-
-            <h3>Uncertainty is the default</h3>
-            <p>New products and significant pivots are not execution problems alone. They are learning problems. The team must discover whether the world behaves the way their strategy assumes. Until that discovery happens, roadmaps are hypotheses written in calendar form.</p>
-            <p>Two questions sit above “Can we build it?”:</p>
-            <ul>
-              <li><strong>Should we build this?</strong> — Is there a problem worth solving, for people who will engage?</li>
-              <li><strong>Can we build a sustainable business around it?</strong> — Will behavior, willingness to pay, or growth mechanics support the vision?</li>
-            </ul>
-            <p>Build Loop work makes those questions explicit instead of burying them under feature lists.</p>
-
-            <h3>Validated learning as progress</h3>
-            <p>Traditional project management measures progress by outputs: stories closed, milestones hit, releases shipped. Under uncertainty, outputs can increase while knowledge stays flat.</p>
-            <p><strong>Validated learning</strong> means you ran something in the real world and updated your beliefs with evidence. Examples of validated learning (concept-level):</p>
-            <ul>
-              <li>Users who saw the new flow completed a key action at twice the baseline rate.</li>
-              <li>Prospects who received the offer declined uniformly — the value hypothesis failed fast.</li>
-              <li>A manual concierge version of the service retained fewer than one in ten participants — the problem may be weaker than assumed.</li>
-            </ul>
-            <p>Invalidated learning also counts: you learned the assumption was wrong. That is progress if you record it and change behavior. Shipping without measuring, or measuring without deciding, is not progress — it is theater.</p>
-
-            <h3>Risky assumptions (leap-of-faith)</h3>
-            <p>Every product bet rests on assumptions. Some are safe; others, if wrong, collapse the whole strategy. Those are <strong>risky assumptions</strong> — sometimes called leap-of-faith assumptions in Lean Startup vocabulary.</p>
-            <p>Common categories:</p>
-            <ul>
-              <li><strong>Value</strong> — Users will find this useful enough to change behavior.</li>
-              <li><strong>Growth</strong> — Acquired users will invite others, return, or expand usage without unsustainable spend.</li>
-              <li><strong>Feasibility</strong> — We can deliver the experience at acceptable cost and quality.</li>
-              <li><strong>Channel / willingness to pay</strong> — Customers will pay, or adopt through the channel we can reach.</li>
-            </ul>
-            <p>Build Loop experiments should name the riskiest assumption up front. The ticket is a hypothesis, not a feature wishlist with a deadline.</p>
-
-            <h3>Why not a feature factory?</h3>
-            <p>A <strong>feature factory</strong> optimizes for throughput: more stories, more releases, more surface area. Inputs and outputs are visible; learning is optional. Symptoms include:</p>
-            <ul>
-              <li>Backlogs grow faster than validated conclusions.</li>
-              <li>“Done” means merged, not learned.</li>
-              <li>Metrics are reported but rarely change the next sprint.</li>
-              <li>Learn columns stay empty or hold vague retrospectives with no persevere / pivot / kill decision.</li>
-            </ul>
-            <p>Feature factories feel busy. Build Loop teams feel decisive — even when the decision is to stop.</p>
-
-            <h3>The Build–Measure–Learn Loop (introduction)</h3>
-            <p>The fundamental activity, attributed to Eric Ries’s Lean Startup methodology, is a repeating cycle:</p>
-            <ol>
-              <li><strong>Build</strong> — Create the smallest version that can test the risky assumption (often called a minimum viable product, or MVP).</li>
-              <li><strong>Measure</strong> — Observe how customers or users respond using metrics chosen <em>before</em> you ship.</li>
-              <li><strong>Learn</strong> — Interpret results, write what you learned, and decide: persevere on the current path, pivot to a new hypothesis, or kill the bet.</li>
-            </ol>
-            <p>Practical AI adds an explicit <strong>kill</strong> outcome so teams stop experiments cleanly instead of letting failed bets linger as zombie projects.</p>
-            <p>Optimize for <strong>cycle time</strong>: how fast you move from idea to decision. A small experiment decided in a week beats a large release debated for a quarter.</p>
-
-            <h3>MVP — preview for Module 2</h3>
-            <p>A <strong>minimum viable product</strong> is the simplest build that starts learning about core assumptions with real users — not a half-finished product shipped for its own sake. The MVP is sized for the hypothesis, not the roadmap. Module 2 goes deeper on phases, exit criteria, and metrics.</p>
+            <h3>What you are learning</h3>
+            <p>BookIQ is onboarding first customers. The goal is <strong>not</strong> to ship features faster — it is to test risky assumptions about whether customers get real value from OMI insights, human oversight, forecasts, and pricing.</p>
+            <p><strong>Validated learning</strong> is progress: evidence from real customers that updates your beliefs. Shipping without measuring, or measuring without deciding, is not progress.</p>
+            <p>The loop: <strong>Build</strong> the smallest test → <strong>Measure</strong> with pre-defined metrics → <strong>Learn</strong> (Persevere / Pivot / Kill). Optimize <em>cycle time</em> from hypothesis to decision.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 3</p>
-            <h3>How to do it</h3>
-            <p>Before you open a repo or file a ticket, run this sequence mentally (or in a short doc). It takes minutes and prevents feature-factory drift.</p>
-            <ol>
-              <li><strong>Name the bet.</strong> State in one sentence what you are trying to learn — not what you are trying to ship. Example shape: “We believe [segment] will [behavior] because [reason].”</li>
-              <li><strong>Pick the riskiest assumption.</strong> List two or three assumptions; circle the one that would kill the bet if false. That assumption drives the experiment.</li>
-              <li><strong>Define what would falsify it.</strong> Write what evidence would mean “this assumption is wrong” before you build. Without falsification criteria, any result can be spun as success.</li>
-              <li><strong>Size the Build for learning.</strong> Ask: what is the smallest thing we can put in front of real users this cycle? Cut scope until the answer tests the assumption, not the whole vision.</li>
-              <li><strong>Pre-register metrics.</strong> Choose one or two measures that tie directly to the assumption. Decide pass / kill thresholds in advance (Module 2 covers actionable vs vanity metrics).</li>
-              <li><strong>Plan the Learn decision.</strong> Agree who records the outcome and which labels apply: persevere, pivot, or kill. No “we’ll see” without a decision owner.</li>
-              <li><strong>Start the loop.</strong> Move the work through Build → Measure → Learn. When Learn is done, the backlog gets the <em>next</em> hypothesis — not an automatic continuation of the old plan.</li>
-            </ol>
-            <p>If you cannot complete steps 2–5, you are not ready to Build yet. You are still in ideation — which is fine, but do not pretend it is an experiment.</p>
+            <h3>BookIQ — four risky assumptions</h3>
+            <p>These drive our first experiments (handoff §2):</p>
+            <ul>
+              <li>Customers <strong>act on OMI insights</strong> — not just glance at the dashboard.</li>
+              <li><strong>Human-reviewed</strong> insights add trust vs pure AI.</li>
+              <li>Customers <strong>keep paying</strong> after novelty wears off (30–60 days).</li>
+              <li><strong>Forecast &amp; Runway</strong> (and similar) are actually used and valued.</li>
+            </ul>
+            <p>Every experiment ticket names one of these (or a sharper slice) as the hypothesis.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 4</p>
-            <h3>How-to micro-scenario</h3>
-            <p><em>Abstract walkthrough — no product names, no book case studies.</em></p>
-            <p>A small team serves remote professionals who struggle to coordinate recurring group activities across time zones. Leadership wants a full scheduling product with integrations, mobile apps, and AI suggestions. The team pushes back: nobody has validated that professionals will trust a new tool for this job.</p>
-            <p><strong>Bet stated:</strong> “We believe busy remote workers will complete a group scheduling task using a lightweight web flow if it saves them more than ten minutes compared to email threads.”</p>
-            <p><strong>Riskiest assumption:</strong> Value — users will finish scheduling through an unfamiliar interface instead of reverting to email.</p>
-            <p><strong>Falsification:</strong> Fewer than 40% of invited participants complete scheduling within 48 hours.</p>
-            <p><strong>Build (MVP-sized):</strong> A single web page: organizer picks three time windows, participants tap one option, organizer sees confirmations. No accounts, no calendar sync, no native apps. Built in days, not months.</p>
-            <p><strong>Measure:</strong> Completion rate per invite; time from first link open to confirmed slot; optional one-question survey on “would you use this again?”</p>
-            <p><strong>Learn:</strong> After two organizer cohorts (n ≈ 30 invites), completion hits 62%. Persevere on the web-first flow; defer mobile and integrations. Document: email escape hatches dropped when reminders were added — hypothesis for next loop.</p>
-            <p>Notice what did <em>not</em> happen: they did not ship a feature factory quarter. They did not count page views as victory. They wrote a decision and fed the next experiment.</p>
+            <h3>Do this now</h3>
+            <p>Write one sentence: <em>“The riskiest assumption for BookIQ right now is ___ because if it’s wrong, ___.”</em> You will reuse this in Module 7.</p>
           </div>
 
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
-              <li><strong>Shipping as progress.</strong> Celebrating merge or launch without pre-defined learning criteria. Fix: no Build ticket closes until Measure and Learn owners are named.</li>
-              <li><strong>Vague hypotheses.</strong> “Improve onboarding” is a theme, not a testable belief. Fix: one sentence with segment, behavior, and expected change.</li>
-              <li><strong>Testing the safe assumption.</strong> Experiments that only validate easy technical work while ignoring value or growth risk. Fix: always label the riskiest assumption on the ticket.</li>
-              <li><strong>Immune metrics.</strong> Choosing measures that cannot fail (total signups, raw page views). Fix: prefer rates and behaviors tied to the assumption (Module 2).</li>
-              <li><strong>Learn theater.</strong> Retrospectives that never produce persevere, pivot, or kill. Fix: Learn column requires a decision label before Done.</li>
-              <li><strong>Oversized MVP.</strong> Building the roadmap slice “because we’ll need it anyway.” Fix: cut until the build only serves the current hypothesis.</li>
-              <li><strong>Ignoring kill.</strong> Letting failed bets continue as low-priority maintenance. Fix: kill explicitly; archive learning so the board stays honest.</li>
+              <li><strong>Feature factory:</strong> velocity celebrated; Learn column empty.</li>
+              <li><strong>Vague hypotheses:</strong> “Improve onboarding” is not testable.</li>
+              <li><strong>Vanity metrics:</strong> logins and page views that cannot fail the bet.</li>
             </ul>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 6</p>
-            <h3>Progress checklist</h3>
-            <p>Check each item when you can explain it without looking at your notes.</p>
+            <h3>Checklist</h3>
             <ul class="checklist">
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c1" data-module="module-1" />
-                  <span>I can explain why validated learning — not shipping volume — is progress under uncertainty.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c2" data-module="module-1" />
-                  <span>I can name the riskiest assumption on a bet and say what would falsify it.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c3" data-module="module-1" />
-                  <span>I can describe Build, Measure, and Learn in order and why cycle time matters.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c4" data-module="module-1" />
-                  <span>I can contrast a feature factory with a Build Loop team in concrete symptoms.</span>
-                </label>
-              </li>
+              <li><label><input type="checkbox" data-progress="m1-c1" data-module="module-1" /><span>I can explain validated learning vs shipping volume.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m1-c2" data-module="module-1" /><span>I can name BookIQ’s four core risky assumptions.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m1-c3" data-module="module-1" /><span>I wrote my one-sentence riskiest-assumption statement.</span></label></li>
             </ul>
           </div>
 
-          <div class="section-card">
-            <p class="eyebrow">Section 7</p>
+          <div class="section-card self-check">
             <h3>Self-check</h3>
-            <div class="self-check">
-              <p class="hint">Answer in your head first, then expand each item.</p>
-              <ol>
-                <li>What is the difference between shipping and validated learning?</li>
-                <li>Why should an experiment target the <em>riskiest</em> assumption first?</li>
-                <li>What are three signs your team is running a feature factory?</li>
-                <li>What does “optimize for cycle time” mean in the Build–Measure–Learn Loop?</li>
-              </ol>
-              <details>
-                <summary>1. Shipping vs validated learning</summary>
-                <p>Shipping adds outputs to the world; validated learning updates beliefs with evidence from how people respond. You can ship without learning (launch nobody uses). You can learn without a large ship (concierge test, prototype, smoke test). Under uncertainty, learning is the progress that reduces risk on the business bet.</p>
-              </details>
-              <details>
-                <summary>2. Riskiest assumption first</summary>
-                <p>If the riskiest assumption is false, the rest of the strategy does not matter — polishing secondary features wastes time. Testing it early maximizes learning per unit of effort and avoids building on a false foundation.</p>
-              </details>
-              <details>
-                <summary>3. Feature factory signs</summary>
-                <ol>
-                  <li>Velocity and output metrics dominate; learning metrics are absent or ignored.</li>
-                  <li>Work is “done” at merge without a Measure / Learn record.</li>
-                  <li>Backlog grows from opinions, not from prior experiment decisions.</li>
-                </ol>
-              </details>
-              <details>
-                <summary>4. Cycle time</summary>
-                <p>Cycle time is the elapsed time from hypothesis to decision. Shorter cycles mean more experiments per quarter, faster correction when wrong, and less sunk cost on false paths. The loop’s power is speed through Build → Measure → Learn, not size of any single Build.</p>
-              </details>
+            <div class="self-check-item">
+              <p>What is the difference between shipping and validated learning?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc1-1">Show answer</button>
+              <div class="reveal-answer" id="sc1-1">Shipping adds outputs; validated learning updates beliefs with customer evidence. You can ship without learning.</div>
+            </div>
+            <div class="self-check-item">
+              <p>Why must Learn produce kill/pivot/persevere decisions?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc1-2">Show answer</button>
+              <div class="reveal-answer" id="sc1-2">Without decisions, the board is theater — activity without changed behavior.</div>
             </div>
           </div>
         </section>
-        <!-- Module 2 -->
+        <!-- module-2.html -->
 <section class="module" id="module-2">
           <div class="module-header">
             <div class="module-badge">2</div>
             <div>
-              <h2>The Build–Measure–Learn Loop</h2>
-              <p class="module-time">~25 min · playbook</p>
+              <h2>The Build-Measure-Learn loop &amp; board</h2>
+              <p class="module-time">~20 min</p>
             </div>
           </div>
 
-          <div class="section-card">
-            <p class="eyebrow">Section 1</p>
-            <h3>Why this matters</h3>
-            <p>Module 1 argued that validated learning beats feature velocity under uncertainty. Module 2 gives you the <strong>operating mechanics</strong> of the Build–Measure–Learn Loop — what each phase is for, when you are allowed to leave it, and how Learn produces real decisions.</p>
-            <p>Teams that skip phase discipline drift back into theater: big Builds with fuzzy Measure plans, dashboards full of numbers that never change priorities, and Learn columns that hold narrative without persevere, pivot, or kill. The loop looks right on a board; behavior stays factory-shaped.</p>
-            <p>Getting the phases right is how Build Loop Mastery stays portable across products. The columns are the same whether you are testing pricing, onboarding, or a new agent workflow: Build tests a hypothesis, Measure gathers evidence against pre-registered criteria, Learn commits to a next move. Practical AI’s explicit <strong>kill</strong> path prevents zombie experiments that drain attention after the hypothesis has already failed.</p>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p><strong>Learn / Validate</strong> is the most important column. If you are not making real decisions there, the whole system is broken.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 2</p>
-            <h3>Ideas / concepts</h3>
-
-            <h3>Three phases and exit criteria</h3>
-            <p>Each phase has a job and a <strong>gate</strong> — criteria for moving forward. Without gates, work slides through the board on momentum instead of evidence.</p>
-
-            <pre class="loop-diagram">  BACKLOG          BUILD              MEASURE            LEARN / VALIDATE         DONE
-  ───────          ─────              ───────            ────────────────         ────
-  hypothesis  →    smallest build  →  observe vs      →  write learning +    →  archive
-  + risky          that tests the     pre-registered      persevere /
-  assumption       assumption         pass/kill           pivot / kill
-                   │                  thresholds          │
-                   │ exit: shippable  │ exit: window      │ exit: decision
-                   │   to test users  │   closed + data   │   recorded
-                   └──────────────────┴───────────────────┘
-                              faster cycle time = more learning per quarter</pre>
-
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr><th>Phase</th><th>Purpose</th><th>Exit criteria (examples)</th></tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><strong>Backlog</strong></td>
-                    <td>Hold experiment ideas with a named hypothesis and riskiest assumption.</td>
-                    <td>Ticket states falsification criteria and owner; ready to enter Build.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Build</strong></td>
-                    <td>Produce the MVP — smallest build that starts learning with real users.</td>
-                    <td>Testable artifact deployed or delivered to a defined cohort; instrumentation in place.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Measure</strong></td>
-                    <td>Run the observation window; collect actionable metrics against thresholds.</td>
-                    <td>Pre-defined time window or sample size reached; data sufficient to compare to pass/kill.</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Learn / Validate</strong></td>
-                    <td>Interpret results; record validated learning; decide next strategic move.</td>
-                    <td>Written learning + label: <code>persevere</code>, <code>pivot</code>, or <code>kill</code> (Practical AI).</td>
-                  </tr>
-                  <tr>
-                    <td><strong>Done</strong></td>
-                    <td>Close the experiment; feed backlog from the decision.</td>
-                    <td>Decision linked; follow-up ticket or archive note exists.</td>
-                  </tr>
-                </tbody>
-              </table>
+            <h3>Five columns (Stage field)</h3>
+            <div class="diagram-wrap">
+              <img src="assets/diagrams/column-flow.svg" alt="Backlog → Build → Measure → Learn Validate → Done" width="720" height="120" />
+              <p class="diagram-caption">One GitHub issue = one experiment. Project board is visual only; the issue body is source of truth.</p>
             </div>
-            <p>If Learn rarely changes what you do next, the loop is broken — regardless of how polished the Kanban looks.</p>
-
-            <h3>MVP as learning vehicle</h3>
-            <p>The <strong>minimum viable product</strong> is not a compromise product for impatient stakeholders. It is the smallest build that lets the team <em>start learning</em> about the core assumption with real users, at the least effort that still produces credible evidence.</p>
-            <p>Good MVP instincts:</p>
             <ul>
-              <li>Scope to the hypothesis, not the multi-year roadmap.</li>
-              <li>Prefer formats that test value early: concierge, wizard-of-oz, single-flow prototype, limited cohort — when full automation is not what you are learning about yet.</li>
-              <li>Accept rough edges where they do not contaminate the metric (ugly UI is fine if you are testing willingness to complete a task).</li>
-              <li>Reject “we need the whole platform first” unless feasibility is the riskiest assumption.</li>
+              <li><strong>Backlog</strong> — assumption queued; hypothesis + kill criteria before leaving.</li>
+              <li><strong>Build</strong> — smallest test shipping; Cursor skill chain applies.</li>
+              <li><strong>Measure</strong> — clock running; no new scope; weekly numbers on the issue.</li>
+              <li><strong>Learn / Validate</strong> — Persevere, Pivot, or Kill with evidence.</li>
+              <li><strong>Done</strong> — decision recorded; next action filed.</li>
             </ul>
-            <p>An MVP that cannot falsify the riskiest assumption is oversized. An MVP that tests multiple unrelated assumptions at once muddies Measure. One loop, one primary assumption.</p>
-
-            <h3>Actionable vs vanity metrics</h3>
-            <p><strong>Vanity metrics</strong> look good in updates but do not tell you what to do next. Totals that only go up (registered users, cumulative downloads, raw page views) often hide flat engagement or weak retention. They are easy to report and hard to act on.</p>
-            <p><strong>Actionable metrics</strong> support a decision and show a plausible cause–effect link to the behavior you changed. They are tied to the hypothesis, measured per cohort or per period, and compared to thresholds you set before Build.</p>
-            <div class="table-wrap">
-              <table>
-                <thead>
-                  <tr><th>Vanity (avoid as primary)</th><th>Actionable (prefer)</th></tr>
-                </thead>
-                <tbody>
-                  <tr><td>Total signups ever</td><td>Activation rate within 7 days for this cohort</td></tr>
-                  <tr><td>Page views on launch day</td><td>% who completed the core action after seeing the new flow</td></tr>
-                  <tr><td>Number of features shipped</td><td>Repeat usage rate among users who tried the feature once</td></tr>
-                  <tr><td>Social impressions</td><td>Conversion from invite to confirmed participant</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <p><strong>Innovation accounting</strong> (light touch): treat each experiment as a accounting period for learning. Establish a baseline from the MVP, tune the engine with subsequent loops, then decide. You do not need the full textbook system in this module — you need baselines, thresholds, and honest comparison.</p>
-
-            <h3>Persevere, pivot, and kill</h3>
-            <p>After Measure, Learn must produce a <strong>structured decision</strong>. Eric Ries’s public methodology emphasizes <strong>pivot or persevere</strong>. Practical AI adds <strong>kill</strong> as an explicit third outcome for operational clarity.</p>
-            <ul>
-              <li><strong>Persevere</strong> — Evidence supports the current hypothesis and drivers are moving in the right direction. Continue investing along this strategy; next Build deepens or extends what worked.</li>
-              <li><strong>Pivot</strong> — A structured course correction: change strategy, segment, channel, or core hypothesis while keeping the broader vision. One foot anchored, one foot moves. Next ticket states the <em>new</em> risky assumption.</li>
-              <li><strong>Kill</strong> (Practical AI extension) — Stop the experiment or drop the bet. Criteria show the hypothesis failed or the opportunity is too weak to justify more cycles. Archive learning so the team does not revive dead bets through inertia. Kill is not failure of the team; it is success of the system.</li>
-            </ul>
-            <p>Pivot is not a euphemism for kill. Pivot keeps a version of the vision alive with a new testable path. Kill ends the line of inquiry unless leadership explicitly reopens it with new evidence.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 3</p>
-            <h3>How to do it</h3>
-            <p>Use this sequence for every experiment ticket. It mirrors the board columns and keeps Measure honest.</p>
-            <ol>
-              <li><strong>Backlog — write the hypothesis block.</strong> One sentence bet, riskiest assumption labeled, falsification statement (“We will consider the hypothesis false if…”).</li>
-              <li><strong>Backlog — pre-register metrics.</strong> Pick one or two actionable metrics. Write pass and kill thresholds numerically. Avoid metrics you cannot influence with this Build.</li>
-              <li><strong>Build — cut to MVP.</strong> List everything the roadmap wants; delete anything that does not serve the current assumption. Ship to a defined cohort or environment.</li>
-              <li><strong>Build — instrument before launch.</strong> Events, funnel steps, or manual tally sheet — whatever matches your maturity. No instrument, no move to Measure.</li>
-              <li><strong>Measure — run the window.</strong> Do not peek for early celebration. Use the sample size or time box you committed to unless there is a safety stop.</li>
-              <li><strong>Measure — compare to thresholds.</strong> Pass, fail, or ambiguous against pre-registered criteria — not against hopes.</li>
-              <li><strong>Learn — write validated learning.</strong> Short prose: what we believed, what happened, what we now believe. Link charts or tables.</li>
-              <li><strong>Learn — label the decision.</strong> Apply <code>persevere</code>, <code>pivot</code>, or <code>kill</code>. Create the follow-up ticket (next hypothesis) or archive with reason.</li>
-              <li><strong>Done — close the loop.</strong> Ensure the board reflects reality; do not start the next oversized Build until the decision is recorded.</li>
-            </ol>
+            <h3>Labels (all seven)</h3>
+            <p><code>experiment</code> · <code>hypothesis</code> · <code>measure</code> · <code>learn</code> · <code>kill-candidate</code> · <code>persevere</code> · <code>pivot</code></p>
+            <p>Columns own phase. Phase labels are optional filters. Decision labels apply at Learn only.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 4</p>
-            <h3>How-to micro-scenario</h3>
-            <p><em>Abstract walkthrough — no product names, no book case studies.</em></p>
-            <p>A team offers a digital checklist tool for volunteer coordinators. Usage is flat. A PM proposes adding gamification — badges, streaks, leaderboards — to “make it fun.” A skeptical engineer asks what assumption that tests.</p>
-            <p><strong>Hypothesis:</strong> “Coordinators who see progress badges will return to the tool within seven days at a higher rate than coordinators who do not.”</p>
-            <p><strong>Riskiest assumption:</strong> Value through motivational design — engagement is low because the experience feels unrewarding, not because the checklist itself is wrong.</p>
-            <p><strong>MVP:</strong> Badge on dashboard for “week fully planned,” shown to 50% of active accounts via feature flag. No leaderboard, no streaks — those are a second loop if badges move the metric.</p>
-            <p><strong>Actionable metric:</strong> Seven-day return rate among coordinators who completed at least one checklist in the prior month, badge cohort vs holdout.</p>
-            <p><strong>Pass / kill:</strong> Pass if badge cohort return rate is ≥ 15% relative lift; kill gamification path if lift &lt; 5% after four weeks.</p>
-            <p><strong>Measure:</strong> Window closes at four weeks; badge cohort shows 6% lift — within noise.</p>
-            <p><strong>Learn — kill this hypothesis path:</strong> “Badges did not materially change return behavior. Low engagement likely sits earlier in the workflow (setup friction), not motivational chrome.” Follow-up ticket pivots to testing a one-screen setup wizard — new risky assumption documented.</p>
-            <p>Vanity metric avoided: “10,000 badges displayed” would have looked triumphant while return rate barely moved.</p>
+            <h3>BookIQ — five initial experiments</h3>
+            <div class="ticket-card"><strong>1. Core Value (OMI insights)</strong><span>≥60% open+click weekly · kill &lt;40% · 4 weeks</span></div>
+            <div class="ticket-card"><strong>2. Human Review Value</strong><span>Higher trust/usage for human-reviewed vs AI · 3 weeks · kill if no difference</span></div>
+            <div class="ticket-card"><strong>3. Feature Usage (Forecast / Runway)</strong><span>Top 3 features ≥70% usage · 30 days</span></div>
+            <div class="ticket-card"><strong>4. Pricing Sensitivity</strong><span>Renewal at $399+/mo · day 45–60 · kill on strong pushback</span></div>
+            <div class="ticket-card"><strong>5. Onboarding Completion</strong><span>Completers vs non-completers engagement · kill &lt;50% completion</span></div>
+            <p>Full drafts: <a href="reference/issues/01-core-value-omi-insights.md">01</a> · <a href="reference/issues/04-human-review-value.md">04</a> · <a href="reference/issues/03-feature-usage-reality-check.md">03</a> · <a href="reference/issues/05-pricing-sensitivity.md">05</a> · <a href="reference/issues/02-onboarding-completion-impact.md">02</a></p>
+          </div>
+
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>Pick one of the five tickets. State its <strong>kill criteria</strong> in one line without opening the doc.</p>
           </div>
 
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
-              <li><strong>Phase blur.</strong> Merging Build and Measure without a shippable gate — debating data before anything reaches users. Fix: explicit Build exit checklist.</li>
-              <li><strong>Moving goalposts.</strong> Changing pass/kill thresholds after results arrive. Fix: thresholds live in the ticket before Build; changes require a new experiment ID.</li>
-              <li><strong>Vanity dashboard.</strong> Reporting cumulative totals that always rise. Fix: cohort rates, period comparisons, behavior tied to hypothesis.</li>
-              <li><strong>Omnibus MVP.</strong> One release testing pricing, onboarding, and referrals simultaneously. Fix: split loops; one primary assumption each.</li>
-              <li><strong>Learn without labels.</strong> Long narrative, no persevere / pivot / kill. Fix: decision label required to leave Learn.</li>
-              <li><strong>Pivot sprawl.</strong> “Pivot” that changes everything at once — no anchor, no new falsifiable ticket. Fix: state what stays, what changes, and the new riskiest assumption.</li>
-              <li><strong>Soft kill.</strong> Deprioritizing without recording kill — bet revives in the next planning cycle. Fix: kill path archives learning and removes from active backlog.</li>
-              <li><strong>Infinite persevere.</strong> Continuing a strategy despite flat or negative drivers because “we already invested.” Fix: pre-register what “no signal” means and when to pivot or kill.</li>
+              <li>Cards skip Measure — “we’ll know when we ship.”</li>
+              <li>Learn holds vague retrospectives — no <code>persevere</code> / <code>pivot</code> / <code>kill-candidate</code>.</li>
+              <li>Five half-baked experiments instead of one good loop.</li>
             </ul>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 6</p>
-            <h3>Progress checklist</h3>
-            <p>Check each item when you can apply it on a real or practice ticket.</p>
+            <h3>Checklist</h3>
             <ul class="checklist">
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m2-c1" data-module="module-2" />
-                  <span>I can state exit criteria for Build, Measure, and Learn on a sample experiment.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m2-c2" data-module="module-2" />
-                  <span>I can size an MVP to a single riskiest assumption and explain what I cut.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m2-c3" data-module="module-2" />
-                  <span>I can replace a vanity metric with an actionable one for the same hypothesis.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m2-c4" data-module="module-2" />
-                  <span>I can explain persevere, pivot, and kill — and when kill is the right call.</span>
-                </label>
-              </li>
+              <li><label><input type="checkbox" data-progress="m2-c1" data-module="module-2" /><span>I can name all five Stage columns in order.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m2-c2" data-module="module-2" /><span>I know all seven labels and when to use decision labels.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m2-c3" data-module="module-2" /><span>I can summarize all five BookIQ initial tickets.</span></label></li>
             </ul>
           </div>
 
-          <div class="section-card">
-            <p class="eyebrow">Section 7</p>
+          <div class="section-card self-check">
             <h3>Self-check</h3>
-            <div class="self-check">
-              <p class="hint">Answer in your head first, then expand each item.</p>
-              <ol>
-                <li>What must be true before a ticket moves from Build to Measure?</li>
-                <li>How is an MVP different from a minimal feature release?</li>
-                <li>Give an example of turning a vanity metric into an actionable one.</li>
-                <li>When is kill better than pivot?</li>
-              </ol>
-              <details>
-                <summary>1. Build → Measure gate</summary>
-                <p>The team must have a shippable (or deliverable) test artifact in front of a defined audience, with instrumentation or a data collection plan ready. Without that, you are not measuring customer response — you are still building. Exit criteria should be verifiable: deployed flag, cohort invited, tally sheet assigned, etc.</p>
-              </details>
-              <details>
-                <summary>2. MVP vs minimal release</summary>
-                <p>A minimal release ships the next roadmap slice early. An MVP ships the smallest thing that tests a specific learning goal. An MVP can be manual, ugly, or narrow if that is what falsifies the assumption. A minimal release optimizes for product completeness; an MVP optimizes for learning per effort.</p>
-              </details>
-              <details>
-                <summary>3. Vanity → actionable</summary>
-                <p>Vanity: “5,000 total accounts created.” Actionable: “Of accounts created in this experiment’s two-week window, what percentage added a second item within 72 hours?” The second metric ties to behavior after the change you introduced and supports a persevere / pivot / kill call.</p>
-              </details>
-              <details>
-                <summary>4. Kill vs pivot</summary>
-                <p>Kill when the hypothesis failed against pre-registered criteria and there is no credible adjacent assumption worth testing under the same vision — or when the opportunity is too small to justify more cycles. Pivot when evidence refutes one specific assumption but a related strategy (new segment, channel, or problem slice) remains plausible and testable. Kill stops theater; pivot redirects energy with a new falsifiable ticket.</p>
-              </details>
+            <div class="self-check-item">
+              <p>What must happen before a card leaves Backlog?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc2-1">Show answer</button>
+              <div class="reveal-answer" id="sc2-1">Written hypothesis and numeric kill criteria.</div>
             </div>
           </div>
         </section>
-        <!-- Module 3 -->
-<section class="hero">
-          <span class="status-chip">Module 3 · ~20 min</span>
-          <h1>GitHub <em>Setup</em></h1>
-          <p class="hero-lede">Issues hold the truth; the Project board is the view. Learn which labels matter, why we skip phase labels, and how <strong>Stage</strong> columns carry the loop.</p>
-        </section>
-
-        <article class="module" id="why">
+        <!-- module-3.html -->
+<section class="module" id="module-3">
           <div class="module-header">
-            <span class="module-badge">3</span>
+            <div class="module-badge">3</div>
             <div>
-              <p class="eyebrow">Why</p>
-              <h2>One experiment, one issue — visible on a board</h2>
-              <p class="module-time">~20 minutes</p>
-            </div>
-          </div>
-          <p>Validated learning needs a durable record and a shared picture of where work sits in the loop. GitHub Issues give you the record: hypothesis, build plan, metrics, and learn decision live on one ticket. A GitHub Project gives you the picture: columns show whether an experiment is waiting, building, measuring, deciding, or done.</p>
-          <p>Splitting those roles keeps creation fast and prevents drift. If you duplicate phase information in both columns <em>and</em> labels, people update one and forget the other. The board columns own the phase; labels mark <strong>what kind of ticket</strong> it is and <strong>what you decided</strong> at Learn — nothing more.</p>
-          <div class="quote">
-            <p><strong>Rule of thumb:</strong> If you cannot answer “where is this experiment in the loop?” from the Project board alone, your setup is too complicated.</p>
-          </div>
-        </article>
-
-        <article class="module" id="ideas">
-          <div class="module-header">
-            <span class="module-badge">3</span>
-            <div>
-              <p class="eyebrow">Ideas</p>
-              <h2>Issues vs Project, labels vs columns</h2>
+              <h2>GitHub setup</h2>
+              <p class="module-time">~15 min</p>
             </div>
           </div>
 
-          <h3>Two pieces, two jobs</h3>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Piece</th><th>Role</th><th>Source of truth?</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>GitHub Issues</strong></td><td>One issue = one experiment. Body holds hypothesis, build scope, measure table, learn decision.</td><td>Yes</td></tr>
-                <tr><td><strong>GitHub Project</strong></td><td>Visual Kanban. Cards mirror issues; <strong>Stage</strong> field drives columns.</td><td>No — reflects issue state</td></tr>
-              </tbody>
-            </table>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>Vanity metrics (logins, raw clicks) are not enough. We care whether customers make better financial decisions because of BookIQ.</p>
           </div>
 
-          <h3>Labels we create</h3>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Label</th><th>Purpose</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><code>experiment</code></td><td>Marks Build Loop experiment tickets</td></tr>
-                <tr><td><code>persevere</code></td><td>Learn decision — keep going</td></tr>
-                <tr><td><code>pivot</code></td><td>Learn decision — change approach</td></tr>
-                <tr><td><code>kill-candidate</code></td><td>Learn decision — kill or sunset</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Labels we deliberately skip</h3>
-          <p>Do <strong>not</strong> create <code>hypothesis</code>, <code>measure</code>, or <code>learn</code> labels. Columns already express phase. Extra phase labels slow issue creation and create conflicting signals when someone moves a card but forgets to swap labels.</p>
-
-          <h3>Stage columns (custom field)</h3>
-          <p>GitHub’s built-in Status field is not flexible enough for our workflow, so we use a custom <strong>Stage</strong> field. Group the board by Stage after setup.</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Stage</th><th>Meaning</th><th>Rule</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>Backlog</strong></td><td>Idea or assumption not yet building</td><td>Hypothesis + kill criteria required before leaving</td></tr>
-                <tr><td><strong>Build</strong></td><td>Shipping the smallest test</td><td>Cursor skills workflow applies here</td></tr>
-                <tr><td><strong>Measure</strong></td><td>Collecting data — do not skip</td><td>Clock starts; no new scope</td></tr>
-                <tr><td><strong>Learn</strong></td><td>Decision point</td><td>Must leave with a decision label</td></tr>
-                <tr><td><strong>Done</strong></td><td>Decision recorded + next action filed</td><td>Archive when stale</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <p>Full setup reference: <a href="reference/Build_Loop_Kanban_Setup.md">Kanban setup guide</a> (filename will be renamed later).</p>
-        </article>
-
-        <article class="module" id="how-to">
-          <div class="module-header">
-            <span class="module-badge">3</span>
-            <div>
-              <p class="eyebrow">How-to</p>
-              <h2>One-time setup with <code>gh</code></h2>
-            </div>
-          </div>
-
-          <h3>1. Verify labels</h3>
-          <pre><code>gh label list | rg 'experiment|persevere|pivot|kill-candidate'</code></pre>
-          <p>If any are missing, create them:</p>
-          <pre><code>gh label create experiment --description "Build Loop experiment ticket" --color 0E8A16
-gh label create persevere --description "Learn decision — keep going" --color 0E8A16
-gh label create pivot --description "Learn decision — change approach" --color FBCA04
-gh label create kill-candidate --description "Learn decision — kill or sunset" --color D93F0B</code></pre>
-
-          <h3>2. Create the Project board</h3>
-          <p>From the repo root, run the project script (requires <code>gh auth refresh -s project,read:project</code> first):</p>
-          <pre><code>bash scripts/create-bml-project.sh</code></pre>
-          <p>Then in the board UI: <strong>View → Group by → Stage</strong>. Filter tip: <code>label:experiment</code>.</p>
-
-          <h3>3. Wire Issues → Project</h3>
-          <p>Create an experiment issue, then add it to the project:</p>
-          <pre><code>gh issue create --title "Build Loop: …" --label experiment --body-file path/to/body.md
-gh project item-add &lt;PROJECT_NUMBER&gt; --owner &lt;ORG&gt; --url &lt;ISSUE_URL&gt;</code></pre>
-          <p>Or use <strong>New issue → Build Loop Experiment</strong> template (auto-applies <code>experiment</code>) and add the card to <strong>Backlog</strong> in the UI.</p>
-
-          <h3>4. Ready to leave Backlog</h3>
-          <ul>
-            <li>One-sentence hypothesis</li>
-            <li>Kill criteria are numeric</li>
-            <li>Duration set</li>
-            <li>Measure path named (event IDs from metrics doc or “manual sheet”)</li>
-          </ul>
-        </article>
-
-        <article class="module" id="micro-scenario">
-          <div class="module-header">
-            <span class="module-badge">3</span>
-            <div>
-              <p class="eyebrow">Micro-scenario</p>
-              <h2>Abstract walkthrough</h2>
-            </div>
-          </div>
           <div class="section-card">
-            <p><strong>Context:</strong> A product team adopts Build Loop for the first time on a greenfield repo.</p>
-            <ol>
-              <li>They run <code>gh label create</code> for the four labels and confirm with <code>gh label list</code>.</li>
-              <li>They execute <code>create-bml-project.sh</code>, open the board, and group by <strong>Stage</strong>.</li>
-              <li>A PM files issue #12: “Will self-serve onboarding reduce support tickets?” with pass/kill numbers and a two-week duration. Label <code>experiment</code> is applied; the card sits in <strong>Backlog</strong>.</li>
-              <li>After review, the card moves to <strong>Build</strong>. No one adds a <code>hypothesis</code> label — the column already says they are building.</li>
-              <li>When the build ships, the card moves to <strong>Measure</strong>. Weekly numbers go on the issue body, not in Slack threads.</li>
-              <li>At Learn, they apply <code>pivot</code> and move to <strong>Done</strong> with evidence and a follow-up issue linked.</li>
-            </ol>
-          </div>
-        </article>
-
-        <article class="module" id="failure-modes">
-          <div class="failure-modes">
-            <h3>Failure modes</h3>
+            <h3>What you need</h3>
             <ul>
-              <li><strong>Phase labels + columns</strong> — Card in Measure still tagged <code>hypothesis</code>. Pick one system; we use columns.</li>
-              <li><strong>Board without issues</strong> — Cards that are not backed by an issue lose hypothesis and metrics. Always create the issue first.</li>
-              <li><strong>Skipping Measure</strong> — Moving straight from Build to Learn because “we know it worked.” The clock and kill criteria exist for a reason.</li>
-              <li><strong>Learn without a decision label</strong> — Vague comments on the issue. Apply exactly one of <code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code>.</li>
-              <li><strong>Too many active builds</strong> — More than three experiments in Build+Measure for a small team. Finish measuring before starting more.</li>
+              <li><strong>GitHub Issues</strong> — one issue per experiment (source of truth).</li>
+              <li><strong>GitHub Project</strong> — Kanban view grouped by <strong>Stage</strong>.</li>
+              <li><strong>Live board:</strong> <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ/projects/1</a></li>
             </ul>
-          </div>
-        </article>
-
-        <article class="module" id="checklist">
-          <div class="module-header">
-            <span class="module-badge">3</span>
-            <div>
-              <p class="eyebrow">Checklist</p>
-              <h2>Module 3 completion</h2>
-            </div>
-          </div>
-          <ul class="checklist">
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m3-c1" data-module="module-3" />
-                <span>I can explain why Issues are source of truth and the Project is the view.</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m3-c2" data-module="module-3" />
-                <span>I know the four labels we use and why we skip phase labels.</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m3-c3" data-module="module-3" />
-                <span>I can name all five Stage columns and the rule for leaving each.</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m3-c4" data-module="module-3" />
-                <span>I can create an experiment issue and add it to the project with <code>gh</code>.</span>
-              </label>
-            </li>
-          </ul>
-        </article>
-
-        <article class="module" id="self-check">
-          <div class="self-check">
-            <p class="eyebrow">Self-check</p>
-            <ol>
-              <li>What is the difference between a GitHub Issue and a GitHub Project card in this system?</li>
-              <li>Why do we not create <code>hypothesis</code>, <code>measure</code>, or <code>learn</code> labels?</li>
-              <li>Which label do you apply at Learn, and when?</li>
-              <li>What must be true before an experiment leaves Backlog?</li>
-            </ol>
-            <p class="hint">Try answering aloud before opening the answers.</p>
-            <details>
-              <summary>Answers</summary>
-              <ol>
-                <li>The issue is the durable record (hypothesis, metrics, decision). The project card is a visual pointer to that issue, positioned by Stage column.</li>
-                <li>Stage columns already express phase. Duplicate phase labels create drift — people update one signal and forget the other.</li>
-                <li>Exactly one decision label: <code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code>, applied when recording the Learn decision with evidence.</li>
-                <li>One-sentence hypothesis, numeric kill criteria, duration set, and a named measure path (instrumentation or manual log).</li>
-              </ol>
-            </details>
-          </div>
-        </article>
-        <!-- Module 4 -->
-<section class="hero">
-          <span class="status-chip">Module 4 · ~25 min</span>
-          <h1>Ticket Template &amp; <em>Build Skills</em></h1>
-          <p class="hero-lede">The experiment issue template forces hypothesis-before-build discipline. In the Build column, a four-skill chain turns that issue into shipped, tested code — one tracer-bullet ticket at a time.</p>
-        </section>
-
-        <article class="module" id="why">
-          <div class="module-header">
-            <span class="module-badge">4</span>
-            <div>
-              <p class="eyebrow">Why</p>
-              <h2>Same shape every time; skills for non-trivial Build</h2>
-              <p class="module-time">~25 minutes</p>
-            </div>
-          </div>
-          <p>Experiments fail quietly when the ticket is vague: no kill criteria, no duration, no measure path. A fixed template makes the minimum bar obvious before anyone writes code.</p>
-          <p>Non-trivial Build work needs more than a template. The skill chain — <strong>grill-with-docs</strong>, <strong>to-spec</strong>, <strong>to-tickets</strong>, <strong>implement</strong> — sharpens the plan, publishes a spec, slices vertical tickets with blocking edges, then builds one ticket at a time with test-driven development and code review. Tiny builds can skip straight to <strong>implement</strong>.</p>
-          <div class="quote">
-            <p><strong>Do not substitute</strong> <code>to-issues</code> plus bare <code>tdd</code> for this chain. <strong>implement</strong> owns <a href="skills/tdd.html">tdd</a> and <a href="skills/code-review.html">code-review</a> at the end of each ticket.</p>
-          </div>
-        </article>
-
-        <article class="module" id="ideas">
-          <div class="module-header">
-            <span class="module-badge">4</span>
-            <div>
-              <p class="eyebrow">Ideas</p>
-              <h2>Experiment template sections</h2>
-            </div>
-          </div>
-          <p>Template path: <code>.github/ISSUE_TEMPLATE/build-loop-experiment.md</code> (teaching copy; auto-applies <code>experiment</code> label).</p>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Section</th><th>What it forces</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><strong>Hypothesis</strong></td><td>One sentence — what customer behavior you believe will happen</td></tr>
-                <tr><td><strong>Build (smallest test)</strong></td><td>Thinnest shippable slice, not the full feature</td></tr>
-                <tr><td><strong>Measure</strong></td><td>Table: metric, pass target, kill threshold, collection method; duration and sample size</td></tr>
-                <tr><td><strong>Learn</strong></td><td>Decision, evidence, next action — filled only at decision time</td></tr>
-                <tr><td><strong>Acceptance criteria</strong></td><td>Checklist: hypothesis before build, instrumentation before measure, labeled learn decision</td></tr>
-                <tr><td><strong>Cursor workflow</strong></td><td>Skill chain for Build column work</td></tr>
-                <tr><td><strong>Technical context</strong></td><td>Short <code>@paths</code> hints for grilling sessions</td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Skill chain (Build column)</h3>
-          <pre class="loop-diagram">grill-with-docs → to-spec → to-tickets → implement
-                                              ↓
-                                    tdd + code-review (inside implement)</pre>
-
-          <div class="pill-row">
-            <a class="pill" href="skills/grill-with-docs.html">grill-with-docs</a>
-            <a class="pill" href="skills/grilling.html">grilling</a>
-            <a class="pill" href="skills/to-spec.html">to-spec</a>
-            <a class="pill" href="skills/to-tickets.html">to-tickets</a>
-            <a class="pill" href="skills/implement.html">implement</a>
-            <a class="pill" href="skills/tdd.html">tdd</a>
-            <a class="pill" href="skills/code-review.html">code-review</a>
-          </div>
-
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Skill</th><th>When</th><th>Output</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><a href="skills/grill-with-docs.html">grill-with-docs</a></td>
-                  <td>Backlog → Build; before a spec</td>
-                  <td>Shared understanding; glossary and ADR updates</td>
-                </tr>
-                <tr>
-                  <td><a href="skills/to-spec.html">to-spec</a></td>
-                  <td>After grill; non-trivial build</td>
-                  <td>Published spec on issue tracker with <code>ready-for-agent</code></td>
-                </tr>
-                <tr>
-                  <td><a href="skills/to-tickets.html">to-tickets</a></td>
-                  <td>After spec; multiple slices</td>
-                  <td>Tracer-bullet tickets with blocking edges</td>
-                </tr>
-                <tr>
-                  <td><a href="skills/implement.html">implement</a></td>
-                  <td>One unblocked ticket</td>
-                  <td>Code + tests + commit; runs <a href="skills/tdd.html">tdd</a> and <a href="skills/code-review.html">code-review</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p>Board rhythm reference: <a href="reference/Build_Loop_Kanban_Setup.md">Kanban setup guide</a>.</p>
-        </article>
-
-        <article class="module" id="how-to">
-          <div class="module-header">
-            <span class="module-badge">4</span>
-            <div>
-              <p class="eyebrow">How-to</p>
-              <h2>File and run an experiment build</h2>
+            <div class="diagram-wrap">
+              <img src="assets/diagrams/board-placeholder.svg" alt="GitHub board placeholder with Backlog, Build, Measure, Learn Validate, Done" width="640" height="360" />
+              <p class="diagram-caption">Replace placeholder with a live screenshot after setup. Group by → Stage · Filter → <code>label:experiment</code></p>
             </div>
           </div>
 
-          <h3>1. Create the issue (&lt;2 minutes)</h3>
-          <ol>
-            <li><strong>New issue</strong> → template <strong>Build Loop Experiment</strong></li>
-            <li>Fill Hypothesis, Build, Measure table (pass/kill), Duration</li>
-            <li>Label <code>experiment</code> is pre-set; add card to project <strong>Backlog</strong></li>
-          </ol>
-
-          <h3>2. Move to Build — pick a path</h3>
-          <p><strong>Tiny build</strong> (single small PR): optional light <a href="skills/grill-with-docs.html">grill-with-docs</a>, then <a href="skills/implement.html">implement</a> directly.</p>
-          <p><strong>Non-trivial build:</strong></p>
-          <ol>
-            <li><code>/grill-with-docs</code> on the issue — prime folders, sharpen plan, capture glossary/ADRs</li>
-            <li><code>/to-spec</code> — synthesize conversation into a published spec; confirm test seams</li>
-            <li><code>/to-tickets</code> — vertical slices with blockers; publish; work the frontier</li>
-            <li><code>/implement</code> — one ticket at a time; clear context between tickets</li>
-          </ol>
-
-          <h3>3. Measure and Learn (no skill chain)</h3>
-          <ul>
-            <li><strong>Measure:</strong> update the issue with weekly numbers. Code only if instrumentation is broken.</li>
-            <li><strong>Learn:</strong> human decision; optional <code>grill-with-docs</code> if pivoting. Apply decision label; move to Done.</li>
-          </ul>
-        </article>
-
-        <article class="module" id="micro-scenario">
-          <div class="module-header">
-            <span class="module-badge">4</span>
-            <div>
-              <p class="eyebrow">Micro-scenario</p>
-              <h2>Abstract walkthrough</h2>
-            </div>
-          </div>
           <div class="section-card">
-            <p><strong>Context:</strong> Issue #40 proposes a guided checklist inside an onboarding flow. Build is multi-step (API + UI + analytics).</p>
-            <ol>
-              <li>PM files the template with hypothesis “users who see the checklist complete setup 20% more often,” kill at &lt;5% lift, two-week measure window.</li>
-              <li>Engineer runs <strong>grill-with-docs</strong>: one question at a time until “checklist item” vs “setup step” terms land in <code>CONTEXT.md</code>.</li>
-              <li><strong>to-spec</strong> publishes a spec: user stories, API contract decisions, test seams at the public onboarding API.</li>
-              <li><strong>to-tickets</strong> yields three tracer bullets: (1) API + empty UI shell, (2) checklist render + event, (3) dashboard readout — each blocked only by its predecessor.</li>
-              <li><strong>implement</strong> on ticket 1: <strong>tdd</strong> at the API seam, full suite once, <strong>code-review</strong>, commit. Context cleared; ticket 2 next.</li>
-              <li>Card moves to <strong>Measure</strong>; no further skills until numbers arrive.</li>
-            </ol>
-          </div>
-        </article>
-
-        <article class="module" id="failure-modes">
-          <div class="failure-modes">
-            <h3>Failure modes</h3>
-            <ul>
-              <li><strong>Full chain for a one-line fix</strong> — Adding analytics to an existing button does not need a spec and five tickets. Use <strong>implement</strong>.</li>
-              <li><strong>Skipping grill on ambiguous scope</strong> — “Improve onboarding” without shared terms produces specs that rewrite themselves mid-build.</li>
-              <li><strong>Horizontal tickets</strong> — “All API work” then “All UI work” cannot demo mid-flight. Use vertical tracer bullets.</li>
-              <li><strong>Implementing multiple tickets in one context</strong> — Context rots; blockers blur. One ticket, then clear.</li>
-              <li><strong>Bare tdd without implement’s review</strong> — Tests land without standards/spec check. Let <strong>implement</strong> run the full close-out.</li>
-              <li><strong>Measure-phase feature creep</strong> — “While we wait, let’s also…” Invalidates the experiment clock.</li>
-            </ul>
-          </div>
-        </article>
-
-        <article class="module" id="checklist">
-          <div class="module-header">
-            <span class="module-badge">4</span>
-            <div>
-              <p class="eyebrow">Checklist</p>
-              <h2>Module 4 completion</h2>
-            </div>
-          </div>
-          <ul class="checklist">
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m4-c1" data-module="module-4" />
-                <span>I can fill every section of the experiment template from memory.</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m4-c2" data-module="module-4" />
-                <span>I know when to run the full skill chain vs implement-only.</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m4-c3" data-module="module-4" />
-                <span>I can describe what each skill produces and link to its deep-dive page.</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m4-c4" data-module="module-4" />
-                <span>I understand that implement owns tdd and code-review at ticket close-out.</span>
-              </label>
-            </li>
-            <li>
-              <label>
-                <input type="checkbox" data-progress="m4-c5" data-module="module-4" />
-                <span>I know Measure and Learn do not use the Build skill chain by default.</span>
-              </label>
-            </li>
-          </ul>
-        </article>
-
-        <article class="module" id="self-check">
-          <div class="self-check">
-            <p class="eyebrow">Self-check</p>
-            <ol>
-              <li>What are the four sections you must fill before Build starts?</li>
-              <li>In order, name the four Build skills for a non-trivial experiment.</li>
-              <li>When can you skip to implement directly?</li>
-              <li>What two skills does implement invoke before committing?</li>
-              <li>What is a tracer-bullet ticket?</li>
-            </ol>
-            <p class="hint">Try answering aloud before opening the answers.</p>
-            <details>
-              <summary>Answers</summary>
-              <ol>
-                <li>Hypothesis (one sentence), Build (smallest test), Measure (pass/kill table + duration/sample), and acceptance that kill criteria exist before build — Learn stays empty until decision time.</li>
-                <li>grill-with-docs → to-spec → to-tickets → implement.</li>
-                <li>When the build fits in a single small PR (e.g. tiny instrumentation fix); optional light grill first.</li>
-                <li>tdd (at pre-agreed seams) and code-review (standards + spec axes).</li>
-                <li>A vertical slice that cuts a narrow but complete path through every layer, demoable on its own, sized for one fresh context window.</li>
-              </ol>
-            </details>
-          </div>
-        </article>
-        <!-- Module 5 -->
-<section class="module">
-          <div class="module-header">
-            <div class="module-badge">5</div>
-            <div>
-              <h2>Running an experiment</h2>
-              <p class="module-time">~30 min</p>
-            </div>
+            <h3>Create labels (~2 min)</h3>
+            <pre><code>gh label create experiment --description "BML experiment ticket" --color 0E8A16
+gh label create hypothesis --description "Optional filter" --color C5DEF5
+gh label create measure --description "Optional filter" --color FEF2C0
+gh label create learn --description "Optional filter" --color D4C5F9
+gh label create persevere --description "Learn — keep going" --color 0E8A16
+gh label create pivot --description "Learn — change approach" --color FBCA04
+gh label create kill-candidate --description "Learn — kill" --color D93F0B</code></pre>
+            <p>Full setup: <a href="reference/Build_Loop_Kanban_Setup.md">Build_Loop_Kanban_Setup.md</a></p>
           </div>
 
-          <p class="eyebrow">Playbook</p>
-          <p>Walk one Build Loop experiment from Backlog through Done. Cursor helps on <strong>Build</strong> only. Humans own <strong>Measure</strong> discipline and <strong>Learn</strong> decisions.</p>
-
-          <div class="pill-row">
-            <a class="pill" href="module-4.html">← Module 4: Ticket template</a>
-            <a class="pill" href="skills/tdd.html">/tdd</a>
-            <a class="pill" href="skills/code-review.html">/code-review</a>
-            <a class="pill" href="skills/prototype.html">/prototype</a>
-          </div>
-
-          <h3>Why run experiments end-to-end</h3>
-          <div class="quote">
-            <p>A ticket that never reaches Learn taught you nothing — no matter how polished the Build was.</p>
-          </div>
-          <p>Most teams treat the board as a shipping pipeline. Build Loop treats it as a <strong>learning pipeline</strong>. Each experiment exists to falsify one customer-behavior claim within a fixed duration. The payoff is a recorded decision — persevere, pivot, or kill — backed by numbers, not narrative.</p>
-          <p>Running one experiment all the way through trains the habits that matter: thin Builds, frozen scope during Measure, and honest Learn outcomes. Skip any column and you get theater — activity that looks like learning but never changes what you build next.</p>
-
-          <h3>Ideas to hold</h3>
-          <ul>
-            <li><strong>One issue, one experiment.</strong> The GitHub issue is the source of truth; the project board is the visual phase tracker.</li>
-            <li><strong>Build is the only Cursor-heavy column.</strong> Agents sharpen plans, publish specs, split tickets, and implement code. They do not decide whether the hypothesis passed.</li>
-            <li><strong>Measure is a clock, not a build phase.</strong> Once the thinnest test ships and a collection path exists, the clock starts. No new feature scope until Learn closes the bet.</li>
-            <li><strong>Learn is a decision, not a retrospective vibe.</strong> Apply one decision label and file one next action before moving to Done.</li>
-            <li><strong>Kill is a success.</strong> Stopping a failed bet early is validated learning, not defeat.</li>
-          </ul>
-
-          <h3>How-to: five columns, one experiment</h3>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Stage</th><th>Who</th><th>What happens</th><th>Exit gate</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Backlog</strong></td>
-                  <td>Human</td>
-                  <td>Create issue from template. Write hypothesis, pass/kill thresholds, duration, sample size.</td>
-                  <td>Hypothesis + numeric kill criteria + duration written</td>
-                </tr>
-                <tr>
-                  <td><strong>Build</strong></td>
-                  <td>Human + Cursor</td>
-                  <td>Ship the smallest test that lets Measure start. Use the skill chain from <a href="module-4.html">Module 4</a> when non-trivial.</td>
-                  <td>Delivery path exists <em>and</em> instrumentation or manual log path is named</td>
-                </tr>
-                <tr>
-                  <td><strong>Measure</strong></td>
-                  <td>Human</td>
-                  <td>Collect weekly numbers into the issue. No code unless instrumentation is broken.</td>
-                  <td>Duration complete; metrics recorded on the issue</td>
-                </tr>
-                <tr>
-                  <td><strong>Learn</strong></td>
-                  <td>Human</td>
-                  <td>Compare numbers to pass/kill. Record decision, evidence, next action. Apply one decision label.</td>
-                  <td><code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code> applied</td>
-                </tr>
-                <tr>
-                  <td><strong>Done</strong></td>
-                  <td>Human</td>
-                  <td>Archive when stale. Follow-up experiment filed if persevere or pivot.</td>
-                  <td>Next action exists or explicit “no follow-up” noted</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Build column — Cursor workflow</h3>
-          <p>Invoke skills only while the card is in <strong>Build</strong>. See <a href="module-4.html">Module 4</a> for the full chain and when to skip steps.</p>
-          <ol>
-            <li><code>/grill-with-docs</code> — prime with the issue + relevant folders; sharpen assumptions and kill criteria</li>
-            <li><code>/to-spec</code> — publish a spec from the grilled conversation (skip if the Build fits one tiny PR)</li>
-            <li><code>/to-tickets</code> — split into vertical-slice tickets with blockers (skip if one ticket)</li>
-            <li><code>/implement</code> — one unblocked ticket at a time; runs <a href="skills/tdd.html"><code>/tdd</code></a> at agreed seams, then <a href="skills/code-review.html"><code>/code-review</code></a>, then commits</li>
-          </ol>
-          <p>For design uncertainty before Build, use <a href="skills/prototype.html"><code>/prototype</code></a> — throwaway code that answers “does this logic feel right?” or “what should this look?”</p>
-
-          <div class="quote">
-            <p><strong>Agent boundary:</strong> Cursor helps on Build. Humans own Measure discipline and Learn decisions. An agent must not apply decision labels or declare a hypothesis validated.</p>
-          </div>
-
-          <h3>Micro-scenario: weekly insight engagement test</h3>
-          <p>Abstract pattern — swap the nouns for your product.</p>
           <div class="section-card">
-            <p><strong>Hypothesis:</strong> Active customers will read and act on a recurring insight delivered each week.</p>
-            <p><strong>Pass:</strong> ≥60% of sampled customers open the insight and complete at least one attributed action per week.</p>
-            <p><strong>Kill:</strong> &lt;40% engagement after four weeks.</p>
-            <p><strong>Duration:</strong> 4 weeks · <strong>Sample:</strong> 20 active accounts</p>
+            <h3>Create an experiment (&lt;2 min)</h3>
+            <pre><code>gh issue create --title "BML: …" --label experiment --body-file path/to/body.md
+gh project item-add &lt;PROJECT_NUMBER&gt; --owner Book-IQ --url &lt;ISSUE_URL&gt;</code></pre>
+            <p>Or: <strong>New issue → Build-Measure-Learn Experiment</strong> template → add to project → Backlog.</p>
           </div>
-          <p><strong>Backlog:</strong> Issue created from template. Measure table filled. Added to board.</p>
-          <p><strong>Build:</strong> Ship email + in-app card for one insight type. Instrument <code>delivered</code>, <code>opened</code>, <code>acted</code> events (or a manual sheet with the same IDs). Cursor runs grill → spec → tickets → implement for the delivery path.</p>
-          <p><strong>Measure:</strong> Every Monday, post open rate and act rate in the issue comment. No “while we’re at it” feature work.</p>
-          <p><strong>Learn:</strong> Week 4 numbers land at 52% act rate — between pass and kill. Team decides <code>pivot</code>: shorten insight, add in-app-only channel, new 3-week experiment filed.</p>
-          <p>Metrics naming conventions: <a href="reference/Build_Loop_Metrics_Tracking.md">Metrics dictionary</a>.</p>
+
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>Open the live board. Confirm Stage columns include <strong>Learn / Validate</strong>. Find issues #1083–#1085 in Backlog.</p>
+          </div>
 
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
-              <li><strong>Build forever.</strong> Polishing the experiment until the duration is half gone. Gate: move to Measure when the thinnest path + collection method exist.</li>
-              <li><strong>Measure creep.</strong> “Quick fix” during Measure that changes what you’re testing. File a new experiment instead.</li>
-              <li><strong>Learn by vibes.</strong> Moving to Done with “customers seem happy” and no numbers on the issue.</li>
-              <li><strong>Agent decides Learn.</strong> Letting Cursor apply <code>persevere</code> because the code merged. Humans compare metrics to the pass/kill table.</li>
-              <li><strong>Vanity metrics.</strong> Counting logins or page views when the hypothesis is about <em>action</em>. Prefer outcome events defined before Build.</li>
-              <li><strong>Skipping grill on risky bets.</strong> Building before kill criteria are sharp — you learn too slowly to decide.</li>
+              <li>Board grouped by Status instead of Stage — columns drift.</li>
+              <li>Issues without <code>experiment</code> label — filter breaks.</li>
+              <li>Skipping project link — invisible experiments.</li>
             </ul>
           </div>
 
-          <h3>Module 5 — progress checklist</h3>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m5-c1" data-module="module-5" /> I can trace an abstract experiment through all five columns with exit gates</label></li>
-            <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /> I know when to invoke Cursor skills (Build only) and when to skip steps</label></li>
-            <li><label><input type="checkbox" data-progress="m5-c3" data-module="module-5" /> I will not add feature scope during Measure</label></li>
-            <li><label><input type="checkbox" data-progress="m5-c4" data-module="module-5" /> I understand humans own Measure logging and Learn decisions — not the agent</label></li>
-          </ul>
-
-          <div class="self-check">
-            <h3 style="margin-top:0">Module 5 — self-check</h3>
-            <ol>
-              <li>Why grill before build on non-trivial experiments?</li>
-              <li>What triggers moving from Build to Measure?</li>
-              <li>Who applies the <code>kill-candidate</code> label — and on what evidence?</li>
-              <li>When is it appropriate to use <code>/prototype</code> instead of jumping to <code>/implement</code>?</li>
-            </ol>
-            <p class="hint">Answer in your own words before expanding the answers below.</p>
-            <details>
-              <summary>Show answers</summary>
-              <ol>
-                <li>Experiment quality depends on crisp assumptions and a thin Build. Grilling surfaces missing kill criteria, vanity metrics, and scope that would make learning too slow — before <code>/to-spec</code> and tickets.</li>
-                <li>The thinnest test is shipped <em>and</em> a measurement path exists (instrumentation or a named manual log). Then the clock starts; new feature scope waits for a new experiment.</li>
-                <li>A human, after duration completes, comparing recorded metrics to the pass/kill table in the issue. The agent may help summarize numbers; it does not apply decision labels.</li>
-                <li>When the key uncertainty is design shape — “does this state model feel right?” or “what should this UI look?” — before committing to a production Build. Prototypes are throwaway; validated decisions fold into the real experiment issue.</li>
-              </ol>
-            </details>
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m3-c1" data-module="module-3" /><span>I opened the live BookIQ project board.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m3-c2" data-module="module-3" /><span>I know how to create a BML issue from the template.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m3-c3" data-module="module-3" /><span>I can list all seven labels.</span></label></li>
+            </ul>
           </div>
         </section>
-        <!-- Module 6 -->
-<section class="module">
+        <!-- module-4.html -->
+<section class="module" id="module-4">
           <div class="module-header">
-            <div class="module-badge">6</div>
+            <div class="module-badge">4</div>
             <div>
-              <h2>Operating the board</h2>
+              <h2>Ticket template &amp; Build skills</h2>
               <p class="module-time">~25 min</p>
             </div>
           </div>
 
-          <p class="eyebrow">Playbook</p>
-          <p>Setup gets you a board. Operating keeps it honest: column gates, WIP limits, a weekly rhythm, and Learn outcomes that actually change what you build.</p>
-
-          <div class="pill-row">
-            <a class="pill" href="module-5.html">← Module 5: Running an experiment</a>
-            <a class="pill" href="reference/Build_Loop_Kanban_Setup.md">Kanban setup reference</a>
-            <a class="pill" href="reference/Build_Loop_Implementation_Notes.md">Implementation notes</a>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>Do <strong>not</strong> jump straight to building on non-trivial work. Experiment quality depends on grilling and a clear spec before tickets. Do not substitute <code>/to-issues</code> + bare <code>/tdd</code> for the chain — <code>/implement</code> already owns TDD and review.</p>
           </div>
 
-          <h3>Why operating rules exist</h3>
-          <div class="quote">
-            <p>If Learn does not regularly produce kill, pivot, or persevere decisions, you are not running Build Loop — you are performing it.</p>
-          </div>
-          <p>A board without gates becomes a feature factory with extra columns. WIP limits force finish-over-start. Weekly cadence prevents cards rotting in Learn. Anti-theater rules exist because teams naturally optimize for shipping — not for stopping bad bets.</p>
-          <p>Operating discipline is how a small team runs multiple experiments without drowning in half-finished Builds or endless Measure phases with no decision.</p>
-
-          <h3>Ideas to hold</h3>
-          <ul>
-            <li><strong>Columns are phases, not suggestions.</strong> Each transition has a gate. Skipping a gate erases auditability.</li>
-            <li><strong>Labels mark decisions, not phases.</strong> Only <code>experiment</code> plus Learn outcomes (<code>persevere</code>, <code>pivot</code>, <code>kill-candidate</code>). No phase labels — columns own phase.</li>
-            <li><strong>The issue body holds evidence.</strong> Board cards are pointers; numbers and decisions live on the issue.</li>
-            <li><strong>Three active maximum.</strong> Build + Measure combined — for a team of three, that is one experiment per person at most.</li>
-            <li><strong>Learn clears before new Builds.</strong> If Learn is stuck, fix that before opening more experiments.</li>
-          </ul>
-
-          <h3>How-to: column gates</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>From → To</th><th>Gate (all required)</th><th>Common miss</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td>Backlog → Build</td>
-                  <td>One-sentence hypothesis; numeric kill criteria; duration set</td>
-                  <td>“We’ll figure out metrics during Build”</td>
-                </tr>
-                <tr>
-                  <td>Build → Measure</td>
-                  <td>Thinnest test shipped; instrumentation or manual log path named</td>
-                  <td>Moving when code merged but nothing can be counted yet</td>
-                </tr>
-                <tr>
-                  <td>Measure → Learn</td>
-                  <td>Duration complete; weekly numbers recorded on the issue</td>
-                  <td>Moving early because “it looks good so far”</td>
-                </tr>
-                <tr>
-                  <td>Learn → Done</td>
-                  <td>Decision label applied; evidence + one next action written</td>
-                  <td>Card moved to Done with no label or follow-up</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>How-to: 3-active WIP limit</h3>
-          <p>Count every card in <strong>Build</strong> or <strong>Measure</strong>. Maximum <strong>three</strong> at once for a three-person team.</p>
-          <ol>
-            <li>Before pulling from Backlog, count active cards. At three? Finish or Learn something first.</li>
-            <li>Measure counts as active — it consumes attention even when no code ships.</li>
-            <li>Long-running Measure is not a license for parallel Builds. Either extend duration explicitly on the issue or move to Learn with an interim decision.</li>
-            <li>Backlog can be deep. Active must stay shallow.</li>
-          </ol>
-
-          <h3>How-to: weekly cadence (~30 min total)</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>When</th><th>Ritual</th><th>Output</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td>Monday</td>
-                  <td>Board review: unblock Measure; post weekly numbers; move anything past duration into Learn</td>
-                  <td>Every active experiment has fresh numbers or a named blocker</td>
-                </tr>
-                <tr>
-                  <td>Wednesday</td>
-                  <td>Scope check: any silent Build creep on active cards?</td>
-                  <td>Creep either rejected or spun into a new Backlog experiment</td>
-                </tr>
-                <tr>
-                  <td>Friday</td>
-                  <td>Learn sweep: every Learn card gets a decision or explicit defer with a date</td>
-                  <td>Zero orphan Learn cards without a plan</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Learn-phase decisions</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Label</th><th>Meaning</th><th>Typical next action</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td><code>persevere</code></td>
-                  <td>Hypothesis supported — continue or expand on current path</td>
-                  <td>Scale sample, deepen Build, or promote from experiment to product bet</td>
-                </tr>
-                <tr>
-                  <td><code>pivot</code></td>
-                  <td>Signal mixed — change approach; core assumption may still hold</td>
-                  <td>New experiment issue with revised hypothesis and metrics</td>
-                </tr>
-                <tr>
-                  <td><code>kill-candidate</code></td>
-                  <td>Hypothesis failed kill criteria — stop or sunset</td>
-                  <td>Archive feature path; document learning; do not quietly revive</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Micro-scenario: stuck Learn queue</h3>
-          <p>Abstract ops story — no product names.</p>
           <div class="section-card">
-            <p>Three experiments sit in <strong>Learn</strong>. Two have complete numbers; one is waiting on “one more week” for the third time. Meanwhile, Backlog has five eager ideas and someone wants to start two new Builds.</p>
+            <h3>Exact ticket template (handoff)</h3>
+            <div class="copy-row">
+              <button type="button" class="btn btn-primary btn-sm" data-copy-template>Copy template</button>
+              <span class="copy-feedback" aria-live="polite"></span>
+            </div>
+            <div class="template-block">
+              <pre id="bml-template"><code>## Hypothesis
+What do we believe will happen?
+
+## Build
+What exactly are we building? What is the smallest version we can ship to test this?
+
+## Measure
+What specific metrics or data will we collect? How will we know if the hypothesis is validated or invalidated?
+
+## Learn
+What did we actually learn? What decision are we making? (Persevere / Pivot / Kill)
+
+## Acceptance Criteria
+- [ ] ...
+
+## Technical Context / References
+@relevant-files @folders (for /grill-with-docs)</code></pre>
+            </div>
+            <p><strong>How to fill Measure:</strong> add a table with pass/kill thresholds, duration, and sample — see <a href="reference/issues/01-core-value-omi-insights.md">Ticket 1 example</a>. Repo template: <a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/build-loop-experiment.md">build-loop-experiment.md</a></p>
           </div>
-          <p><strong>Anti-theater response:</strong></p>
-          <ol>
-            <li>Friday Learn sweep: decide the two complete cards (one <code>persevere</code>, one <code>kill-candidate</code>).</li>
-            <li>Defer card three with a date, or kill it — “waiting for perfect data” is not a decision.</li>
-            <li>Hold new Builds until Learn count drops. Pull one Backlog card only after WIP drops below three.</li>
-            <li>Post mortem note on the issue: “Learn queue stuck 3 weeks — weekly Friday sweep now mandatory.”</li>
-          </ol>
-          <p>Week-1 Measure can be a spreadsheet. Event IDs should match the <a href="reference/Build_Loop_Metrics_Tracking.md">metrics dictionary</a> so later instrumentation does not invent new names.</p>
 
-          <div class="failure-modes">
-            <h3>Failure modes — Learn anti-theater</h3>
-            <ul>
-              <li><strong>Zero kills in a quarter.</strong> Either your kill criteria are too soft or Learn is being skipped. Fix Learn before more Builds.</li>
-              <li><strong>Learn without numbers.</strong> Decisions based on memory or enthusiasm. Gate: metrics on the issue.</li>
-              <li><strong>Perpetual Measure.</strong> Extending duration informally to avoid a kill. Update the issue or decide.</li>
-              <li><strong>Board as wallpaper.</strong> Team ships from memory; cards do not move. Monday review is non-optional.</li>
-              <li><strong>WIP blowout.</strong> Six active experiments, none reaching Learn. Enforce the three-active cap ruthlessly.</li>
-              <li><strong>Label without action.</strong> <code>pivot</code> applied but no follow-up experiment filed. Done means done <em>and</em> next step exists.</li>
-            </ul>
-          </div>
-
-          <h3>Module 6 — progress checklist</h3>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m6-c1" data-module="module-6" /> I know the gates between every column pair</label></li>
-            <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /> I understand the 3-active limit (Build + Measure) and will enforce it</label></li>
-            <li><label><input type="checkbox" data-progress="m6-c3" data-module="module-6" /> I can run the Monday / Wednesday / Friday weekly ritual</label></li>
-            <li><label><input type="checkbox" data-progress="m6-c4" data-module="module-6" /> I will treat zero Learn decisions for 2+ weeks as a system failure to fix first</label></li>
-          </ul>
-
-          <div class="self-check">
-            <h3 style="margin-top:0">Module 6 — self-check</h3>
+          <div class="section-card">
+            <h3>Cursor skill chain (Build column)</h3>
+            <div class="diagram-wrap">
+              <img src="assets/diagrams/skill-chain.svg" alt="grill-with-docs → to-spec → to-tickets → implement (tdd, code-review)" width="520" height="200" />
+            </div>
             <ol>
-              <li>Can you move to Learn without pass/kill numbers? Why not?</li>
-              <li>What do you do when an experiment sits in Learn for two weeks with no decision?</li>
-              <li>You have three cards in Build and a strong Backlog idea. What do you do?</li>
-              <li>What is the difference between a phase column and a decision label?</li>
+              <li><code>/grill-with-docs</code> — prime with issue + folders; sharpen assumptions</li>
+              <li><code>/to-spec</code> — publish spec from grilled conversation (no re-interview)</li>
+              <li><code>/to-tickets</code> — tracer-bullet vertical slices with blockers</li>
+              <li><code>/implement</code> — one ticket at a time; runs <code>/tdd</code> + <code>/code-review</code>; commits</li>
             </ol>
-            <p class="hint">Answer in your own words before expanding the answers below.</p>
-            <details>
-              <summary>Show answers</summary>
-              <ol>
-                <li>No. Learn without numbers is vibes. Duration must be complete and metrics recorded on the issue so the decision is auditable.</li>
-                <li>Treat it as a system failure: force a decision in the next weekly review (persevere / pivot / kill), or explicitly defer with a date. Do not open new Builds until Learn clears.</li>
-                <li>Do not start the new experiment. Finish, Measure, or Learn something first until active count is below three.</li>
-                <li>Columns (Backlog, Build, Measure, Learn, Done) track where the experiment is in the loop. Labels (<code>experiment</code>, <code>persevere</code>, <code>pivot</code>, <code>kill-candidate</code>) mark type and Learn outcome — they do not replace column position.</li>
-              </ol>
-            </details>
-          </div>
-        </section>
-        <!-- Module 7 -->
-<section class="hero">
-          <span class="status-chip">Module 7 · ~30 min</span>
-          <h1>Your first <em>project</em></h1>
-          <p class="hero-lede">Ship a real experiment issue in <strong>sandbox</strong> — practice the full template without polluting the live board. A lead graduates it when the hypothesis and thresholds are sound.</p>
-        </section>
-
-        <article class="module" id="why">
-          <div class="module-header">
-            <span class="module-badge">7</span>
-            <div>
-              <p class="eyebrow">Why</p>
-              <h2>Sandbox before the live board</h2>
-              <p class="module-time">~30 minutes</p>
+            <p>Tiny builds: skip to <code>/implement</code> (optional light grill).</p>
+            <div class="pill-row">
+              <a class="pill" href="skills/grill-with-docs.html">grill-with-docs</a>
+              <a class="pill" href="skills/to-spec.html">to-spec</a>
+              <a class="pill" href="skills/to-tickets.html">to-tickets</a>
+              <a class="pill" href="skills/implement.html">implement</a>
             </div>
           </div>
-          <p>Reading about the Build–Measure–Learn Loop is not the same as writing a falsifiable experiment ticket. Module 7 is the mandatory exercise: create your first real issue using the full template, with numeric pass and kill thresholds, a named measure path, and a duration.</p>
-          <p>Practice issues stay in <strong>sandbox</strong> until a lead promotes them. That protects the operating board’s WIP limit (max three active in Build+Measure combined) and keeps active experiments honest. Leads check template completeness and threshold quality before graduation — not whether you “like” the idea.</p>
-          <div class="quote">
-            <p><strong>Hard truth:</strong> If your sandbox issue could not survive lead review, it should not have been on the live board yet.</p>
+
+          <div class="section-card">
+            <h3>BookIQ example — Ticket 1 (Core Value)</h3>
+            <p><strong>Hypothesis:</strong> Customers actively read and act on OMI’s weekly insights.</p>
+            <p><strong>Build:</strong> Confirm weekly delivery + <code>omi.insight.*</code> events — no new product scope.</p>
+            <p><strong>Measure:</strong> ≥60% weekly open+click · kill &lt;40% after 4 weeks.</p>
+            <p><strong>Learn:</strong> Persevere / Pivot / Kill with evidence + <code>kill-candidate</code> if dead.</p>
+            <p><a href="reference/issues/01-core-value-omi-insights.md">Full draft</a> · Live <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a></p>
           </div>
-        </article>
 
-        <article class="module" id="how">
-          <div class="module-header">
-            <span class="module-badge">7</span>
-            <div>
-              <p class="eyebrow">How</p>
-              <h2>Create, submit, graduate</h2>
-            </div>
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>Copy the template. Paste into a scratch issue. Fill Hypothesis + Measure (with pass/kill) for Ticket 1 without looking at the draft.</p>
           </div>
-          <h3>Step 1 — Create the sandbox issue</h3>
-          <ol>
-            <li>Open your product repo (or teaching repo for practice) → <strong>New issue</strong> → <strong>Build Loop Experiment</strong> template.</li>
-            <li>Fill every section: hypothesis (one sentence), Build (smallest test), Measure table (pass + kill + how collected), duration, sample.</li>
-            <li>Apply label <code>experiment</code>.</li>
-            <li>Do <strong>not</strong> add the issue to the live Project board until a lead graduates it.</li>
-          </ol>
 
-          <h3>Step 2 — Post your submission</h3>
-          <p>Share the issue URL where your lead specifies (repo Discussion, Slack, or team channel):</p>
-<pre><code>Build Loop Module 7 submission
-Issue: https://github.com/YOUR-ORG/YOUR-REPO/issues/NNN
-Hypothesis (one line): …</code></pre>
-
-          <h3>Step 3 — Lead graduation</h3>
-          <p>Your lead reviews:</p>
-          <ul>
-            <li>Complete template with falsifiable hypothesis</li>
-            <li>Numeric pass and kill criteria plus duration</li>
-            <li>Named measure path (instrumentation or manual log)</li>
-            <li>Fit under the three-active Build+Measure cap when promoted</li>
-          </ul>
-          <p>When approved, the lead adds the issue to the live board at <strong>Backlog</strong> (or moves an existing draft). If sandbox-only practice is enough for your role, the lead confirms that on the <a href="certification.html">certification checklist</a>.</p>
-
-          <p><strong>BookIQ teammates:</strong> create the sandbox issue on <code>Book-IQ/bookiqv1-rc</code>; lead graduates it to the <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Build Loop Experiments board</a> when ready. See the <a href="appendix.html">BookIQ appendix</a> for week-1 draft examples.</p>
-        </article>
-
-        <article class="module" id="failure-modes">
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
-              <li><strong>Live board pollution</strong> — adding practice tickets to the operating Project before review. Crowds WIP and trains the team to ignore Backlog discipline.</li>
-              <li><strong>Vague hypothesis</strong> — “Improve onboarding” is not falsifiable. Name customer behavior you expect to see.</li>
-              <li><strong>Missing kill criteria</strong> — without a numeric fail line, Learn becomes vibes-only theater.</li>
-              <li><strong>Skipping submission</strong> — certification requires a posted link; silent sandbox issues do not count.</li>
+              <li>Template sections renamed — Cursor skills can’t find structure.</li>
+              <li>Skipping grill on multi-PR builds — weak assumptions ship.</li>
+              <li>Using <code>/prototype</code> or <code>/wayfinder</code> instead of the Build chain.</li>
             </ul>
           </div>
-        </article>
 
-        <article class="module" id="checklist">
-          <h3>Module 7 — progress checklist</h3>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /> Sandbox issue created with full template</label></li>
-            <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /> Pass and kill thresholds defined</label></li>
-            <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /> Submission link posted for lead review</label></li>
-          </ul>
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m4-c1" data-module="module-4" /><span>I copied the exact six-section template.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m4-c2" data-module="module-4" /><span>I can recite the four-skill Build chain in order.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m4-c3" data-module="module-4" /><span>I filled a scratch Ticket 1 with pass/kill metrics.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m4-c4" data-module="module-4" /><span>I know when to skip to /implement only.</span></label></li>
+            </ul>
+          </div>
+        </section>
+        <!-- module-5.html -->
+<section class="module" id="module-5">
+          <div class="module-header">
+            <div class="module-badge">5</div>
+            <div>
+              <h2>Running an experiment</h2>
+              <p class="module-time">~25 min</p>
+            </div>
+          </div>
 
-          <div class="self-check">
-            <h3 style="margin-top:0">Module 7 — self-check</h3>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>The Measure phase must be taken seriously. If you treat it as a waiting room while you build the next feature, you are not doing Build-Measure-Learn.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Column gates</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Leaving…</th><th>Requires</th></tr></thead>
+                <tbody>
+                  <tr><td>Backlog → Build</td><td>Hypothesis + numeric kill criteria on issue</td></tr>
+                  <tr><td>Build → Measure</td><td>Smallest test shipped; instrumentation or manual log path exists</td></tr>
+                  <tr><td>Measure → Learn / Validate</td><td>Duration elapsed or kill threshold hit; weekly numbers posted</td></tr>
+                  <tr><td>Learn → Done</td><td>Decision + evidence; one of <code>persevere</code> <code>pivot</code> <code>kill-candidate</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 2 (Human Review)</h3>
+            <p><strong>Hypothesis:</strong> Customers trust insights more when they know a human reviewed them.</p>
+            <p><strong>Build:</strong> A/B or cohort — same insight content, one arm shows “human-reviewed” indicator. Badge/copy only unless review workflow is required.</p>
+            <p><strong>Measure (3 weeks):</strong> trust/usefulness ratings + <code>omi.insight.acted</code> by variant. <strong>Kill:</strong> no meaningful difference.</p>
+            <p><strong>Learn:</strong> If kill — stop investing in human-review marketing; if persevere — expand review surfacing.</p>
+            <p><a href="reference/issues/04-human-review-value.md">Full draft</a> · Backlog until Core Value (#1083) has signal.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Build column — when code ships</h3>
+            <p>Non-trivial: <code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code>.</p>
+            <p>Measure column: <strong>no code</strong> unless instrumentation is broken — update issue with weekly numbers.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>On paper, walk Ticket 1 (#1083) through all five columns. What artifact exists in each column?</p>
+          </div>
+
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li>Measure without pre-registered pass/kill — any result “wins.”</li>
+              <li>Building new features during Measure — scope creep.</li>
+              <li>Learn without customer evidence — vibes-based persevere.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m5-c1" data-module="module-5" /><span>I know the gate for each column transition.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /><span>I walked Ticket 1 or 2 through all five columns.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m5-c3" data-module="module-5" /><span>I know Measure is data collection, not a dev queue.</span></label></li>
+            </ul>
+          </div>
+
+          <div class="section-card self-check">
+            <h3>Self-check</h3>
+            <div class="self-check-item">
+              <p>When can you write code during Measure?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc5-1">Show answer</button>
+              <div class="reveal-answer" id="sc5-1">Only if instrumentation is broken — otherwise post weekly numbers on the issue.</div>
+            </div>
+          </div>
+        </section>
+        <!-- module-6.html -->
+<section class="module" id="module-6">
+          <div class="module-header">
+            <div class="module-badge">6</div>
+            <div>
+              <h2>Operating the board</h2>
+              <p class="module-time">~20 min</p>
+            </div>
+          </div>
+
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>If you have not killed something in 60 days, you failed the system. One good experiment beats five half-baked features.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>WIP limits</h3>
+            <ul>
+              <li><strong>Max 3 active</strong> in Build + Measure combined (team of 3).</li>
+              <li>Clear Learn / Validate before pulling new Builds from Backlog.</li>
+              <li>Week-1 live priority: Core Value, Onboarding, Feature Usage — not all five at once.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Weekly cadence (30 min max)</h3>
             <ol>
-              <li>Why sandbox before adding to the live board?</li>
-              <li>What must a lead check before graduating your issue?</li>
-              <li>What happens if Learn never produces kill or pivot decisions?</li>
+              <li>Move overdue cards to Learn / Validate.</li>
+              <li>For each Learn card: Decision + Evidence on issue; apply decision label; → Done.</li>
+              <li>If Learn had zero decisions for 2+ weeks → fix Learn before shipping more.</li>
             </ol>
-            <p class="hint">Try answering aloud before opening the answers.</p>
-            <details>
-              <summary>Answers</summary>
-              <ol>
-                <li>So practice tickets do not crowd the live WIP limit or dilute active experiments. Leads keep the operating board honest.</li>
-                <li>Complete template, falsifiable hypothesis, numeric pass/kill + duration, measure path named, and that the experiment fits under the three-active Build+Measure cap when promoted.</li>
-                <li>The loop is theater — shipping without deciding. The Learn column exists to force persevere, pivot, or kill from evidence.</li>
-              </ol>
-            </details>
           </div>
-        </article>
-        <section class="module" id="skills-index">
-          <div class="module-header">
-            <div class="module-badge">S</div>
-            <div><h2>Cursor skills index</h2></div>
+
+          <div class="section-card">
+            <h3>BookIQ anti-patterns</h3>
+            <ul>
+              <li><strong>Stuck Learn:</strong> #1083 in Measure forever with no weekly <code>omi.insight.*</code> tallies.</li>
+              <li><strong>Vanity:</strong> celebrating dashboard logins while <code>omi.insight.acted</code> is zero.</li>
+              <li><strong>Zombie persevere:</strong> Forecast/Runway roadmap full steam while Ticket 3 shows low <code>feature.returned</code>.</li>
+            </ul>
+            <p>Metrics dictionary: <a href="reference/Build_Loop_Metrics_Tracking.md">Build_Loop_Metrics_Tracking.md</a></p>
           </div>
-          <div class="table-wrap"><table>
-            <thead><tr><th>Skill</th><th>Role</th></tr></thead>
-            <tbody>
-              <tr><td>/grill-with-docs</td><td>Sharpen plan + capture ADRs before spec</td></tr>
-              <tr><td>/grilling</td><td>One-question-at-a-time decision interview</td></tr>
-              <tr><td>/to-spec</td><td>Publish spec from conversation</td></tr>
-              <tr><td>/to-tickets</td><td>Vertical-slice tickets with blockers</td></tr>
-              <tr><td>/implement</td><td>Build one ticket; runs /tdd + /code-review</td></tr>
-              <tr><td>/tdd</td><td>Red-green at agreed seams</td></tr>
-              <tr><td>/code-review</td><td>Standards + spec review of diff</td></tr>
-              <tr><td>/prototype</td><td>Throwaway artifact to answer a design question</td></tr>
-              <tr><td>/wayfinder</td><td>Decision map for large uncertain efforts</td></tr>
-            </tbody>
-          </table></div>
-        </section>
 
-        <!-- appendix -->
-<section class="hero">
-          <span class="status-chip">Appendix · reference</span>
-          <h1>BookIQ <em>appendix</em></h1>
-          <p class="hero-lede">Modules 1–6 are portable. This page is <strong>BookIQ-specific</strong> — product assumptions, the live board, canonical templates, and week-1 experiment drafts on <code>Book-IQ/bookiqv1-rc</code>.</p>
-        </section>
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>Scan the live board. Count cards in Build + Measure. If &gt;3, identify what moves to Learn or Backlog.</p>
+          </div>
 
-        <article class="module" id="appendix">
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li>Learn queue as parking lot — no decisions for weeks.</li>
+              <li>Starting Pricing (#4) before day 45–60 cohort data exists.</li>
+              <li>Human Review (#2) before Core Value (#1) shows engagement signal.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m6-c1" data-module="module-6" /><span>I know the WIP limit and weekly rhythm.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /><span>I can spot vanity metrics on BookIQ experiments.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m6-c3" data-module="module-6" /><span>I counted active cards on the live board.</span></label></li>
+            </ul>
+          </div>
+        </section>
+        <!-- module-7.html -->
+<section class="module" id="module-7">
           <div class="module-header">
-            <div class="module-badge">A</div>
+            <div class="module-badge">7</div>
             <div>
-              <h2>Worked example: BookIQ</h2>
-              <p class="module-time">Product pointers only — not required for other teams</p>
+              <h2>Sandbox — your first ticket</h2>
+              <p class="module-time">~30 min</p>
             </div>
           </div>
 
-          <p><strong>BookIQ</strong> (bookiq.io) is Practical AI’s AI-powered financial platform with OMI (virtual CFO). First customers onboard with real money and real trust on the line — the Build Loop board exists to test whether they get value, not whether we ship features.</p>
-
-          <h3>BookIQ risky assumptions</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Assumption</th><th>Why it’s risky</th></tr></thead>
-              <tbody>
-                <tr><td>Customers act on OMI insights</td><td>Core value hypothesis</td></tr>
-                <tr><td>Human review adds trust</td><td>Differentiator vs pure AI</td></tr>
-                <tr><td>Customers renew after 60 days</td><td>Revenue survival</td></tr>
-                <tr><td>Forecast / Runway are top features</td><td>Roadmap bets</td></tr>
-              </tbody>
-            </table>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>Reading this course does not certify you. A lead must review a real ticket you wrote — with kill criteria sharp enough to actually kill the bet.</p>
           </div>
 
-          <h3>Live resources</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Resource</th><th>Link</th></tr></thead>
-              <tbody>
-                <tr><td>Live Build Loop board</td><td><a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ Projects #1</a></td></tr>
-                <tr><td>Live issue template (canonical)</td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/blob/main/.github/ISSUE_TEMPLATE/bml-experiment.md" target="_blank" rel="noopener noreferrer">bookiqv1-rc template</a> — runtime naming sync pending; see <a href="reference/Build_Loop_BookIQ_sync_note.md">sync note</a></td></tr>
-                <tr><td>Teaching template (mirror)</td><td><a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/build-loop-experiment.md" target="_blank" rel="noopener noreferrer">bml-onboarding copy</a></td></tr>
-                <tr>
-                  <td>Week-1 experiment drafts</td>
-                  <td>
-                    <a href="reference/issues/01-core-value-omi-insights.md">Core Value</a> ·
-                    <a href="reference/issues/02-onboarding-completion-impact.md">Onboarding</a> ·
-                    <a href="reference/issues/03-feature-usage-reality-check.md">Feature usage</a>
-                  </td>
-                </tr>
-                <tr><td>Handoff (origin)</td><td><a href="reference/Build_Loop_Kanban_Handoff.md">Build Loop Kanban handoff</a></td></tr>
-                <tr><td>Metrics dictionary</td><td><a href="reference/Build_Loop_Metrics_Tracking.md">Build Loop metrics tracking</a></td></tr>
-                <tr><td>Appendix index (repo)</td><td><a href="examples/bookiq/">examples/bookiq/</a></td></tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="quote">
-            <p>Teaching template syncs <strong>one-way</strong> from the live BookIQ template (<code>&lt;!-- last-synced: YYYY-MM-DD from bookiqv1-rc --&gt;</code>). See <a href="reference/Build_Loop_Implementation_Notes.md">Implementation notes</a> and <a href="reference/Build_Loop_BookIQ_sync_note.md">BookIQ sync note</a> for strings the live repo should adopt.</p>
-          </div>
-
-          <h3>Live experiment issues (reference)</h3>
-          <p>Product experiment issues <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a>, <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a>, and <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a> map to the week-1 drafts above. Do not edit those from this training repo.</p>
-
-          <h3>Module 7 for BookIQ teammates</h3>
-          <p>Create your sandbox issue on <code>Book-IQ/bookiqv1-rc</code>. Post the submission URL to your lead. When approved, the lead adds it to <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Projects #1</a> at Backlog. Full exercise: <a href="module-7.html">Module 7</a>.</p>
-        </article>
-        <!-- next-steps -->
-<section class="hero">
-          <span class="status-chip">After the course</span>
-          <h1>Next <em>steps</em></h1>
-          <p class="hero-lede">Certification is the start of operating the loop — not the finish. Graduate your sandbox issue, join the weekly cadence, and keep Modules 1–6 portable if you fork for another product.</p>
-        </section>
-
-        <article class="module" id="next-steps">
-          <div class="module-header">
-            <div class="module-badge">→</div>
-            <div>
-              <h2>Your first week after certification</h2>
+          <div class="section-card">
+            <h3>Pick one of the five tickets</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>#</th><th>Experiment</th><th>Draft</th><th>Live</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Core Value — OMI insights</td><td><a href="reference/issues/01-core-value-omi-insights.md">draft</a></td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a></td></tr>
+                  <tr><td>2</td><td>Human Review Value</td><td><a href="reference/issues/04-human-review-value.md">draft</a></td><td>Backlog</td></tr>
+                  <tr><td>3</td><td>Feature Usage — Forecast / Runway</td><td><a href="reference/issues/03-feature-usage-reality-check.md">draft</a></td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a></td></tr>
+                  <tr><td>4</td><td>Pricing Sensitivity</td><td><a href="reference/issues/05-pricing-sensitivity.md">draft</a></td><td>Backlog</td></tr>
+                  <tr><td>5</td><td>Onboarding Completion</td><td><a href="reference/issues/02-onboarding-completion-impact.md">draft</a></td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a></td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          <ol>
-            <li><strong>Complete Module 7 sandbox submission</strong> — if not already posted, finish the issue and share the URL with your lead.</li>
-            <li><strong>Get lead sign-off</strong> on the <a href="certification.html">certification checklist</a> (all six items).</li>
-            <li><strong>Graduate the sandbox issue</strong> to the live board when approved — Backlog first, then Build only when hypothesis and kill criteria are locked.</li>
-            <li><strong>Join the weekly Build Loop review</strong> — move cards honestly, record Learn decisions with evidence, enforce the three-active WIP cap.</li>
-            <li><strong>Browse deepening material</strong> — <a href="how-to/">how-to/</a> and <a href="videos/">videos/</a> as they publish; skill deep-dives under <a href="skills/wayfinder.html">skills/</a>.</li>
-          </ol>
 
-          <h3>Reference docs (ops)</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Doc</th><th>Use when</th></tr></thead>
-              <tbody>
-                <tr><td><a href="reference/Build_Loop_Kanban_Handoff.md">Kanban handoff</a></td><td>Origin context and hard truths</td></tr>
-                <tr><td><a href="reference/Build_Loop_Kanban_Setup.md">Kanban setup</a></td><td>Standing up a new board</td></tr>
-                <tr><td><a href="reference/Build_Loop_Metrics_Tracking.md">Metrics tracking</a></td><td>Event IDs and measure tables</td></tr>
-                <tr><td><a href="reference/Build_Loop_Implementation_Notes.md">Implementation notes</a></td><td>Anti-bloat design choices</td></tr>
-                <tr><td><a href="research/lean-startup-build-loop-teaching-points.md">Lean Startup teaching points</a></td><td>Concept attribution for Modules 1–2</td></tr>
-              </tbody>
-            </table>
+          <div class="section-card">
+            <h3>Your task</h3>
+            <ol>
+              <li>Copy the <a href="module-4.html">exact template</a> (or use Copy button there).</li>
+              <li>Draft a <strong>new</strong> sandbox issue in <code>Practical-Office/bml-onboarding</code> Discussions or a scratch repo — <strong>not</strong> the live BookIQ board until certified.</li>
+              <li>Fill all six sections. Measure must include pass/kill numbers and duration.</li>
+              <li>Submit link to your lead for <a href="certification.html">certification</a>.</li>
+            </ol>
+            <p>Alternative: improve one section on an existing draft (e.g. sharpen Ticket 4 pricing kill criteria) and explain what changed.</p>
           </div>
 
-          <h3>Forking for another product</h3>
-          <p>Keep <strong>Modules 1–6</strong> as the portable core — no product-specific URLs in the main flow. Swap the <a href="appendix.html">appendix</a> links only: live board URL, canonical issue template on the product repo, and week-1 experiment drafts. Teaching mirror stays in this repo at <code>.github/ISSUE_TEMPLATE/build-loop-experiment.md</code>.</p>
-
-          <div class="quote">
-            <p><strong>Portable rule:</strong> If a teammate learning on Product B has to read Product A’s board to finish Module 4, the core course is too coupled. Product pointers belong in the appendix.</p>
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>Create the sandbox issue. Paste the URL in your certification checklist.</p>
           </div>
-        </article>
-        <!-- certification -->
-<section class="hero">
-          <span class="status-chip">Lead-reviewed</span>
-          <h1>Certification <em>checklist</em></h1>
-          <p class="hero-lede">Sign off when you can run the shared experiment system independently — modules complete, sandbox submitted, and a lead confirms graduation or sandbox-only practice.</p>
+
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li>Sandbox issue filed on live board without lead approval.</li>
+              <li>Measure section without numeric kill threshold.</li>
+              <li>Technical Context empty — grill-with-docs has nothing to prime.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /><span>I picked one of the five tickets as my base.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /><span>I created a sandbox issue with all six template sections.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /><span>I submitted the link for certification review.</span></label></li>
+            </ul>
+          </div>
         </section>
+        <!-- quick-reference.html -->
+<section class="module">
+          <div class="module-header">
+            <div class="module-badge">⚡</div>
+            <div><h2>Build-Measure-Learn quick reference</h2><p class="module-time">printable one-pager</p></div>
+          </div>
 
-        <article class="module" id="certification">
+          <div class="section-card">
+            <h3>Columns (Stage)</h3>
+            <p>Backlog → Build → Measure → <strong>Learn / Validate</strong> → Done</p>
+            <img src="assets/diagrams/column-flow.svg" alt="Column flow" width="720" height="120" />
+          </div>
+
+          <div class="section-card">
+            <h3>Labels</h3>
+            <p><code>experiment</code> <code>hypothesis</code> <code>measure</code> <code>learn</code> <code>persevere</code> <code>pivot</code> <code>kill-candidate</code></p>
+            <p>Columns own phase. Decision labels at Learn only.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>WIP &amp; cadence</h3>
+            <ul>
+              <li>Max <strong>3</strong> active in Build + Measure</li>
+              <li>Weekly 30 min: overdue → Learn; decide; label; Done</li>
+              <li>2+ weeks with zero Learn decisions = theater — fix before new Builds</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Column gates</h3>
+            <ul>
+              <li><strong>Backlog → Build:</strong> hypothesis + kill criteria</li>
+              <li><strong>Build → Measure:</strong> smallest test shipped + measure path</li>
+              <li><strong>Measure → Learn:</strong> duration done or kill hit; numbers posted</li>
+              <li><strong>Learn → Done:</strong> decision + evidence + label</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Ticket template</h3>
+            <div class="copy-row no-print">
+              <button type="button" class="btn btn-primary btn-sm" data-copy-template>Copy template</button>
+              <span class="copy-feedback" aria-live="polite"></span>
+            </div>
+            <pre id="qr-template"><code>## Hypothesis
+## Build
+## Measure
+## Learn
+## Acceptance Criteria
+## Technical Context / References</code></pre>
+            <p>Fill Measure with pass/kill table + duration. Prime grill: <code>@folders</code> in Technical Context.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Build skills (required order)</h3>
+            <p><code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code> (<code>/tdd</code> + <code>/code-review</code> inside)</p>
+            <p>Tiny build: <code>/implement</code> only. No <code>/to-issues</code> substitute.</p>
+          </div>
+
+          <div class="hard-truth">
+            <h3>Hard truths</h3>
+            <ul>
+              <li>Most teams never kill anything — we will.</li>
+              <li>Learn / Validate is the most important column.</li>
+              <li>Vanity metrics ≠ validated learning.</li>
+              <li>60 days without a kill = you failed the system.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ — five tickets</h3>
+            <ol>
+              <li>OMI insights engagement (#1083)</li>
+              <li>Human review A/B (backlog)</li>
+              <li>Forecast / Runway usage (#1085)</li>
+              <li>Pricing $399+ (backlog, day 45–60)</li>
+              <li>Onboarding completion (#1084)</li>
+            </ol>
+          </div>
+        </section>
+        <!-- certification.html -->
+<section class="module">
           <div class="module-header">
             <div class="module-badge">✓</div>
-            <div>
-              <h2>What certification means</h2>
-              <p class="module-time">Submit when all items are true</p>
-            </div>
+            <div><h2>Certification</h2><p class="module-time">lead-reviewed</p></div>
           </div>
-          <p>Certification is not a badge for reading the course. It means you can create a falsifiable experiment issue, respect board WIP limits, use the Build skill chain when appropriate, and commit to Learn decisions backed by data — including kill when the hypothesis fails.</p>
-          <p>Your lead initials the checklist (or confirms in your team channel). For BookIQ teammates, graduation to the live board is the usual capstone; other products follow the same checklist with their own board URL in the appendix.</p>
-
+          <p>Certification means you can create strong experiment tickets and operate the board without theater. Your lead signs off after reviewing your sandbox work.</p>
           <div class="cert-box">
-            <p class="eyebrow">Sign off when all are true</p>
+            <p class="eyebrow">Checklist</p>
             <ul class="cert-list">
-              <li><label><input type="checkbox" data-progress="cert-1" data-module="certification" /> Completed all module progress checklists (Modules 1–7)</label></li>
-              <li><label><input type="checkbox" data-progress="cert-2" data-module="certification" /> Answered self-check questions (discussed with lead if unsure)</label></li>
-              <li><label><input type="checkbox" data-progress="cert-3" data-module="certification" /> Created sandbox Build Loop experiment issue with pass/kill metrics</label></li>
-              <li><label><input type="checkbox" data-progress="cert-4" data-module="certification" /> Posted submission link for review</label></li>
-              <li><label><input type="checkbox" data-progress="cert-5" data-module="certification" /> Lead approved graduation to live board (or confirmed sandbox-only practice complete)</label></li>
-              <li><label><input type="checkbox" data-progress="cert-6" data-module="certification" /> I will kill or pivot when data says so — not theater</label></li>
+              <li><label><input type="checkbox" data-progress="cert-1" data-module="certification" /><span>Completed all seven modules (checklists done).</span></label></li>
+              <li><label><input type="checkbox" data-progress="cert-2" data-module="certification" /><span>Submitted sandbox issue from Module 7 (link below).</span></label></li>
+              <li><label><input type="checkbox" data-progress="cert-3" data-module="certification" /><span>Ticket uses exact six-section template with numeric pass/kill in Measure.</span></label></li>
+              <li><label><input type="checkbox" data-progress="cert-4" data-module="certification" /><span>Can explain grill-with-docs → to-spec → to-tickets → implement.</span></label></li>
+              <li><label><input type="checkbox" data-progress="cert-5" data-module="certification" /><span>Lead approved — ready for live board work.</span></label></li>
             </ul>
             <div class="cert-meta">
-              <strong>Certified by:</strong> ________________ · <strong>Date:</strong> YYYY-MM-DD
+              <p><strong>Lead review prompts:</strong></p>
+              <ul>
+                <li>Would this ticket’s kill criteria actually kill the bet?</li>
+                <li>Is Build the smallest test — or a roadmap slice?</li>
+                <li>What decision label would you apply if Measure hits kill today?</li>
+                <li>Walk one issue through Build using the skill chain — which skills, which order?</li>
+              </ul>
+              <p><strong>High-stakes roles:</strong> lead schedules a short video walkthrough of one full loop (Backlog → Done) on a real or sandbox ticket.</p>
+              <p>Submit sandbox URL via team Slack or <a href="https://github.com/Practical-Office/bml-onboarding/discussions" target="_blank" rel="noopener noreferrer">repo Discussions</a>.</p>
             </div>
           </div>
-
-          <h3>Lead review prompts</h3>
-          <p>Leads can use these questions in a five-minute review:</p>
-          <ol>
-            <li>Can the teammate state the hypothesis in one sentence without reading the issue?</li>
-            <li>Are pass and kill thresholds numeric and tied to a named measure path?</li>
-            <li>Does the teammate know when to use <code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code> vs skip to <code>/implement</code>?</li>
-            <li>Will they move the card through Measure without adding scope?</li>
-            <li>Do they accept kill as a valid Learn outcome?</li>
-          </ol>
-        </article>
-        <p class="footer-note">
-          Build Loop Mastery — concepts from Eric Ries’s Lean Startup methodology summarized with attribution; not a substitute for the book.
-          Practical AI adds an explicit <strong>kill</strong> Learn outcome.
-          © Practical AI · https://practical-office.github.io/bml-onboarding/
-        </p>
+        </section>
+        <!-- next-steps.html -->
+<section class="module">
+          <div class="module-header">
+            <div class="module-badge">→</div>
+            <div><h2>First week on the live board</h2></div>
+          </div>
+          <div class="section-card">
+            <h3>After certification</h3>
+            <ol>
+              <li>Join <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ/projects/1</a> — confirm Stage grouping.</li>
+              <li>Pick up one live ticket (#1083, #1084, or #1085) — do not exceed WIP 3.</li>
+              <li>Run weekly Learn review — decisions before new Builds.</li>
+              <li>Keep <a href="quick-reference.html">quick reference</a> bookmarked.</li>
+            </ol>
+          </div>
+          <div class="section-card">
+            <h3>Skills deep-dives</h3>
+            <p>Required chain: <a href="skills/grill-with-docs.html">grill-with-docs</a> · <a href="skills/to-spec.html">to-spec</a> · <a href="skills/to-tickets.html">to-tickets</a> · <a href="skills/implement.html">implement</a></p>
+            <p>Optional: <a href="skills/tdd.html">tdd</a> · <a href="skills/code-review.html">code-review</a> · <a href="skills/grilling.html">grilling</a></p>
+          </div>
+        </section>
+        <p class="footer-note">Build-Measure-Learn Onboarding — Lean Startup concepts with attribution; Practical AI adds explicit kill.</p>
       </main>
     </div>
   </div>

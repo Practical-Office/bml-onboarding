@@ -1,5 +1,5 @@
 ---
-title: "Build Loop: Feature usage reality check (Forecast / Runway)"
+title: "BML: Feature usage reality check (Forecast / Runway)"
 labels: [experiment]
 github: https://github.com/Book-IQ/bookiqv1-rc/issues/1085
 ---
@@ -8,7 +8,7 @@ github: https://github.com/Book-IQ/bookiqv1-rc/issues/1085
 
 Forecast and Runway are among the most valuable features for first customers (they will show up in top usage, not just marketing claims).
 
-## Build (smallest test)
+## Build
 
 Tag existing routes/actions with `feature.viewed` / `feature.used` / `feature.returned` for keys: `forecast`, `runway`, plus baselines `omi_insights`, `cashflow`, `transactions_review`. No new Forecast/Runway features — measurement only.
 
@@ -22,7 +22,7 @@ Tag existing routes/actions with `feature.viewed` / `feature.used` / `feature.re
 **Duration:** 30 days  
 **Sample:** Pilot tenants with access to these surfaces
 
-## Learn (fill only when deciding)
+## Learn
 
 - **Decision:** Persevere / Pivot / Kill
 - **Evidence:**
@@ -34,13 +34,6 @@ Tag existing routes/actions with `feature.viewed` / `feature.used` / `feature.re
 - [ ] Weekly usage tally on the issue or sheet
 - [ ] Learn decision: keep investing / pivot messaging / kill emphasis
 - [ ] Decision label applied: `persevere` | `pivot` | `kill-candidate`
-
-## Cursor workflow (when in Build)
-
-1. `/grill-with-docs` — Voyager routes for forecast/runway/cashflow
-2. `/to-spec` — if Build is non-trivial
-3. `/to-tickets` — if the Build splits into multiple slices
-4. `/implement` — thin client/API usage events only; one ticket at a time (`/tdd` + `/code-review` inside)
 
 ## Technical Context / References
 

@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Module 7 — Your First Project · Build Loop Mastery</title>
-  <meta name="description" content="Create your first Build Loop experiment in sandbox, submit for lead review, and graduate to the live board when approved." />
+  <title>Module 7 — Sandbox | Build-Measure-Learn Onboarding</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,114 +17,75 @@
     <div class="main">
       <header class="topbar no-print">
         <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
-        <div class="topbar-title">Module 7 — Your first project</div>
-        <div class="topbar-actions">
-          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
-        </div>
+        <div class="topbar-title">Module 7</div>
+        <div class="topbar-actions"><button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button></div>
       </header>
       <main class="content" id="top">
-        <section class="hero">
-          <span class="status-chip">Module 7 · ~30 min</span>
-          <h1>Your first <em>project</em></h1>
-          <p class="hero-lede">Ship a real experiment issue in <strong>sandbox</strong> — practice the full template without polluting the live board. A lead graduates it when the hypothesis and thresholds are sound.</p>
-        </section>
-
-        <article class="module" id="why">
+        <section class="module" id="module-7">
           <div class="module-header">
-            <span class="module-badge">7</span>
+            <div class="module-badge">7</div>
             <div>
-              <p class="eyebrow">Why</p>
-              <h2>Sandbox before the live board</h2>
-              <p class="module-time">~30 minutes</p>
+              <h2>Sandbox — your first ticket</h2>
+              <p class="module-time">~30 min</p>
             </div>
           </div>
-          <p>Reading about the Build–Measure–Learn Loop is not the same as writing a falsifiable experiment ticket. Module 7 is the mandatory exercise: create your first real issue using the full template, with numeric pass and kill thresholds, a named measure path, and a duration.</p>
-          <p>Practice issues stay in <strong>sandbox</strong> until a lead promotes them. That protects the operating board’s WIP limit (max three active in Build+Measure combined) and keeps active experiments honest. Leads check template completeness and threshold quality before graduation — not whether you “like” the idea.</p>
-          <div class="quote">
-            <p><strong>Hard truth:</strong> If your sandbox issue could not survive lead review, it should not have been on the live board yet.</p>
-          </div>
-        </article>
 
-        <article class="module" id="how">
-          <div class="module-header">
-            <span class="module-badge">7</span>
-            <div>
-              <p class="eyebrow">How</p>
-              <h2>Create, submit, graduate</h2>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>Reading this course does not certify you. A lead must review a real ticket you wrote — with kill criteria sharp enough to actually kill the bet.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Pick one of the five tickets</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>#</th><th>Experiment</th><th>Draft</th><th>Live</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>Core Value — OMI insights</td><td><a href="reference/issues/01-core-value-omi-insights.md">draft</a></td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a></td></tr>
+                  <tr><td>2</td><td>Human Review Value</td><td><a href="reference/issues/04-human-review-value.md">draft</a></td><td>Backlog</td></tr>
+                  <tr><td>3</td><td>Feature Usage — Forecast / Runway</td><td><a href="reference/issues/03-feature-usage-reality-check.md">draft</a></td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a></td></tr>
+                  <tr><td>4</td><td>Pricing Sensitivity</td><td><a href="reference/issues/05-pricing-sensitivity.md">draft</a></td><td>Backlog</td></tr>
+                  <tr><td>5</td><td>Onboarding Completion</td><td><a href="reference/issues/02-onboarding-completion-impact.md">draft</a></td><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a></td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
-          <h3>Step 1 — Create the sandbox issue</h3>
-          <ol>
-            <li>Open your product repo (or teaching repo for practice) → <strong>New issue</strong> → <strong>Build Loop Experiment</strong> template.</li>
-            <li>Fill every section: hypothesis (one sentence), Build (smallest test), Measure table (pass + kill + how collected), duration, sample.</li>
-            <li>Apply label <code>experiment</code>.</li>
-            <li>Do <strong>not</strong> add the issue to the live Project board until a lead graduates it.</li>
-          </ol>
 
-          <h3>Step 2 — Post your submission</h3>
-          <p>Share the issue URL where your lead specifies (repo Discussion, Slack, or team channel):</p>
-<pre><code>Build Loop Module 7 submission
-Issue: https://github.com/YOUR-ORG/YOUR-REPO/issues/NNN
-Hypothesis (one line): …</code></pre>
+          <div class="section-card">
+            <h3>Your task</h3>
+            <ol>
+              <li>Copy the <a href="module-4.html">exact template</a> (or use Copy button there).</li>
+              <li>Draft a <strong>new</strong> sandbox issue in <code>Practical-Office/bml-onboarding</code> Discussions or a scratch repo — <strong>not</strong> the live BookIQ board until certified.</li>
+              <li>Fill all six sections. Measure must include pass/kill numbers and duration.</li>
+              <li>Submit link to your lead for <a href="certification.html">certification</a>.</li>
+            </ol>
+            <p>Alternative: improve one section on an existing draft (e.g. sharpen Ticket 4 pricing kill criteria) and explain what changed.</p>
+          </div>
 
-          <h3>Step 3 — Lead graduation</h3>
-          <p>Your lead reviews:</p>
-          <ul>
-            <li>Complete template with falsifiable hypothesis</li>
-            <li>Numeric pass and kill criteria plus duration</li>
-            <li>Named measure path (instrumentation or manual log)</li>
-            <li>Fit under the three-active Build+Measure cap when promoted</li>
-          </ul>
-          <p>When approved, the lead adds the issue to the live board at <strong>Backlog</strong> (or moves an existing draft). If sandbox-only practice is enough for your role, the lead confirms that on the <a href="certification.html">certification checklist</a>.</p>
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>Create the sandbox issue. Paste the URL in your certification checklist.</p>
+          </div>
 
-          <p><strong>BookIQ teammates:</strong> create the sandbox issue on <code>Book-IQ/bookiqv1-rc</code>; lead graduates it to the <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Build Loop Experiments board</a> when ready. See the <a href="appendix.html">BookIQ appendix</a> for week-1 draft examples.</p>
-        </article>
-
-        <article class="module" id="failure-modes">
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
-              <li><strong>Live board pollution</strong> — adding practice tickets to the operating Project before review. Crowds WIP and trains the team to ignore Backlog discipline.</li>
-              <li><strong>Vague hypothesis</strong> — “Improve onboarding” is not falsifiable. Name customer behavior you expect to see.</li>
-              <li><strong>Missing kill criteria</strong> — without a numeric fail line, Learn becomes vibes-only theater.</li>
-              <li><strong>Skipping submission</strong> — certification requires a posted link; silent sandbox issues do not count.</li>
+              <li>Sandbox issue filed on live board without lead approval.</li>
+              <li>Measure section without numeric kill threshold.</li>
+              <li>Technical Context empty — grill-with-docs has nothing to prime.</li>
             </ul>
           </div>
-        </article>
 
-        <article class="module" id="checklist">
-          <h3>Module 7 — progress checklist</h3>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /> Sandbox issue created with full template</label></li>
-            <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /> Pass and kill thresholds defined</label></li>
-            <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /> Submission link posted for lead review</label></li>
-          </ul>
-
-          <div class="self-check">
-            <h3 style="margin-top:0">Module 7 — self-check</h3>
-            <ol>
-              <li>Why sandbox before adding to the live board?</li>
-              <li>What must a lead check before graduating your issue?</li>
-              <li>What happens if Learn never produces kill or pivot decisions?</li>
-            </ol>
-            <p class="hint">Try answering aloud before opening the answers.</p>
-            <details>
-              <summary>Answers</summary>
-              <ol>
-                <li>So practice tickets do not crowd the live WIP limit or dilute active experiments. Leads keep the operating board honest.</li>
-                <li>Complete template, falsifiable hypothesis, numeric pass/kill + duration, measure path named, and that the experiment fits under the three-active Build+Measure cap when promoted.</li>
-                <li>The loop is theater — shipping without deciding. The Learn column exists to force persevere, pivot, or kill from evidence.</li>
-              </ol>
-            </details>
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /><span>I picked one of the five tickets as my base.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /><span>I created a sandbox issue with all six template sections.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /><span>I submitted the link for certification review.</span></label></li>
+            </ul>
           </div>
-        </article>
-
+        </section>
         <div class="page-nav no-print" id="pageNav"></div>
-
-        <p class="footer-note">
-          Next: <a href="appendix.html">BookIQ appendix</a> (product pointers) or <a href="certification.html">certification checklist</a>.
-          Teaching template: <a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/build-loop-experiment.md" target="_blank" rel="noopener noreferrer">build-loop-experiment.md</a>.
-        </p>
       </main>
     </div>
   </div>

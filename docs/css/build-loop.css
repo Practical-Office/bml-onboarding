@@ -1,4 +1,4 @@
-/* Build Loop Mastery — Practical AI / BookIQ product chrome */
+/* Build-Measure-Learn Onboarding — Practical AI / BookIQ */
 :root {
   --brand: #fcbb48;
   --brand-dark: #e0a53b;
@@ -34,6 +34,44 @@
   --radius: 0.625rem;
   --radius-lg: 0.875rem;
   --radius-xl: 1.125rem;
+}
+
+[data-theme="dark"] {
+  --brand-soft: #3d3428;
+  --brand-50: #2a2419;
+  --ink: #e8edf2;
+  --ink-soft: #c9d2dc;
+  --ink-faint: #9aa8b8;
+  --muted: #8b9aab;
+  --canvas: #1a2330;
+  --surface: #243040;
+  --surface-alt: #2a3545;
+  --border: #3a4a5c;
+  --border-strong: #4a5c70;
+  --success-soft: #14352a;
+  --info-soft: #1a2d4a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --brand-soft: #3d3428;
+    --brand-50: #2a2419;
+    --ink: #e8edf2;
+    --ink-soft: #c9d2dc;
+    --ink-faint: #9aa8b8;
+    --muted: #8b9aab;
+    --canvas: #1a2330;
+    --surface: #243040;
+    --surface-alt: #2a3545;
+    --border: #3a4a5c;
+    --border-strong: #4a5c70;
+    --success-soft: #14352a;
+    --info-soft: #1a2d4a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    --shadow-card: 0 4px 14px rgba(0, 0, 0, 0.25);
+  }
 }
 
 *,
@@ -807,12 +845,124 @@ body.nav-open .sidebar {
   margin: 1.25rem 0;
 }
 
+.hard-truth {
+  margin: 1.25rem 0;
+  padding: 1rem 1.15rem;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--brand-dark);
+  background: var(--brand-50);
+}
+
+.hard-truth h3 {
+  margin-top: 0;
+  color: var(--ink);
+}
+
+.diagram-wrap {
+  margin: 1.25rem 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  text-align: center;
+}
+
+.diagram-wrap svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram-caption {
+  margin: 0.75rem 0 0;
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.template-block {
+  position: relative;
+  margin: 1rem 0;
+}
+
+.template-block pre {
+  margin: 0;
+}
+
+.copy-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.copy-feedback {
+  font-size: 0.8rem;
+  color: var(--success);
+  opacity: 0;
+  transition: opacity 0.2s var(--ease);
+}
+
+.copy-feedback.is-visible {
+  opacity: 1;
+}
+
+.reveal-answer {
+  margin-top: 0.5rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius);
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  display: none;
+}
+
+.reveal-answer.is-open {
+  display: block;
+}
+
+.self-check-item {
+  margin: 0.75rem 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.self-check-item:last-child {
+  border-bottom: none;
+}
+
+.ticket-card {
+  margin: 0.65rem 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.ticket-card strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.ticket-card span {
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+}
+
 .failure-modes {
   margin: 1.25rem 0;
   padding: 1rem 1.15rem;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(190, 18, 60, 0.2);
   background: rgba(255, 241, 242, 0.5);
+}
+
+[data-theme="dark"] .failure-modes {
+  background: rgba(190, 18, 60, 0.08);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .failure-modes {
+    background: rgba(190, 18, 60, 0.08);
+  }
 }
 
 .failure-modes h3 {

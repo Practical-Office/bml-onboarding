@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Module 1 — Introduction | Build Loop Mastery</title>
-  <meta name="description" content="Why Build Loop Mastery: uncertainty, validated learning, risky assumptions, and why feature factories fail." />
+  <title>Module 1 — Introduction | Build-Measure-Learn Onboarding</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,196 +27,74 @@
           <div class="module-header">
             <div class="module-badge">1</div>
             <div>
-              <h2>Introduction — why Build Loop</h2>
-              <p class="module-time">~25 min · playbook</p>
+              <h2>Introduction — why Build-Measure-Learn</h2>
+              <p class="module-time">~20 min</p>
             </div>
           </div>
 
-          <div class="section-card">
-            <p class="eyebrow">Section 1</p>
-            <h3>Why this matters</h3>
-            <p>Most teams can ship software. The harder question — especially for new products and major bets — is whether anyone wants what you built enough to sustain a business around it. That question lives in <strong>extreme uncertainty</strong>. You do not know yet if the problem is real, if your solution fits, or if customers will pay, adopt, or return.</p>
-            <p>Under uncertainty, shipping more features is not the same as making progress. A team can close dozens of tickets, hit sprint velocity targets, and still learn nothing decisive about the bet they are running. Activity looks productive; the business model stays unproven.</p>
-            <p><strong>Validated learning</strong> is the unit of progress that matters here: evidence, from real-world contact with customers or users, that a belief about value, growth, or feasibility is true or false. Not opinions in a roadmap doc. Not internal applause for a launch. Learning you can point to and act on.</p>
-            <p>Build Loop Mastery exists because Practical AI teams need a shared experiment system — not a feature factory with prettier standups. The <strong>Build–Measure–Learn Loop</strong> is that system: turn an idea into something testable, measure how people respond, then decide whether to continue, change course, or stop. Faster cycles through that loop beat longer cycles through a backlog of unvalidated assumptions.</p>
-            <p>This module frames the mindset. Later modules show you how to run experiments on GitHub, write tickets, and operate the board. Start here so every experiment you run has a clear <em>why</em>.</p>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>Most teams say they do Build-Measure-Learn but never kill anything. If Learn does not regularly produce kill, pivot, or persevere decisions from real data, you are doing <strong>theater</strong> — not learning.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 2</p>
-            <h3>Ideas / concepts</h3>
-
-            <h3>Uncertainty is the default</h3>
-            <p>New products and significant pivots are not execution problems alone. They are learning problems. The team must discover whether the world behaves the way their strategy assumes. Until that discovery happens, roadmaps are hypotheses written in calendar form.</p>
-            <p>Two questions sit above “Can we build it?”:</p>
-            <ul>
-              <li><strong>Should we build this?</strong> — Is there a problem worth solving, for people who will engage?</li>
-              <li><strong>Can we build a sustainable business around it?</strong> — Will behavior, willingness to pay, or growth mechanics support the vision?</li>
-            </ul>
-            <p>Build Loop work makes those questions explicit instead of burying them under feature lists.</p>
-
-            <h3>Validated learning as progress</h3>
-            <p>Traditional project management measures progress by outputs: stories closed, milestones hit, releases shipped. Under uncertainty, outputs can increase while knowledge stays flat.</p>
-            <p><strong>Validated learning</strong> means you ran something in the real world and updated your beliefs with evidence. Examples of validated learning (concept-level):</p>
-            <ul>
-              <li>Users who saw the new flow completed a key action at twice the baseline rate.</li>
-              <li>Prospects who received the offer declined uniformly — the value hypothesis failed fast.</li>
-              <li>A manual concierge version of the service retained fewer than one in ten participants — the problem may be weaker than assumed.</li>
-            </ul>
-            <p>Invalidated learning also counts: you learned the assumption was wrong. That is progress if you record it and change behavior. Shipping without measuring, or measuring without deciding, is not progress — it is theater.</p>
-
-            <h3>Risky assumptions (leap-of-faith)</h3>
-            <p>Every product bet rests on assumptions. Some are safe; others, if wrong, collapse the whole strategy. Those are <strong>risky assumptions</strong> — sometimes called leap-of-faith assumptions in Lean Startup vocabulary.</p>
-            <p>Common categories:</p>
-            <ul>
-              <li><strong>Value</strong> — Users will find this useful enough to change behavior.</li>
-              <li><strong>Growth</strong> — Acquired users will invite others, return, or expand usage without unsustainable spend.</li>
-              <li><strong>Feasibility</strong> — We can deliver the experience at acceptable cost and quality.</li>
-              <li><strong>Channel / willingness to pay</strong> — Customers will pay, or adopt through the channel we can reach.</li>
-            </ul>
-            <p>Build Loop experiments should name the riskiest assumption up front. The ticket is a hypothesis, not a feature wishlist with a deadline.</p>
-
-            <h3>Why not a feature factory?</h3>
-            <p>A <strong>feature factory</strong> optimizes for throughput: more stories, more releases, more surface area. Inputs and outputs are visible; learning is optional. Symptoms include:</p>
-            <ul>
-              <li>Backlogs grow faster than validated conclusions.</li>
-              <li>“Done” means merged, not learned.</li>
-              <li>Metrics are reported but rarely change the next sprint.</li>
-              <li>Learn columns stay empty or hold vague retrospectives with no persevere / pivot / kill decision.</li>
-            </ul>
-            <p>Feature factories feel busy. Build Loop teams feel decisive — even when the decision is to stop.</p>
-
-            <h3>The Build–Measure–Learn Loop (introduction)</h3>
-            <p>The fundamental activity, attributed to Eric Ries’s Lean Startup methodology, is a repeating cycle:</p>
-            <ol>
-              <li><strong>Build</strong> — Create the smallest version that can test the risky assumption (often called a minimum viable product, or MVP).</li>
-              <li><strong>Measure</strong> — Observe how customers or users respond using metrics chosen <em>before</em> you ship.</li>
-              <li><strong>Learn</strong> — Interpret results, write what you learned, and decide: persevere on the current path, pivot to a new hypothesis, or kill the bet.</li>
-            </ol>
-            <p>Practical AI adds an explicit <strong>kill</strong> outcome so teams stop experiments cleanly instead of letting failed bets linger as zombie projects.</p>
-            <p>Optimize for <strong>cycle time</strong>: how fast you move from idea to decision. A small experiment decided in a week beats a large release debated for a quarter.</p>
-
-            <h3>MVP — preview for Module 2</h3>
-            <p>A <strong>minimum viable product</strong> is the simplest build that starts learning about core assumptions with real users — not a half-finished product shipped for its own sake. The MVP is sized for the hypothesis, not the roadmap. Module 2 goes deeper on phases, exit criteria, and metrics.</p>
+            <h3>What you are learning</h3>
+            <p>BookIQ is onboarding first customers. The goal is <strong>not</strong> to ship features faster — it is to test risky assumptions about whether customers get real value from OMI insights, human oversight, forecasts, and pricing.</p>
+            <p><strong>Validated learning</strong> is progress: evidence from real customers that updates your beliefs. Shipping without measuring, or measuring without deciding, is not progress.</p>
+            <p>The loop: <strong>Build</strong> the smallest test → <strong>Measure</strong> with pre-defined metrics → <strong>Learn</strong> (Persevere / Pivot / Kill). Optimize <em>cycle time</em> from hypothesis to decision.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 3</p>
-            <h3>How to do it</h3>
-            <p>Before you open a repo or file a ticket, run this sequence mentally (or in a short doc). It takes minutes and prevents feature-factory drift.</p>
-            <ol>
-              <li><strong>Name the bet.</strong> State in one sentence what you are trying to learn — not what you are trying to ship. Example shape: “We believe [segment] will [behavior] because [reason].”</li>
-              <li><strong>Pick the riskiest assumption.</strong> List two or three assumptions; circle the one that would kill the bet if false. That assumption drives the experiment.</li>
-              <li><strong>Define what would falsify it.</strong> Write what evidence would mean “this assumption is wrong” before you build. Without falsification criteria, any result can be spun as success.</li>
-              <li><strong>Size the Build for learning.</strong> Ask: what is the smallest thing we can put in front of real users this cycle? Cut scope until the answer tests the assumption, not the whole vision.</li>
-              <li><strong>Pre-register metrics.</strong> Choose one or two measures that tie directly to the assumption. Decide pass / kill thresholds in advance (Module 2 covers actionable vs vanity metrics).</li>
-              <li><strong>Plan the Learn decision.</strong> Agree who records the outcome and which labels apply: persevere, pivot, or kill. No “we’ll see” without a decision owner.</li>
-              <li><strong>Start the loop.</strong> Move the work through Build → Measure → Learn. When Learn is done, the backlog gets the <em>next</em> hypothesis — not an automatic continuation of the old plan.</li>
-            </ol>
-            <p>If you cannot complete steps 2–5, you are not ready to Build yet. You are still in ideation — which is fine, but do not pretend it is an experiment.</p>
+            <h3>BookIQ — four risky assumptions</h3>
+            <p>These drive our first experiments (handoff §2):</p>
+            <ul>
+              <li>Customers <strong>act on OMI insights</strong> — not just glance at the dashboard.</li>
+              <li><strong>Human-reviewed</strong> insights add trust vs pure AI.</li>
+              <li>Customers <strong>keep paying</strong> after novelty wears off (30–60 days).</li>
+              <li><strong>Forecast &amp; Runway</strong> (and similar) are actually used and valued.</li>
+            </ul>
+            <p>Every experiment ticket names one of these (or a sharper slice) as the hypothesis.</p>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 4</p>
-            <h3>How-to micro-scenario</h3>
-            <p><em>Abstract walkthrough — no product names, no book case studies.</em></p>
-            <p>A small team serves remote professionals who struggle to coordinate recurring group activities across time zones. Leadership wants a full scheduling product with integrations, mobile apps, and AI suggestions. The team pushes back: nobody has validated that professionals will trust a new tool for this job.</p>
-            <p><strong>Bet stated:</strong> “We believe busy remote workers will complete a group scheduling task using a lightweight web flow if it saves them more than ten minutes compared to email threads.”</p>
-            <p><strong>Riskiest assumption:</strong> Value — users will finish scheduling through an unfamiliar interface instead of reverting to email.</p>
-            <p><strong>Falsification:</strong> Fewer than 40% of invited participants complete scheduling within 48 hours.</p>
-            <p><strong>Build (MVP-sized):</strong> A single web page: organizer picks three time windows, participants tap one option, organizer sees confirmations. No accounts, no calendar sync, no native apps. Built in days, not months.</p>
-            <p><strong>Measure:</strong> Completion rate per invite; time from first link open to confirmed slot; optional one-question survey on “would you use this again?”</p>
-            <p><strong>Learn:</strong> After two organizer cohorts (n ≈ 30 invites), completion hits 62%. Persevere on the web-first flow; defer mobile and integrations. Document: email escape hatches dropped when reminders were added — hypothesis for next loop.</p>
-            <p>Notice what did <em>not</em> happen: they did not ship a feature factory quarter. They did not count page views as victory. They wrote a decision and fed the next experiment.</p>
+            <h3>Do this now</h3>
+            <p>Write one sentence: <em>“The riskiest assumption for BookIQ right now is ___ because if it’s wrong, ___.”</em> You will reuse this in Module 7.</p>
           </div>
 
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
-              <li><strong>Shipping as progress.</strong> Celebrating merge or launch without pre-defined learning criteria. Fix: no Build ticket closes until Measure and Learn owners are named.</li>
-              <li><strong>Vague hypotheses.</strong> “Improve onboarding” is a theme, not a testable belief. Fix: one sentence with segment, behavior, and expected change.</li>
-              <li><strong>Testing the safe assumption.</strong> Experiments that only validate easy technical work while ignoring value or growth risk. Fix: always label the riskiest assumption on the ticket.</li>
-              <li><strong>Immune metrics.</strong> Choosing measures that cannot fail (total signups, raw page views). Fix: prefer rates and behaviors tied to the assumption (Module 2).</li>
-              <li><strong>Learn theater.</strong> Retrospectives that never produce persevere, pivot, or kill. Fix: Learn column requires a decision label before Done.</li>
-              <li><strong>Oversized MVP.</strong> Building the roadmap slice “because we’ll need it anyway.” Fix: cut until the build only serves the current hypothesis.</li>
-              <li><strong>Ignoring kill.</strong> Letting failed bets continue as low-priority maintenance. Fix: kill explicitly; archive learning so the board stays honest.</li>
+              <li><strong>Feature factory:</strong> velocity celebrated; Learn column empty.</li>
+              <li><strong>Vague hypotheses:</strong> “Improve onboarding” is not testable.</li>
+              <li><strong>Vanity metrics:</strong> logins and page views that cannot fail the bet.</li>
             </ul>
           </div>
 
           <div class="section-card">
-            <p class="eyebrow">Section 6</p>
-            <h3>Progress checklist</h3>
-            <p>Check each item when you can explain it without looking at your notes.</p>
+            <h3>Checklist</h3>
             <ul class="checklist">
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c1" data-module="module-1" />
-                  <span>I can explain why validated learning — not shipping volume — is progress under uncertainty.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c2" data-module="module-1" />
-                  <span>I can name the riskiest assumption on a bet and say what would falsify it.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c3" data-module="module-1" />
-                  <span>I can describe Build, Measure, and Learn in order and why cycle time matters.</span>
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input type="checkbox" data-progress="m1-c4" data-module="module-1" />
-                  <span>I can contrast a feature factory with a Build Loop team in concrete symptoms.</span>
-                </label>
-              </li>
+              <li><label><input type="checkbox" data-progress="m1-c1" data-module="module-1" /><span>I can explain validated learning vs shipping volume.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m1-c2" data-module="module-1" /><span>I can name BookIQ’s four core risky assumptions.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m1-c3" data-module="module-1" /><span>I wrote my one-sentence riskiest-assumption statement.</span></label></li>
             </ul>
           </div>
 
-          <div class="section-card">
-            <p class="eyebrow">Section 7</p>
+          <div class="section-card self-check">
             <h3>Self-check</h3>
-            <div class="self-check">
-              <p class="hint">Answer in your head first, then expand each item.</p>
-              <ol>
-                <li>What is the difference between shipping and validated learning?</li>
-                <li>Why should an experiment target the <em>riskiest</em> assumption first?</li>
-                <li>What are three signs your team is running a feature factory?</li>
-                <li>What does “optimize for cycle time” mean in the Build–Measure–Learn Loop?</li>
-              </ol>
-              <details>
-                <summary>1. Shipping vs validated learning</summary>
-                <p>Shipping adds outputs to the world; validated learning updates beliefs with evidence from how people respond. You can ship without learning (launch nobody uses). You can learn without a large ship (concierge test, prototype, smoke test). Under uncertainty, learning is the progress that reduces risk on the business bet.</p>
-              </details>
-              <details>
-                <summary>2. Riskiest assumption first</summary>
-                <p>If the riskiest assumption is false, the rest of the strategy does not matter — polishing secondary features wastes time. Testing it early maximizes learning per unit of effort and avoids building on a false foundation.</p>
-              </details>
-              <details>
-                <summary>3. Feature factory signs</summary>
-                <ol>
-                  <li>Velocity and output metrics dominate; learning metrics are absent or ignored.</li>
-                  <li>Work is “done” at merge without a Measure / Learn record.</li>
-                  <li>Backlog grows from opinions, not from prior experiment decisions.</li>
-                </ol>
-              </details>
-              <details>
-                <summary>4. Cycle time</summary>
-                <p>Cycle time is the elapsed time from hypothesis to decision. Shorter cycles mean more experiments per quarter, faster correction when wrong, and less sunk cost on false paths. The loop’s power is speed through Build → Measure → Learn, not size of any single Build.</p>
-              </details>
+            <div class="self-check-item">
+              <p>What is the difference between shipping and validated learning?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc1-1">Show answer</button>
+              <div class="reveal-answer" id="sc1-1">Shipping adds outputs; validated learning updates beliefs with customer evidence. You can ship without learning.</div>
+            </div>
+            <div class="self-check-item">
+              <p>Why must Learn produce kill/pivot/persevere decisions?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc1-2">Show answer</button>
+              <div class="reveal-answer" id="sc1-2">Without decisions, the board is theater — activity without changed behavior.</div>
             </div>
           </div>
         </section>
-
         <div class="page-nav no-print" id="pageNav"></div>
-
-        <p class="footer-note">
-          Build Loop Mastery — concepts from Eric Ries’s Lean Startup methodology summarized with attribution; not a substitute for the book.
-          See <a href="https://theleanstartup.com/principles" target="_blank" rel="noopener noreferrer">theleanstartup.com/principles</a>.
-          Practical AI adds an explicit <strong>kill</strong> Learn outcome.
-        </p>
+        <p class="footer-note">Concepts attributed to Eric Ries’s Lean Startup methodology — <a href="https://theleanstartup.com/principles" target="_blank" rel="noopener noreferrer">theleanstartup.com/principles</a>.</p>
       </main>
     </div>
   </div>

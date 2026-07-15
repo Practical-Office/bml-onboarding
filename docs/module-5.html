@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Module 5 — Running an experiment · Build Loop Mastery</title>
-  <meta name="description" content="End-to-end how-to for running a Build Loop experiment: humans own Measure and Learn; Cursor assists Build only." />
+  <title>Module 5 — Running an Experiment | Build-Measure-Learn Onboarding</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,162 +18,86 @@
       <header class="topbar no-print">
         <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
         <div class="topbar-title">Module 5</div>
-        <div class="topbar-actions">
-          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
-        </div>
+        <div class="topbar-actions"><button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button></div>
       </header>
       <main class="content" id="top">
-        <section class="module">
+        <section class="module" id="module-5">
           <div class="module-header">
             <div class="module-badge">5</div>
             <div>
               <h2>Running an experiment</h2>
-              <p class="module-time">~30 min</p>
+              <p class="module-time">~25 min</p>
             </div>
           </div>
 
-          <p class="eyebrow">Playbook</p>
-          <p>Walk one Build Loop experiment from Backlog through Done. Cursor helps on <strong>Build</strong> only. Humans own <strong>Measure</strong> discipline and <strong>Learn</strong> decisions.</p>
-
-          <div class="pill-row">
-            <a class="pill" href="module-4.html">← Module 4: Ticket template</a>
-            <a class="pill" href="skills/tdd.html">/tdd</a>
-            <a class="pill" href="skills/code-review.html">/code-review</a>
-            <a class="pill" href="skills/prototype.html">/prototype</a>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>The Measure phase must be taken seriously. If you treat it as a waiting room while you build the next feature, you are not doing Build-Measure-Learn.</p>
           </div>
 
-          <h3>Why run experiments end-to-end</h3>
-          <div class="quote">
-            <p>A ticket that never reaches Learn taught you nothing — no matter how polished the Build was.</p>
-          </div>
-          <p>Most teams treat the board as a shipping pipeline. Build Loop treats it as a <strong>learning pipeline</strong>. Each experiment exists to falsify one customer-behavior claim within a fixed duration. The payoff is a recorded decision — persevere, pivot, or kill — backed by numbers, not narrative.</p>
-          <p>Running one experiment all the way through trains the habits that matter: thin Builds, frozen scope during Measure, and honest Learn outcomes. Skip any column and you get theater — activity that looks like learning but never changes what you build next.</p>
-
-          <h3>Ideas to hold</h3>
-          <ul>
-            <li><strong>One issue, one experiment.</strong> The GitHub issue is the source of truth; the project board is the visual phase tracker.</li>
-            <li><strong>Build is the only Cursor-heavy column.</strong> Agents sharpen plans, publish specs, split tickets, and implement code. They do not decide whether the hypothesis passed.</li>
-            <li><strong>Measure is a clock, not a build phase.</strong> Once the thinnest test ships and a collection path exists, the clock starts. No new feature scope until Learn closes the bet.</li>
-            <li><strong>Learn is a decision, not a retrospective vibe.</strong> Apply one decision label and file one next action before moving to Done.</li>
-            <li><strong>Kill is a success.</strong> Stopping a failed bet early is validated learning, not defeat.</li>
-          </ul>
-
-          <h3>How-to: five columns, one experiment</h3>
-          <div class="table-wrap">
-            <table>
-              <thead>
-                <tr><th>Stage</th><th>Who</th><th>What happens</th><th>Exit gate</th></tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Backlog</strong></td>
-                  <td>Human</td>
-                  <td>Create issue from template. Write hypothesis, pass/kill thresholds, duration, sample size.</td>
-                  <td>Hypothesis + numeric kill criteria + duration written</td>
-                </tr>
-                <tr>
-                  <td><strong>Build</strong></td>
-                  <td>Human + Cursor</td>
-                  <td>Ship the smallest test that lets Measure start. Use the skill chain from <a href="module-4.html">Module 4</a> when non-trivial.</td>
-                  <td>Delivery path exists <em>and</em> instrumentation or manual log path is named</td>
-                </tr>
-                <tr>
-                  <td><strong>Measure</strong></td>
-                  <td>Human</td>
-                  <td>Collect weekly numbers into the issue. No code unless instrumentation is broken.</td>
-                  <td>Duration complete; metrics recorded on the issue</td>
-                </tr>
-                <tr>
-                  <td><strong>Learn</strong></td>
-                  <td>Human</td>
-                  <td>Compare numbers to pass/kill. Record decision, evidence, next action. Apply one decision label.</td>
-                  <td><code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code> applied</td>
-                </tr>
-                <tr>
-                  <td><strong>Done</strong></td>
-                  <td>Human</td>
-                  <td>Archive when stale. Follow-up experiment filed if persevere or pivot.</td>
-                  <td>Next action exists or explicit “no follow-up” noted</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Build column — Cursor workflow</h3>
-          <p>Invoke skills only while the card is in <strong>Build</strong>. See <a href="module-4.html">Module 4</a> for the full chain and when to skip steps.</p>
-          <ol>
-            <li><code>/grill-with-docs</code> — prime with the issue + relevant folders; sharpen assumptions and kill criteria</li>
-            <li><code>/to-spec</code> — publish a spec from the grilled conversation (skip if the Build fits one tiny PR)</li>
-            <li><code>/to-tickets</code> — split into vertical-slice tickets with blockers (skip if one ticket)</li>
-            <li><code>/implement</code> — one unblocked ticket at a time; runs <a href="skills/tdd.html"><code>/tdd</code></a> at agreed seams, then <a href="skills/code-review.html"><code>/code-review</code></a>, then commits</li>
-          </ol>
-          <p>For design uncertainty before Build, use <a href="skills/prototype.html"><code>/prototype</code></a> — throwaway code that answers “does this logic feel right?” or “what should this look?”</p>
-
-          <div class="quote">
-            <p><strong>Agent boundary:</strong> Cursor helps on Build. Humans own Measure discipline and Learn decisions. An agent must not apply decision labels or declare a hypothesis validated.</p>
-          </div>
-
-          <h3>Micro-scenario: weekly insight engagement test</h3>
-          <p>Abstract pattern — swap the nouns for your product.</p>
           <div class="section-card">
-            <p><strong>Hypothesis:</strong> Active customers will read and act on a recurring insight delivered each week.</p>
-            <p><strong>Pass:</strong> ≥60% of sampled customers open the insight and complete at least one attributed action per week.</p>
-            <p><strong>Kill:</strong> &lt;40% engagement after four weeks.</p>
-            <p><strong>Duration:</strong> 4 weeks · <strong>Sample:</strong> 20 active accounts</p>
+            <h3>Column gates</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Leaving…</th><th>Requires</th></tr></thead>
+                <tbody>
+                  <tr><td>Backlog → Build</td><td>Hypothesis + numeric kill criteria on issue</td></tr>
+                  <tr><td>Build → Measure</td><td>Smallest test shipped; instrumentation or manual log path exists</td></tr>
+                  <tr><td>Measure → Learn / Validate</td><td>Duration elapsed or kill threshold hit; weekly numbers posted</td></tr>
+                  <tr><td>Learn → Done</td><td>Decision + evidence; one of <code>persevere</code> <code>pivot</code> <code>kill-candidate</code></td></tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <p><strong>Backlog:</strong> Issue created from template. Measure table filled. Added to board.</p>
-          <p><strong>Build:</strong> Ship email + in-app card for one insight type. Instrument <code>delivered</code>, <code>opened</code>, <code>acted</code> events (or a manual sheet with the same IDs). Cursor runs grill → spec → tickets → implement for the delivery path.</p>
-          <p><strong>Measure:</strong> Every Monday, post open rate and act rate in the issue comment. No “while we’re at it” feature work.</p>
-          <p><strong>Learn:</strong> Week 4 numbers land at 52% act rate — between pass and kill. Team decides <code>pivot</code>: shorten insight, add in-app-only channel, new 3-week experiment filed.</p>
-          <p>Metrics naming conventions: <a href="reference/Build_Loop_Metrics_Tracking.md">Metrics dictionary</a>.</p>
+
+          <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 2 (Human Review)</h3>
+            <p><strong>Hypothesis:</strong> Customers trust insights more when they know a human reviewed them.</p>
+            <p><strong>Build:</strong> A/B or cohort — same insight content, one arm shows “human-reviewed” indicator. Badge/copy only unless review workflow is required.</p>
+            <p><strong>Measure (3 weeks):</strong> trust/usefulness ratings + <code>omi.insight.acted</code> by variant. <strong>Kill:</strong> no meaningful difference.</p>
+            <p><strong>Learn:</strong> If kill — stop investing in human-review marketing; if persevere — expand review surfacing.</p>
+            <p><a href="reference/issues/04-human-review-value.md">Full draft</a> · Backlog until Core Value (#1083) has signal.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Build column — when code ships</h3>
+            <p>Non-trivial: <code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code>.</p>
+            <p>Measure column: <strong>no code</strong> unless instrumentation is broken — update issue with weekly numbers.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>On paper, walk Ticket 1 (#1083) through all five columns. What artifact exists in each column?</p>
+          </div>
 
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
-              <li><strong>Build forever.</strong> Polishing the experiment until the duration is half gone. Gate: move to Measure when the thinnest path + collection method exist.</li>
-              <li><strong>Measure creep.</strong> “Quick fix” during Measure that changes what you’re testing. File a new experiment instead.</li>
-              <li><strong>Learn by vibes.</strong> Moving to Done with “customers seem happy” and no numbers on the issue.</li>
-              <li><strong>Agent decides Learn.</strong> Letting Cursor apply <code>persevere</code> because the code merged. Humans compare metrics to the pass/kill table.</li>
-              <li><strong>Vanity metrics.</strong> Counting logins or page views when the hypothesis is about <em>action</em>. Prefer outcome events defined before Build.</li>
-              <li><strong>Skipping grill on risky bets.</strong> Building before kill criteria are sharp — you learn too slowly to decide.</li>
+              <li>Measure without pre-registered pass/kill — any result “wins.”</li>
+              <li>Building new features during Measure — scope creep.</li>
+              <li>Learn without customer evidence — vibes-based persevere.</li>
             </ul>
           </div>
 
-          <h3>Module 5 — progress checklist</h3>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m5-c1" data-module="module-5" /> I can trace an abstract experiment through all five columns with exit gates</label></li>
-            <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /> I know when to invoke Cursor skills (Build only) and when to skip steps</label></li>
-            <li><label><input type="checkbox" data-progress="m5-c3" data-module="module-5" /> I will not add feature scope during Measure</label></li>
-            <li><label><input type="checkbox" data-progress="m5-c4" data-module="module-5" /> I understand humans own Measure logging and Learn decisions — not the agent</label></li>
-          </ul>
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m5-c1" data-module="module-5" /><span>I know the gate for each column transition.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /><span>I walked Ticket 1 or 2 through all five columns.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m5-c3" data-module="module-5" /><span>I know Measure is data collection, not a dev queue.</span></label></li>
+            </ul>
+          </div>
 
-          <div class="self-check">
-            <h3 style="margin-top:0">Module 5 — self-check</h3>
-            <ol>
-              <li>Why grill before build on non-trivial experiments?</li>
-              <li>What triggers moving from Build to Measure?</li>
-              <li>Who applies the <code>kill-candidate</code> label — and on what evidence?</li>
-              <li>When is it appropriate to use <code>/prototype</code> instead of jumping to <code>/implement</code>?</li>
-            </ol>
-            <p class="hint">Answer in your own words before expanding the answers below.</p>
-            <details>
-              <summary>Show answers</summary>
-              <ol>
-                <li>Experiment quality depends on crisp assumptions and a thin Build. Grilling surfaces missing kill criteria, vanity metrics, and scope that would make learning too slow — before <code>/to-spec</code> and tickets.</li>
-                <li>The thinnest test is shipped <em>and</em> a measurement path exists (instrumentation or a named manual log). Then the clock starts; new feature scope waits for a new experiment.</li>
-                <li>A human, after duration completes, comparing recorded metrics to the pass/kill table in the issue. The agent may help summarize numbers; it does not apply decision labels.</li>
-                <li>When the key uncertainty is design shape — “does this state model feel right?” or “what should this UI look?” — before committing to a production Build. Prototypes are throwaway; validated decisions fold into the real experiment issue.</li>
-              </ol>
-            </details>
+          <div class="section-card self-check">
+            <h3>Self-check</h3>
+            <div class="self-check-item">
+              <p>When can you write code during Measure?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc5-1">Show answer</button>
+              <div class="reveal-answer" id="sc5-1">Only if instrumentation is broken — otherwise post weekly numbers on the issue.</div>
+            </div>
           </div>
         </section>
-
         <div class="page-nav no-print" id="pageNav"></div>
-
-        <p class="footer-note">
-          Build Loop Mastery — concepts from Eric Ries’s Lean Startup methodology summarized with attribution; not a substitute for the book.
-          Practical AI adds an explicit <strong>kill</strong> Learn outcome.
-        </p>
       </main>
     </div>
   </div>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quick Reference | Build-Measure-Learn Onboarding</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="quick-reference" data-base="" data-file="quick-reference.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Quick reference</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-primary btn-sm" id="printCourse">Print</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="module">
+          <div class="module-header">
+            <div class="module-badge">⚡</div>
+            <div><h2>Build-Measure-Learn quick reference</h2><p class="module-time">printable one-pager</p></div>
+          </div>
+
+          <div class="section-card">
+            <h3>Columns (Stage)</h3>
+            <p>Backlog → Build → Measure → <strong>Learn / Validate</strong> → Done</p>
+            <img src="assets/diagrams/column-flow.svg" alt="Column flow" width="720" height="120" />
+          </div>
+
+          <div class="section-card">
+            <h3>Labels</h3>
+            <p><code>experiment</code> <code>hypothesis</code> <code>measure</code> <code>learn</code> <code>persevere</code> <code>pivot</code> <code>kill-candidate</code></p>
+            <p>Columns own phase. Decision labels at Learn only.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>WIP &amp; cadence</h3>
+            <ul>
+              <li>Max <strong>3</strong> active in Build + Measure</li>
+              <li>Weekly 30 min: overdue → Learn; decide; label; Done</li>
+              <li>2+ weeks with zero Learn decisions = theater — fix before new Builds</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Column gates</h3>
+            <ul>
+              <li><strong>Backlog → Build:</strong> hypothesis + kill criteria</li>
+              <li><strong>Build → Measure:</strong> smallest test shipped + measure path</li>
+              <li><strong>Measure → Learn:</strong> duration done or kill hit; numbers posted</li>
+              <li><strong>Learn → Done:</strong> decision + evidence + label</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Ticket template</h3>
+            <div class="copy-row no-print">
+              <button type="button" class="btn btn-primary btn-sm" data-copy-template>Copy template</button>
+              <span class="copy-feedback" aria-live="polite"></span>
+            </div>
+            <pre id="qr-template"><code>## Hypothesis
+## Build
+## Measure
+## Learn
+## Acceptance Criteria
+## Technical Context / References</code></pre>
+            <p>Fill Measure with pass/kill table + duration. Prime grill: <code>@folders</code> in Technical Context.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Build skills (required order)</h3>
+            <p><code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code> (<code>/tdd</code> + <code>/code-review</code> inside)</p>
+            <p>Tiny build: <code>/implement</code> only. No <code>/to-issues</code> substitute.</p>
+          </div>
+
+          <div class="hard-truth">
+            <h3>Hard truths</h3>
+            <ul>
+              <li>Most teams never kill anything — we will.</li>
+              <li>Learn / Validate is the most important column.</li>
+              <li>Vanity metrics ≠ validated learning.</li>
+              <li>60 days without a kill = you failed the system.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ — five tickets</h3>
+            <ol>
+              <li>OMI insights engagement (#1083)</li>
+              <li>Human review A/B (backlog)</li>
+              <li>Forecast / Runway usage (#1085)</li>
+              <li>Pricing $399+ (backlog, day 45–60)</li>
+              <li>Onboarding completion (#1084)</li>
+            </ol>
+          </div>
+        </section>
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>

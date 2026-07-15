@@ -3,8 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Module 6 — Operating the board · Build Loop Mastery</title>
-  <meta name="description" content="Column gates, 3-active WIP limit, weekly cadence, and Learn anti-theater for operating a Build Loop board." />
+  <title>Module 6 — Operating the Board | Build-Measure-Learn Onboarding</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,192 +18,75 @@
       <header class="topbar no-print">
         <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
         <div class="topbar-title">Module 6</div>
-        <div class="topbar-actions">
-          <button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button>
-        </div>
+        <div class="topbar-actions"><button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button></div>
       </header>
       <main class="content" id="top">
-        <section class="module">
+        <section class="module" id="module-6">
           <div class="module-header">
             <div class="module-badge">6</div>
             <div>
               <h2>Operating the board</h2>
-              <p class="module-time">~25 min</p>
+              <p class="module-time">~20 min</p>
             </div>
           </div>
 
-          <p class="eyebrow">Playbook</p>
-          <p>Setup gets you a board. Operating keeps it honest: column gates, WIP limits, a weekly rhythm, and Learn outcomes that actually change what you build.</p>
-
-          <div class="pill-row">
-            <a class="pill" href="module-5.html">← Module 5: Running an experiment</a>
-            <a class="pill" href="reference/Build_Loop_Kanban_Setup.md">Kanban setup reference</a>
-            <a class="pill" href="reference/Build_Loop_Implementation_Notes.md">Implementation notes</a>
+          <div class="hard-truth">
+            <h3>Hard truth</h3>
+            <p>If you have not killed something in 60 days, you failed the system. One good experiment beats five half-baked features.</p>
           </div>
 
-          <h3>Why operating rules exist</h3>
-          <div class="quote">
-            <p>If Learn does not regularly produce kill, pivot, or persevere decisions, you are not running Build Loop — you are performing it.</p>
-          </div>
-          <p>A board without gates becomes a feature factory with extra columns. WIP limits force finish-over-start. Weekly cadence prevents cards rotting in Learn. Anti-theater rules exist because teams naturally optimize for shipping — not for stopping bad bets.</p>
-          <p>Operating discipline is how a small team runs multiple experiments without drowning in half-finished Builds or endless Measure phases with no decision.</p>
-
-          <h3>Ideas to hold</h3>
-          <ul>
-            <li><strong>Columns are phases, not suggestions.</strong> Each transition has a gate. Skipping a gate erases auditability.</li>
-            <li><strong>Labels mark decisions, not phases.</strong> Only <code>experiment</code> plus Learn outcomes (<code>persevere</code>, <code>pivot</code>, <code>kill-candidate</code>). No phase labels — columns own phase.</li>
-            <li><strong>The issue body holds evidence.</strong> Board cards are pointers; numbers and decisions live on the issue.</li>
-            <li><strong>Three active maximum.</strong> Build + Measure combined — for a team of three, that is one experiment per person at most.</li>
-            <li><strong>Learn clears before new Builds.</strong> If Learn is stuck, fix that before opening more experiments.</li>
-          </ul>
-
-          <h3>How-to: column gates</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>From → To</th><th>Gate (all required)</th><th>Common miss</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td>Backlog → Build</td>
-                  <td>One-sentence hypothesis; numeric kill criteria; duration set</td>
-                  <td>“We’ll figure out metrics during Build”</td>
-                </tr>
-                <tr>
-                  <td>Build → Measure</td>
-                  <td>Thinnest test shipped; instrumentation or manual log path named</td>
-                  <td>Moving when code merged but nothing can be counted yet</td>
-                </tr>
-                <tr>
-                  <td>Measure → Learn</td>
-                  <td>Duration complete; weekly numbers recorded on the issue</td>
-                  <td>Moving early because “it looks good so far”</td>
-                </tr>
-                <tr>
-                  <td>Learn → Done</td>
-                  <td>Decision label applied; evidence + one next action written</td>
-                  <td>Card moved to Done with no label or follow-up</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>How-to: 3-active WIP limit</h3>
-          <p>Count every card in <strong>Build</strong> or <strong>Measure</strong>. Maximum <strong>three</strong> at once for a three-person team.</p>
-          <ol>
-            <li>Before pulling from Backlog, count active cards. At three? Finish or Learn something first.</li>
-            <li>Measure counts as active — it consumes attention even when no code ships.</li>
-            <li>Long-running Measure is not a license for parallel Builds. Either extend duration explicitly on the issue or move to Learn with an interim decision.</li>
-            <li>Backlog can be deep. Active must stay shallow.</li>
-          </ol>
-
-          <h3>How-to: weekly cadence (~30 min total)</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>When</th><th>Ritual</th><th>Output</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td>Monday</td>
-                  <td>Board review: unblock Measure; post weekly numbers; move anything past duration into Learn</td>
-                  <td>Every active experiment has fresh numbers or a named blocker</td>
-                </tr>
-                <tr>
-                  <td>Wednesday</td>
-                  <td>Scope check: any silent Build creep on active cards?</td>
-                  <td>Creep either rejected or spun into a new Backlog experiment</td>
-                </tr>
-                <tr>
-                  <td>Friday</td>
-                  <td>Learn sweep: every Learn card gets a decision or explicit defer with a date</td>
-                  <td>Zero orphan Learn cards without a plan</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Learn-phase decisions</h3>
-          <div class="table-wrap">
-            <table>
-              <thead><tr><th>Label</th><th>Meaning</th><th>Typical next action</th></tr></thead>
-              <tbody>
-                <tr>
-                  <td><code>persevere</code></td>
-                  <td>Hypothesis supported — continue or expand on current path</td>
-                  <td>Scale sample, deepen Build, or promote from experiment to product bet</td>
-                </tr>
-                <tr>
-                  <td><code>pivot</code></td>
-                  <td>Signal mixed — change approach; core assumption may still hold</td>
-                  <td>New experiment issue with revised hypothesis and metrics</td>
-                </tr>
-                <tr>
-                  <td><code>kill-candidate</code></td>
-                  <td>Hypothesis failed kill criteria — stop or sunset</td>
-                  <td>Archive feature path; document learning; do not quietly revive</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>Micro-scenario: stuck Learn queue</h3>
-          <p>Abstract ops story — no product names.</p>
           <div class="section-card">
-            <p>Three experiments sit in <strong>Learn</strong>. Two have complete numbers; one is waiting on “one more week” for the third time. Meanwhile, Backlog has five eager ideas and someone wants to start two new Builds.</p>
-          </div>
-          <p><strong>Anti-theater response:</strong></p>
-          <ol>
-            <li>Friday Learn sweep: decide the two complete cards (one <code>persevere</code>, one <code>kill-candidate</code>).</li>
-            <li>Defer card three with a date, or kill it — “waiting for perfect data” is not a decision.</li>
-            <li>Hold new Builds until Learn count drops. Pull one Backlog card only after WIP drops below three.</li>
-            <li>Post mortem note on the issue: “Learn queue stuck 3 weeks — weekly Friday sweep now mandatory.”</li>
-          </ol>
-          <p>Week-1 Measure can be a spreadsheet. Event IDs should match the <a href="reference/Build_Loop_Metrics_Tracking.md">metrics dictionary</a> so later instrumentation does not invent new names.</p>
-
-          <div class="failure-modes">
-            <h3>Failure modes — Learn anti-theater</h3>
+            <h3>WIP limits</h3>
             <ul>
-              <li><strong>Zero kills in a quarter.</strong> Either your kill criteria are too soft or Learn is being skipped. Fix Learn before more Builds.</li>
-              <li><strong>Learn without numbers.</strong> Decisions based on memory or enthusiasm. Gate: metrics on the issue.</li>
-              <li><strong>Perpetual Measure.</strong> Extending duration informally to avoid a kill. Update the issue or decide.</li>
-              <li><strong>Board as wallpaper.</strong> Team ships from memory; cards do not move. Monday review is non-optional.</li>
-              <li><strong>WIP blowout.</strong> Six active experiments, none reaching Learn. Enforce the three-active cap ruthlessly.</li>
-              <li><strong>Label without action.</strong> <code>pivot</code> applied but no follow-up experiment filed. Done means done <em>and</em> next step exists.</li>
+              <li><strong>Max 3 active</strong> in Build + Measure combined (team of 3).</li>
+              <li>Clear Learn / Validate before pulling new Builds from Backlog.</li>
+              <li>Week-1 live priority: Core Value, Onboarding, Feature Usage — not all five at once.</li>
             </ul>
           </div>
 
-          <h3>Module 6 — progress checklist</h3>
-          <ul class="checklist">
-            <li><label><input type="checkbox" data-progress="m6-c1" data-module="module-6" /> I know the gates between every column pair</label></li>
-            <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /> I understand the 3-active limit (Build + Measure) and will enforce it</label></li>
-            <li><label><input type="checkbox" data-progress="m6-c3" data-module="module-6" /> I can run the Monday / Wednesday / Friday weekly ritual</label></li>
-            <li><label><input type="checkbox" data-progress="m6-c4" data-module="module-6" /> I will treat zero Learn decisions for 2+ weeks as a system failure to fix first</label></li>
-          </ul>
-
-          <div class="self-check">
-            <h3 style="margin-top:0">Module 6 — self-check</h3>
+          <div class="section-card">
+            <h3>Weekly cadence (30 min max)</h3>
             <ol>
-              <li>Can you move to Learn without pass/kill numbers? Why not?</li>
-              <li>What do you do when an experiment sits in Learn for two weeks with no decision?</li>
-              <li>You have three cards in Build and a strong Backlog idea. What do you do?</li>
-              <li>What is the difference between a phase column and a decision label?</li>
+              <li>Move overdue cards to Learn / Validate.</li>
+              <li>For each Learn card: Decision + Evidence on issue; apply decision label; → Done.</li>
+              <li>If Learn had zero decisions for 2+ weeks → fix Learn before shipping more.</li>
             </ol>
-            <p class="hint">Answer in your own words before expanding the answers below.</p>
-            <details>
-              <summary>Show answers</summary>
-              <ol>
-                <li>No. Learn without numbers is vibes. Duration must be complete and metrics recorded on the issue so the decision is auditable.</li>
-                <li>Treat it as a system failure: force a decision in the next weekly review (persevere / pivot / kill), or explicitly defer with a date. Do not open new Builds until Learn clears.</li>
-                <li>Do not start the new experiment. Finish, Measure, or Learn something first until active count is below three.</li>
-                <li>Columns (Backlog, Build, Measure, Learn, Done) track where the experiment is in the loop. Labels (<code>experiment</code>, <code>persevere</code>, <code>pivot</code>, <code>kill-candidate</code>) mark type and Learn outcome — they do not replace column position.</li>
-              </ol>
-            </details>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ anti-patterns</h3>
+            <ul>
+              <li><strong>Stuck Learn:</strong> #1083 in Measure forever with no weekly <code>omi.insight.*</code> tallies.</li>
+              <li><strong>Vanity:</strong> celebrating dashboard logins while <code>omi.insight.acted</code> is zero.</li>
+              <li><strong>Zombie persevere:</strong> Forecast/Runway roadmap full steam while Ticket 3 shows low <code>feature.returned</code>.</li>
+            </ul>
+            <p>Metrics dictionary: <a href="reference/Build_Loop_Metrics_Tracking.md">Build_Loop_Metrics_Tracking.md</a></p>
+          </div>
+
+          <div class="section-card">
+            <h3>Do this now</h3>
+            <p>Scan the live board. Count cards in Build + Measure. If &gt;3, identify what moves to Learn or Backlog.</p>
+          </div>
+
+          <div class="failure-modes">
+            <h3>Failure modes</h3>
+            <ul>
+              <li>Learn queue as parking lot — no decisions for weeks.</li>
+              <li>Starting Pricing (#4) before day 45–60 cohort data exists.</li>
+              <li>Human Review (#2) before Core Value (#1) shows engagement signal.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Checklist</h3>
+            <ul class="checklist">
+              <li><label><input type="checkbox" data-progress="m6-c1" data-module="module-6" /><span>I know the WIP limit and weekly rhythm.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /><span>I can spot vanity metrics on BookIQ experiments.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m6-c3" data-module="module-6" /><span>I counted active cards on the live board.</span></label></li>
+            </ul>
           </div>
         </section>
-
         <div class="page-nav no-print" id="pageNav"></div>
-
-        <p class="footer-note">
-          Build Loop Mastery — concepts from Eric Ries’s Lean Startup methodology summarized with attribution; not a substitute for the book.
-          Practical AI adds an explicit <strong>kill</strong> Learn outcome.
-        </p>
       </main>
     </div>
   </div>
