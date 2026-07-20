@@ -5,7 +5,7 @@
   const MODULES = [
     { id: "module-1", href: "module-1.html", num: "1", label: "Introduction", meta: "20m" },
     { id: "module-2", href: "module-2.html", num: "2", label: "BML Loop & Board", meta: "20m" },
-    { id: "module-3", href: "module-3.html", num: "3", label: "GitHub Setup", meta: "15m" },
+    { id: "module-3", href: "module-3.html", num: "3", label: "Meet the Board", meta: "10m" },
     { id: "module-4", href: "module-4.html", num: "4", label: "Template & Skills", meta: "25m" },
     { id: "module-5", href: "module-5.html", num: "5", label: "Run Experiment", meta: "25m" },
     { id: "module-6", href: "module-6.html", num: "6", label: "Operate Board", meta: "20m" },
@@ -46,6 +46,7 @@
 
   const PAGE_ORDER = [
     "index.html",
+    "experiment-sop.html",
     "quick-reference.html",
     ...MODULES.map((m) => m.href),
     ...SKILLS_CORE.map((s) => s.href),
@@ -68,6 +69,7 @@ What specific metrics or data will we collect? How will we know if the hypothesi
 What did we actually learn? What decision are we making? (Persevere / Pivot / Kill)
 
 ## Acceptance Criteria
+- [ ] ...
 - [ ] ...
 
 ## Technical Context / References
@@ -178,6 +180,7 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
       <nav class="sidebar-nav">
         <p class="nav-section-label">Start</p>
         <a class="nav-link${pageId === "hub" ? " is-active" : ""}" data-module="hub" href="${href("index.html")}"><span class="nav-num">⌂</span> Course hub</a>
+        <a class="nav-link${pageId === "experiment-sop" ? " is-active" : ""}" data-module="experiment-sop" href="${href("experiment-sop.html")}"><span class="nav-num">☑</span> Experiment SOP</a>
         <a class="nav-link${pageId === "quick-reference" ? " is-active" : ""}" data-module="quick-reference" href="${href("quick-reference.html")}"><span class="nav-num">⚡</span> Quick reference</a>
         <p class="nav-section-label">Modules</p>
         ${moduleLinks}

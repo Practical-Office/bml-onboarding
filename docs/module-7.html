@@ -25,14 +25,38 @@
           <div class="module-header">
             <div class="module-badge">7</div>
             <div>
-              <h2>Sandbox — your first ticket</h2>
+              <h2>Sandbox — full SOP dry-run</h2>
               <p class="module-time">~30 min</p>
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP steps 1–7)</h3>
+            <p>Run the full <a href="experiment-sop.html">Experiment SOP</a> once in Sandbox — not on the live BookIQ board until a lead graduates you.</p>
+            <ul>
+              <li>Bring forward your Module 1 riskiest-assumption sentence.</li>
+              <li>Bring forward your Module 4 scratch ticket (or start fresh from one of the five bets).</li>
+              <li>Create a sandbox issue with all six template sections and submit for lead review.</li>
+            </ul>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
-            <p>Reading this course does not certify you. A lead must review a real ticket you wrote — with kill criteria sharp enough to actually kill the bet.</p>
+            <p>Finishing this module proves you can run the checklist — it does not auto-certify you. A lead reviews your sandbox ticket (kill criteria sharp enough to actually kill the bet) and graduates you to the live board.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>SOP dry-run — what to produce</h3>
+            <ol>
+              <li><strong>Assumption</strong> — paste your Module 1 one-sentence statement (or refine it).</li>
+              <li><strong>Ticket</strong> — six sections with numeric pass/kill in Measure and placeholder Learn.</li>
+              <li><strong>Backlog</strong> — note which labels you would apply (<code>experiment</code> required).</li>
+              <li><strong>Build</strong> — smallest test described; note if you would use the skill chain.</li>
+              <li><strong>Measure</strong> — what you would post weekly; duration and kill threshold.</li>
+              <li><strong>Learn</strong> — write a sample decision (persevere / pivot / kill) as if data landed on kill day.</li>
+              <li><strong>Done</strong> — one line on what happens next per your decision.</li>
+            </ol>
+            <p>You can capture steps 3–7 as comments on your sandbox issue or in a short “SOP walkthrough” section at the bottom.</p>
           </div>
 
           <div class="section-card">
@@ -52,19 +76,31 @@
           </div>
 
           <div class="section-card">
-            <h3>Your task</h3>
-            <ol>
-              <li>Copy the <a href="module-4.html">exact template</a> (or use Copy button there).</li>
-              <li>Draft a <strong>new</strong> sandbox issue in <code>Practical-Office/bml-onboarding</code> Discussions or a scratch repo — <strong>not</strong> the live BookIQ board until certified.</li>
-              <li>Fill all six sections. Measure must include pass/kill numbers and duration.</li>
-              <li>Submit link to your lead for <a href="certification.html">certification</a>.</li>
-            </ol>
-            <p>Alternative: improve one section on an existing draft (e.g. sharpen Ticket 4 pricing kill criteria) and explain what changed.</p>
+            <h3>Fill guides (H / B / M / L)</h3>
+            <div class="ticket-card"><strong>Ticket 1 — Core Value</strong><span><a href="module-4.html">Module 4</a> walkthrough</span></div>
+            <p><strong>H:</strong> Customers actively read and act on OMI weekly insights. <strong>B:</strong> Weekly delivery + <code>omi.insight.*</code> events. <strong>M:</strong> ≥60% open+click weekly · kill &lt;40% · 4 weeks. <strong>L:</strong> Persevere / Pivot / Kill + decision label.</p>
+
+            <div class="ticket-card"><strong>Ticket 2 — Human Review</strong><span><a href="module-5.html">Module 5</a> walkthrough</span></div>
+            <p><strong>H:</strong> Higher trust when human-reviewed. <strong>B:</strong> A/B badge on same insight content. <strong>M:</strong> trust ratings + <code>omi.insight.acted</code> by variant · 3 weeks · kill if no difference. <strong>L:</strong> Stop review marketing or expand surfacing.</p>
+
+            <div class="ticket-card"><strong>Ticket 3 — Feature Usage</strong><span><a href="module-5.html">Module 5</a> walkthrough</span></div>
+            <p><strong>H:</strong> Forecast &amp; Runway are top-valued features. <strong>B:</strong> <code>feature.used</code> / <code>feature.returned</code> tags only. <strong>M:</strong> top 3 ≥70% usage · 30 days · kill low Forecast/Runway + low return. <strong>L:</strong> Double-down, pivot messaging, or kill roadmap emphasis.</p>
+
+            <div class="ticket-card"><strong>Ticket 4 — Pricing</strong><span><a href="module-6.html">Module 6</a> walkthrough</span></div>
+            <p><strong>H:</strong> Customers pay $399+/mo after 60 days. <strong>B:</strong> Renewal script + structured feedback at day 45–60. <strong>M:</strong> renewal without heavy discount · kill on strong price pushback. <strong>L:</strong> Hold price, adjust packaging, or pilot tier — start only at renewal window.</p>
+
+            <div class="ticket-card"><strong>Ticket 5 — Onboarding</strong><span><a href="module-6.html">Module 6</a> walkthrough</span></div>
+            <p><strong>H:</strong> Completers engage significantly more. <strong>B:</strong> Canonical onboarding steps + <code>onboarding.*</code> events. <strong>M:</strong> ≥50% complete in 14 days · kill &lt;50% · compare <code>omi.insight.acted</code> cohorts. <strong>L:</strong> Week-1 priority with Core Value; sequence before Pricing (#4).</p>
           </div>
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>Create the sandbox issue. Paste the URL in your certification checklist.</p>
+            <ol>
+              <li>Copy the <a href="module-4.html">exact template</a> (or use Copy button there).</li>
+              <li>Create a sandbox issue in <code>Practical-Office/bml-onboarding</code> <a href="https://github.com/Practical-Office/bml-onboarding/discussions" target="_blank" rel="noopener noreferrer">Discussions</a> or a scratch repo — <strong>not</strong> the live BookIQ board.</li>
+              <li>Complete the SOP dry-run (steps 1–7 above). Measure must include pass/kill numbers and duration.</li>
+              <li>Submit the link on the <a href="certification.html">certification</a> page for lead review.</li>
+            </ol>
           </div>
 
           <div class="failure-modes">
@@ -73,15 +109,16 @@
               <li>Sandbox issue filed on live board without lead approval.</li>
               <li>Measure section without numeric kill threshold.</li>
               <li>Technical Context empty — grill-with-docs has nothing to prime.</li>
+              <li>Skipping the SOP walkthrough — ticket only, no column/label/decision practice.</li>
             </ul>
           </div>
 
           <div class="section-card">
             <h3>Checklist</h3>
             <ul class="checklist">
-              <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /><span>I picked one of the five tickets as my base.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /><span>I created a sandbox issue with all six template sections.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /><span>I submitted the link for certification review.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /><span>I brought forward my Module 1 assumption and Module 4 draft (or equivalent).</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /><span>I created a sandbox issue with all six template sections and SOP steps 3–7 noted.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /><span>I submitted the link for lead review and certification.</span></label></li>
             </ul>
           </div>
         </section>

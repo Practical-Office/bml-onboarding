@@ -30,6 +30,17 @@
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP steps 6 &amp; 7)</h3>
+            <p>You know column gates and Measure discipline (<a href="module-5.html">Module 5</a>). This module adds <strong>Learn decisions</strong>, weekly ops, and what happens after Done — including when to kill, pivot, or persevere.</p>
+            <ul>
+              <li>Know the WIP limit and weekly rhythm.</li>
+              <li>Walk through Tickets 4 and 5 sequencing rules.</li>
+              <li>Count active cards on the live board.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
             <p>If you have not killed something in 60 days, you failed the system. One good experiment beats five half-baked features.</p>
@@ -51,6 +62,24 @@
               <li>For each Learn card: Decision + Evidence on issue; apply decision label; → Done.</li>
               <li>If Learn had zero decisions for 2+ weeks → fix Learn before shipping more.</li>
             </ol>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 5 (Onboarding Completion)</h3>
+            <p><strong>Hypothesis:</strong> Customers who complete full onboarding will have significantly higher engagement.</p>
+            <p><strong>Build:</strong> Define canonical steps (<code>invite_accepted</code> → <code>tenant_connected</code> → <code>first_dashboard_view</code> → <code>first_omi_interaction</code>). Instrument <code>onboarding.*</code> — no UX redesign until Measure shows &lt;50% completion or no lift.</p>
+            <p><strong>Measure (3–4 weeks):</strong> ≥50% completion within 14 days; completers higher on <code>omi.insight.acted</code> vs non-completers. <strong>Kill:</strong> &lt;50% completion rate.</p>
+            <p><strong>Learn:</strong> Week-1 priority alongside Core Value — sequence before Pricing (#4) and Human Review (#2) if engagement is unknown.</p>
+            <p><a href="reference/issues/02-onboarding-completion-impact.md">Full draft</a> · Live <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a></p>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 4 (Pricing Sensitivity)</h3>
+            <p><strong>Hypothesis:</strong> Customers are willing to pay $399+/month after the first 60 days.</p>
+            <p><strong>Build:</strong> Renewal conversation script + structured feedback capture at day 45–60. No new pricing UI unless required.</p>
+            <p><strong>Measure (45–60 days):</strong> renewal rate without heavy discounting; price objection themes. <strong>Kill:</strong> strong pushback on pricing from multiple customers.</p>
+            <p><strong>Learn:</strong> Do <strong>not</strong> start until cohort approaches renewal window — starting early is theater.</p>
+            <p><a href="reference/issues/05-pricing-sensitivity.md">Full draft</a> · Backlog until day 45–60 data exists.</p>
           </div>
 
           <div class="section-card">
@@ -81,7 +110,7 @@
             <h3>Checklist</h3>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m6-c1" data-module="module-6" /><span>I know the WIP limit and weekly rhythm.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /><span>I can spot vanity metrics on BookIQ experiments.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /><span>I can walk through Tickets 4 and 5 sequencing rules.</span></label></li>
               <li><label><input type="checkbox" data-progress="m6-c3" data-module="module-6" /><span>I counted active cards on the live board.</span></label></li>
             </ul>
           </div>

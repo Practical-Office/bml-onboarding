@@ -30,6 +30,17 @@
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP step 5)</h3>
+            <p>You already drafted a ticket and know the Build skill chain (<a href="module-4.html">Module 4</a>). Now add <strong>Measure</strong> — collecting only the evidence you pre-registered, and knowing what must exist before each column move.</p>
+            <ul>
+              <li>Know the gate for each column transition.</li>
+              <li>Walk Ticket 1, 2, or 3 through all five columns on paper.</li>
+              <li>Know Measure is data collection, not a dev queue.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
             <p>The Measure phase must be taken seriously. If you treat it as a waiting room while you build the next feature, you are not doing Build-Measure-Learn.</p>
@@ -60,6 +71,15 @@
           </div>
 
           <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 3 (Feature Usage)</h3>
+            <p><strong>Hypothesis:</strong> Forecast &amp; Runway tools are the most valuable features.</p>
+            <p><strong>Build:</strong> Tag routes with <code>feature.viewed</code> / <code>feature.used</code> / <code>feature.returned</code> for <code>forecast</code>, <code>runway</code>, plus baselines — measurement only, no new Forecast/Runway scope.</p>
+            <p><strong>Measure (30 days):</strong> top 3 features ≥70% of usage; Forecast and/or Runway in top tier if hypothesis holds. <strong>Kill:</strong> low usage and low <code>feature.returned</code>.</p>
+            <p><strong>Learn:</strong> Double-down on winners, pivot messaging, or kill roadmap emphasis on zombie features.</p>
+            <p><a href="reference/issues/03-feature-usage-reality-check.md">Full draft</a> · Live <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a></p>
+          </div>
+
+          <div class="section-card">
             <h3>Build column — when code ships</h3>
             <p>Non-trivial: <code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code>.</p>
             <p>Measure column: <strong>no code</strong> unless instrumentation is broken — update issue with weekly numbers.</p>
@@ -67,7 +87,7 @@
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>On paper, walk Ticket 1 (#1083) through all five columns. What artifact exists in each column?</p>
+            <p>Take your scratch Ticket 1 from Module 4 (or pick Ticket 2 or 3 below). On paper, walk it through all five columns. For each column, write one artifact that must exist before the card can move (e.g. Backlog: hypothesis + kill on issue; Measure: weekly numbers posted).</p>
           </div>
 
           <div class="failure-modes">
@@ -83,7 +103,7 @@
             <h3>Checklist</h3>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m5-c1" data-module="module-5" /><span>I know the gate for each column transition.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /><span>I walked Ticket 1 or 2 through all five columns.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /><span>I walked Ticket 1, 2, or 3 through all five columns.</span></label></li>
               <li><label><input type="checkbox" data-progress="m5-c3" data-module="module-5" /><span>I know Measure is data collection, not a dev queue.</span></label></li>
             </ul>
           </div>

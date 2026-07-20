@@ -5,7 +5,7 @@ title: "BML: "
 labels: ["experiment"]
 ---
 
-<!-- last-synced: 2026-07-15 from Build_Loop_Kanban_Handoff.md; BookIQ live template sync is follow-on -->
+<!-- last-synced: 2026-07-15 from Build_Loop_Kanban_Handoff.md §4; BookIQ live template sync is follow-on -->
 
 ## Hypothesis
 
@@ -25,6 +25,7 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
 
 ## Acceptance Criteria
 
+- [ ] ...
 - [ ] ...
 
 ## Technical Context / References

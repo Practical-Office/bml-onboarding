@@ -29,6 +29,10 @@
             <div><h2>Build-Measure-Learn quick reference</h2><p class="module-time">printable one-pager</p></div>
           </div>
 
+          <div class="section-card no-print">
+            <p><strong>Running an experiment?</strong> Use the full numbered checklist: <a href="experiment-sop.html">Experiment SOP →</a></p>
+          </div>
+
           <div class="section-card">
             <h3>Columns (Stage)</h3>
             <p>Backlog → Build → Measure → <strong>Learn / Validate</strong> → Done</p>
@@ -67,11 +71,23 @@
               <span class="copy-feedback" aria-live="polite"></span>
             </div>
             <pre id="qr-template"><code>## Hypothesis
+What do we believe will happen?
+
 ## Build
+What exactly are we building? What is the smallest version we can ship to test this?
+
 ## Measure
+What specific metrics or data will we collect? How will we know if the hypothesis is validated or invalidated?
+
 ## Learn
+What did we actually learn? What decision are we making? (Persevere / Pivot / Kill)
+
 ## Acceptance Criteria
-## Technical Context / References</code></pre>
+- [ ] ...
+- [ ] ...
+
+## Technical Context / References
+@relevant-files @folders (for /grill-with-docs)</code></pre>
             <p>Fill Measure with pass/kill table + duration. Prime grill: <code>@folders</code> in Technical Context.</p>
           </div>
 
@@ -92,13 +108,13 @@
           </div>
 
           <div class="section-card">
-            <h3>BookIQ — five tickets</h3>
+            <h3>BookIQ — five tickets (handoff §6)</h3>
             <ol>
-              <li>OMI insights engagement (#1083)</li>
-              <li>Human review A/B (backlog)</li>
-              <li>Forecast / Runway usage (#1085)</li>
-              <li>Pricing $399+ (backlog, day 45–60)</li>
-              <li>Onboarding completion (#1084)</li>
+              <li><strong>Core Value:</strong> ≥60% open+click weekly · kill &lt;40% · 4 weeks (#1083)</li>
+              <li><strong>Human Review:</strong> higher trust/usage for human-reviewed vs AI · 3 weeks · kill if no difference</li>
+              <li><strong>Feature Usage:</strong> top 3 features ≥70% usage · 30 days (#1085)</li>
+              <li><strong>Pricing:</strong> renewal at $399+/mo · day 45–60 · kill on strong pushback</li>
+              <li><strong>Onboarding:</strong> completers vs non-completers engagement · kill &lt;50% completion (#1084)</li>
             </ol>
           </div>
         </section>

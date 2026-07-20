@@ -30,6 +30,16 @@
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP steps 2 &amp; 4)</h3>
+            <ul>
+              <li>Copy the exact six-section ticket template.</li>
+              <li>Fill a scratch Ticket 1 with pass/kill metrics (before peeking at the example).</li>
+              <li>Recite the four-skill Build chain and know when to skip to <code>/implement</code> only.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
             <p>Do <strong>not</strong> jump straight to building on non-trivial work. Experiment quality depends on grilling and a clear spec before tickets. Do not substitute <code>/to-issues</code> + bare <code>/tdd</code> for the chain — <code>/implement</code> already owns TDD and review.</p>
@@ -56,11 +66,27 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
 
 ## Acceptance Criteria
 - [ ] ...
+- [ ] ...
 
 ## Technical Context / References
 @relevant-files @folders (for /grill-with-docs)</code></pre>
             </div>
-            <p><strong>How to fill Measure:</strong> add a table with pass/kill thresholds, duration, and sample — copy from <a href="reference/issues/01-core-value-omi-insights.md">reference/issues/</a> for live-ready format. The repo template is the handoff minimum; drafts show the full Measure table.</p>
+            <p><strong>How to fill Measure:</strong> add numeric pass threshold, kill threshold, duration, and sample size. Example format: “≥60% weekly open+click · kill &lt;40% · 4 weeks.”</p>
+          </div>
+
+          <div class="section-card">
+            <h3>How to write Acceptance Criteria</h3>
+            <p>ACs describe observable “done” for the <strong>Build</strong> slice — what must ship so Measure can start. They do <strong>not</strong> replace Measure pass/kill numbers.</p>
+            <ul>
+              <li>Good: “Weekly insight email sends for all active tenants.” “<code>omi.insight.opened</code> and <code>omi.insight.acted</code> events fire.”</li>
+              <li>Bad: “Improve engagement” (not observable). “≥60% open rate” (belongs in Measure, not AC).</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Do this now — draft before you peek</h3>
+            <p>Copy the template above. Paste into a scratch doc or issue. Fill <strong>Hypothesis</strong>, <strong>Build</strong>, <strong>Measure</strong> (with pass/kill), and <strong>Acceptance Criteria</strong> for BookIQ Ticket 1 (Core Value — OMI insights) <strong>without</strong> opening the example or draft links below.</p>
+            <p>Ticket 1 tests whether customers actively read and act on OMI weekly insights — use what you learned in <a href="module-2.html">Module 2</a>.</p>
           </div>
 
           <div class="section-card">
@@ -84,17 +110,13 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
           </div>
 
           <div class="section-card">
-            <h3>BookIQ example — Ticket 1 (Core Value)</h3>
+            <h3>Check your draft — BookIQ Ticket 1 (Core Value)</h3>
+            <p>After you draft, compare your scratch ticket to this walkthrough. Adjust anything you missed.</p>
             <p><strong>Hypothesis:</strong> Customers actively read and act on OMI’s weekly insights.</p>
             <p><strong>Build:</strong> Confirm weekly delivery + <code>omi.insight.*</code> events — no new product scope.</p>
             <p><strong>Measure:</strong> ≥60% weekly open+click · kill &lt;40% after 4 weeks.</p>
             <p><strong>Learn:</strong> Persevere / Pivot / Kill with evidence + <code>kill-candidate</code> if dead.</p>
             <p><a href="reference/issues/01-core-value-omi-insights.md">Full draft</a> · Live <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a></p>
-          </div>
-
-          <div class="section-card">
-            <h3>Do this now</h3>
-            <p>Copy the template. Paste into a scratch issue. Fill Hypothesis + Measure (with pass/kill) for Ticket 1 without looking at the draft.</p>
           </div>
 
           <div class="failure-modes">

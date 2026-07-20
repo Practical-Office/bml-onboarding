@@ -30,9 +30,20 @@
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP steps 3 &amp; 6 — prep)</h3>
+            <p>You already know <strong>why</strong> we run experiments (<a href="module-1.html">Module 1</a>). This module teaches <strong>how the board works</strong> — columns, labels, and our five initial BookIQ bets — so you can label cards and record Learn decisions later.</p>
+            <ul>
+              <li>Name all five Stage columns in order.</li>
+              <li>Know all seven labels and when to use decision labels.</li>
+              <li>Summarize all five BookIQ initial experiment tickets.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
-            <p><strong>Learn / Validate</strong> is the most important column. If you are not making real decisions there, the whole system is broken.</p>
+            <p><strong>Learn / Validate</strong> is the most important column. If you are not making real decisions there — including <strong>kill</strong> when criteria hit — the whole system is broken.</p>
           </div>
 
           <div class="section-card">
@@ -42,41 +53,55 @@
               <p class="diagram-caption">One GitHub issue = one experiment. Project board is visual only; the issue body is source of truth.</p>
             </div>
             <ul>
-              <li><strong>Backlog</strong> — assumption queued; hypothesis + kill criteria before leaving.</li>
-              <li><strong>Build</strong> — smallest test shipping; Cursor skill chain applies.</li>
-              <li><strong>Measure</strong> — clock running; no new scope; weekly numbers on the issue.</li>
-              <li><strong>Learn / Validate</strong> — Persevere, Pivot, or Kill with evidence.</li>
-              <li><strong>Done</strong> — decision recorded; next action filed.</li>
+              <li><strong>Backlog</strong> — assumption queued; written hypothesis + numeric kill criteria before leaving.</li>
+              <li><strong>Build</strong> — smallest test shipping; Cursor skill chain applies when non-trivial.</li>
+              <li><strong>Measure</strong> — clock running; no new scope; weekly numbers posted on the issue.</li>
+              <li><strong>Learn / Validate</strong> — Persevere, Pivot, or Kill with evidence; apply a decision label.</li>
+              <li><strong>Done</strong> — decision recorded; next action filed (see <a href="experiment-sop.html">SOP step 7</a>).</li>
             </ul>
           </div>
 
           <div class="section-card">
-            <h3>Labels (all seven)</h3>
-            <p><code>experiment</code> · <code>hypothesis</code> · <code>measure</code> · <code>learn</code> · <code>kill-candidate</code> · <code>persevere</code> · <code>pivot</code></p>
-            <p>Columns own phase. Phase labels are optional filters. Decision labels apply at Learn only.</p>
+            <h3>Labels — when to use each</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Label</th><th>When</th></tr></thead>
+                <tbody>
+                  <tr><td><code>experiment</code></td><td><strong>Every</strong> BML issue — required.</td></tr>
+                  <tr><td><code>hypothesis</code></td><td>Optional filter while drafting or in Backlog.</td></tr>
+                  <tr><td><code>measure</code></td><td>Optional filter while in Measure column.</td></tr>
+                  <tr><td><code>learn</code></td><td>Optional filter while in Learn / Validate.</td></tr>
+                  <tr><td><code>persevere</code></td><td><strong>Learn only</strong> — evidence supports continuing current strategy.</td></tr>
+                  <tr><td><code>pivot</code></td><td><strong>Learn only</strong> — change hypothesis or approach; new or revised experiment.</td></tr>
+                  <tr><td><code>kill-candidate</code></td><td><strong>Learn only</strong> — kill criteria hit or bet should stop (kill is success).</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Columns own phase. Phase labels are optional filters. Decision labels apply at Learn only — never at Backlog or Build.</p>
           </div>
 
           <div class="section-card">
             <h3>BookIQ — five initial experiments</h3>
-            <div class="ticket-card"><strong>1. Core Value (OMI insights)</strong><span>≥60% open+click weekly · kill &lt;40% · 4 weeks</span></div>
-            <div class="ticket-card"><strong>2. Human Review Value</strong><span>Higher trust/usage for human-reviewed vs AI · 3 weeks · kill if no difference</span></div>
-            <div class="ticket-card"><strong>3. Feature Usage (Forecast / Runway)</strong><span>Top 3 features ≥70% usage · 30 days</span></div>
-            <div class="ticket-card"><strong>4. Pricing Sensitivity</strong><span>Renewal at $399+/mo · day 45–60 · kill on strong pushback</span></div>
-            <div class="ticket-card"><strong>5. Onboarding Completion</strong><span>Completers vs non-completers engagement · kill &lt;50% completion</span></div>
+            <p>Each card below is one experiment ticket on the board. Read the one-line summary now — you will check yourself without reopening the docs.</p>
+            <div class="ticket-card"><strong>1. Core Value (OMI insights)</strong><span>Hypothesis: customers act on weekly insights · Measure: ≥60% open+click weekly · kill &lt;40% · 4 weeks</span></div>
+            <div class="ticket-card"><strong>2. Human Review Value</strong><span>Hypothesis: human-reviewed insights trusted more · Measure: trust/usage by variant · 3 weeks · kill if no difference</span></div>
+            <div class="ticket-card"><strong>3. Feature Usage (Forecast / Runway)</strong><span>Hypothesis: Forecast/Runway are top-valued · Measure: top 3 features ≥70% usage · 30 days</span></div>
+            <div class="ticket-card"><strong>4. Pricing Sensitivity</strong><span>Hypothesis: customers pay $399+/mo after 60 days · Measure: renewal without heavy discount · kill on pushback</span></div>
+            <div class="ticket-card"><strong>5. Onboarding Completion</strong><span>Hypothesis: completers engage more · Measure: ≥50% complete in 14 days · kill &lt;50% completion</span></div>
             <p>Full drafts: <a href="reference/issues/01-core-value-omi-insights.md">01</a> · <a href="reference/issues/04-human-review-value.md">04</a> · <a href="reference/issues/03-feature-usage-reality-check.md">03</a> · <a href="reference/issues/05-pricing-sensitivity.md">05</a> · <a href="reference/issues/02-onboarding-completion-impact.md">02</a></p>
           </div>
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>Pick one of the five tickets. State its <strong>kill criteria</strong> in one line without opening the doc.</p>
+            <p>Pick <strong>one</strong> of the five tickets above. In your own words, write its hypothesis and kill criteria in one line each — without opening the draft links.</p>
           </div>
 
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
               <li>Cards skip Measure — “we’ll know when we ship.”</li>
-              <li>Learn holds vague retrospectives — no <code>persevere</code> / <code>pivot</code> / <code>kill-candidate</code>.</li>
-              <li>Five half-baked experiments instead of one good loop.</li>
+              <li>Learn holds vague retrospectives — no <code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code> label.</li>
+              <li>Five half-baked experiments in Build instead of one good loop through Learn.</li>
             </ul>
           </div>
 
@@ -94,7 +119,12 @@
             <div class="self-check-item">
               <p>What must happen before a card leaves Backlog?</p>
               <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc2-1">Show answer</button>
-              <div class="reveal-answer" id="sc2-1">Written hypothesis and numeric kill criteria.</div>
+              <div class="reveal-answer" id="sc2-1">Written hypothesis and numeric kill criteria on the issue.</div>
+            </div>
+            <div class="self-check-item">
+              <p>When do you apply <code>kill-candidate</code>?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc2-2">Show answer</button>
+              <div class="reveal-answer" id="sc2-2">At Learn / Validate only — when kill criteria are hit or the bet should stop.</div>
             </div>
           </div>
         </section>

@@ -52,6 +52,8 @@ Any push to `main` that changes files under `docs/` (or Pages config).
 | Broken asset path | Use relative paths from `docs/` (e.g. `css/build-loop.css`) |
 | Custom domain | Optional — configure in Pages settings + DNS CNAME |
 
-## Board screenshot (manual)
+## Board visual
 
-Replace `docs/assets/diagrams/board-placeholder.svg` with a PNG of the live board when available. Keep filename or update `<img src>` in `module-3.html`.
+`docs/assets/diagrams/board-mock.svg` is the intentional teaching visual in Module 3 (Stage columns + sample BookIQ cards). It matches the live board layout without requiring repo access to a screenshot.
+
+Optional: replace with a PNG of the live board at `github.com/orgs/Book-IQ/projects/1` — update `<img src>` in `module-3.html` and `course-full.html` if you do.

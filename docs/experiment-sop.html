@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiment SOP | Build-Measure-Learn Onboarding</title>
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/build-loop.css" />
+</head>
+<body data-page="experiment-sop" data-base="" data-file="experiment-sop.html">
+  <div class="overlay" id="navOverlay" aria-hidden="true"></div>
+  <div class="app">
+    <aside class="sidebar" id="sidebar" aria-label="Course navigation"></aside>
+    <div class="main">
+      <header class="topbar no-print">
+        <button type="button" class="menu-btn" id="menuBtn" aria-label="Open navigation">☰</button>
+        <div class="topbar-title">Experiment SOP</div>
+        <div class="topbar-actions">
+          <button type="button" class="btn btn-primary btn-sm" id="printCourse">Print</button>
+        </div>
+      </header>
+      <main class="content" id="top">
+        <section class="module">
+          <div class="module-header">
+            <div class="module-badge">SOP</div>
+            <div>
+              <h2>Run one experiment end-to-end</h2>
+              <p class="module-time">team checklist · board already exists</p>
+            </div>
+          </div>
+
+          <div class="section-card">
+            <p>This is the full checklist for running a Build-Measure-Learn experiment on the live BML Board. The board, labels, and project are already set up — you orient in <a href="module-3.html">Module 3</a>, then run from this list. Keep <a href="quick-reference.html">quick reference</a> open for gates, WIP, and the ticket template.</p>
+            <p>Each course module teaches one slice of these steps. <a href="module-7.html">Module 7</a> is a full dry-run in Sandbox before a lead graduates you to the live board.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Experiment SOP — seven steps</h3>
+            <ol class="checklist" style="list-style:decimal;padding-left:1.25rem">
+              <li style="margin-bottom:1rem"><strong>State the risky assumption.</strong> One sentence: what must be true for the bet to work, and what breaks if it is wrong. <span class="nav-meta">Module 1 · SOP-1</span></li>
+              <li style="margin-bottom:1rem"><strong>Draft the experiment ticket.</strong> Six sections: Hypothesis, Build (smallest test), Measure (numeric pass <em>and</em> kill + duration), Learn (placeholder until data), Acceptance Criteria, Technical Context. <span class="nav-meta">Module 4 · SOP-2</span></li>
+              <li style="margin-bottom:1rem"><strong>Label and Backlog.</strong> Apply <code>experiment</code> (required). Add phase or decision labels as needed. Issue on Backlog until hypothesis + kill criteria are written. <span class="nav-meta">Modules 2–3 · SOP-3</span></li>
+              <li style="margin-bottom:1rem"><strong>Build.</strong> Ship the smallest test. Non-trivial work: <code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code>. Tiny builds may skip to <code>/implement</code>. <span class="nav-meta">Module 4 · SOP-4</span></li>
+              <li style="margin-bottom:1rem"><strong>Measure.</strong> Collect only the evidence you pre-registered. Post weekly numbers on the issue. No new product scope unless instrumentation is broken. <span class="nav-meta">Module 5 · SOP-5</span></li>
+              <li style="margin-bottom:1rem"><strong>Learn / Validate.</strong> Write what you learned. Decide <strong>persevere</strong>, <strong>pivot</strong>, or <strong>kill</strong> (kill is success when criteria hit). Apply the matching decision label. <span class="nav-meta">Modules 2, 6 · SOP-6</span></li>
+              <li style="margin-bottom:1rem"><strong>Done — record what’s next.</strong>
+                <ul>
+                  <li><strong>Pivot</strong> → revise hypothesis; restart at step 1.</li>
+                  <li><strong>Persevere</strong> → next bet or deeper build on same path.</li>
+                  <li><strong>Kill</strong> → stop the bet; archive learning so theater does not continue.</li>
+                </ul>
+                <span class="nav-meta">Modules 6–7 · SOP-7</span>
+              </li>
+            </ol>
+          </div>
+
+          <div class="hard-truth">
+            <h3>Hard truths</h3>
+            <ul>
+              <li>If Learn rarely produces kill, pivot, or persevere, the system is theater.</li>
+              <li>Max <strong>3</strong> active cards in Build + Measure combined.</li>
+              <li>If you have not killed something in 60 days, you failed the system.</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Module map</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Module</th><th>SOP steps</th><th>You can…</th></tr></thead>
+                <tbody>
+                  <tr><td><a href="module-1.html">1</a></td><td>1</td><td>State risky assumptions; explain validated learning vs theater</td></tr>
+                  <tr><td><a href="module-2.html">2</a></td><td>3, 6 (prep)</td><td>Name columns, labels, and five BookIQ bets</td></tr>
+                  <tr><td><a href="module-3.html">3</a></td><td>orient</td><td>Open the live board; identify a card by Stage and labels</td></tr>
+                  <tr><td><a href="module-4.html">4</a></td><td>2, 4</td><td>Draft a ticket; know the Build skill chain</td></tr>
+                  <tr><td><a href="module-5.html">5</a></td><td>5</td><td>Run Measure; know column gates</td></tr>
+                  <tr><td><a href="module-6.html">6</a></td><td>6, 7</td><td>Weekly ops; Learn decisions; WIP limits</td></tr>
+                  <tr><td><a href="module-7.html">7</a></td><td>1–7</td><td>Full dry-run in Sandbox → <a href="certification.html">certification</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <p class="footer-note">Build–Measure–Learn concepts attributed to Eric Ries’s Lean Startup methodology. Practical AI adds an explicit <strong>kill</strong> outcome alongside pivot and persevere.</p>
+        </section>
+        <div class="page-nav no-print" id="pageNav"></div>
+      </main>
+    </div>
+  </div>
+  <script src="js/build-loop.js"></script>
+</body>
+</html>

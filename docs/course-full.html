@@ -34,15 +34,31 @@
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP step 1)</h3>
+            <ul>
+              <li>Explain <strong>validated learning</strong> vs shipping volume.</li>
+              <li>Name BookIQ’s four core risky assumptions.</li>
+              <li>Write your one-sentence riskiest-assumption statement (reuse in Module 7).</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
             <p>Most teams say they do Build-Measure-Learn but never kill anything. If Learn does not regularly produce kill, pivot, or persevere decisions from real data, you are doing <strong>theater</strong> — not learning.</p>
           </div>
 
           <div class="section-card">
-            <h3>What you are learning</h3>
+            <h3>Three terms you must know</h3>
+            <p><strong>Validated learning</strong> — progress backed by real evidence from real customers (or your agreed measure). Updating beliefs with data, not shipping volume or internal consensus alone.</p>
+            <p><strong>Kill</strong> — a Learn decision to stop or drop the bet because numeric kill criteria were hit (or clearly will be). <em>Kill is system success</em> — you learned before wasting more build time. It is not personal failure.</p>
+            <p><strong>Theater</strong> — going through Build-Measure-Learn motions without numeric criteria, real Measure, or willingness to kill.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>Why Build-Measure-Learn</h3>
             <p>BookIQ is onboarding first customers. The goal is <strong>not</strong> to ship features faster — it is to test risky assumptions about whether customers get real value from OMI insights, human oversight, forecasts, and pricing.</p>
-            <p><strong>Validated learning</strong> is progress: evidence from real customers that updates your beliefs. Shipping without measuring, or measuring without deciding, is not progress.</p>
             <p>The loop: <strong>Build</strong> the smallest test → <strong>Measure</strong> with pre-defined metrics → <strong>Learn</strong> (Persevere / Pivot / Kill). Optimize <em>cycle time</em> from hypothesis to decision.</p>
           </div>
 
@@ -60,7 +76,8 @@
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>Write one sentence: <em>“The riskiest assumption for BookIQ right now is ___ because if it’s wrong, ___.”</em> You will reuse this in Module 7.</p>
+            <p>Write one sentence using this pattern: <em>“The riskiest assumption for BookIQ right now is <strong>[what must be true]</strong> because if it’s wrong, <strong>[what breaks for customers or the business]</strong>.”</em></p>
+            <p>Example: <em>“The riskiest assumption for BookIQ right now is that customers act on OMI weekly insights because if it’s wrong, we will lose trust and churn before pricing ever matters.”</em> You will reuse your sentence in <a href="module-7.html">Module 7</a>.</p>
           </div>
 
           <div class="failure-modes">
@@ -105,9 +122,20 @@
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP steps 3 &amp; 6 — prep)</h3>
+            <p>You already know <strong>why</strong> we run experiments (<a href="module-1.html">Module 1</a>). This module teaches <strong>how the board works</strong> — columns, labels, and our five initial BookIQ bets — so you can label cards and record Learn decisions later.</p>
+            <ul>
+              <li>Name all five Stage columns in order.</li>
+              <li>Know all seven labels and when to use decision labels.</li>
+              <li>Summarize all five BookIQ initial experiment tickets.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
-            <p><strong>Learn / Validate</strong> is the most important column. If you are not making real decisions there, the whole system is broken.</p>
+            <p><strong>Learn / Validate</strong> is the most important column. If you are not making real decisions there — including <strong>kill</strong> when criteria hit — the whole system is broken.</p>
           </div>
 
           <div class="section-card">
@@ -117,41 +145,55 @@
               <p class="diagram-caption">One GitHub issue = one experiment. Project board is visual only; the issue body is source of truth.</p>
             </div>
             <ul>
-              <li><strong>Backlog</strong> — assumption queued; hypothesis + kill criteria before leaving.</li>
-              <li><strong>Build</strong> — smallest test shipping; Cursor skill chain applies.</li>
-              <li><strong>Measure</strong> — clock running; no new scope; weekly numbers on the issue.</li>
-              <li><strong>Learn / Validate</strong> — Persevere, Pivot, or Kill with evidence.</li>
-              <li><strong>Done</strong> — decision recorded; next action filed.</li>
+              <li><strong>Backlog</strong> — assumption queued; written hypothesis + numeric kill criteria before leaving.</li>
+              <li><strong>Build</strong> — smallest test shipping; Cursor skill chain applies when non-trivial.</li>
+              <li><strong>Measure</strong> — clock running; no new scope; weekly numbers posted on the issue.</li>
+              <li><strong>Learn / Validate</strong> — Persevere, Pivot, or Kill with evidence; apply a decision label.</li>
+              <li><strong>Done</strong> — decision recorded; next action filed (see <a href="experiment-sop.html">SOP step 7</a>).</li>
             </ul>
           </div>
 
           <div class="section-card">
-            <h3>Labels (all seven)</h3>
-            <p><code>experiment</code> · <code>hypothesis</code> · <code>measure</code> · <code>learn</code> · <code>kill-candidate</code> · <code>persevere</code> · <code>pivot</code></p>
-            <p>Columns own phase. Phase labels are optional filters. Decision labels apply at Learn only.</p>
+            <h3>Labels — when to use each</h3>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Label</th><th>When</th></tr></thead>
+                <tbody>
+                  <tr><td><code>experiment</code></td><td><strong>Every</strong> BML issue — required.</td></tr>
+                  <tr><td><code>hypothesis</code></td><td>Optional filter while drafting or in Backlog.</td></tr>
+                  <tr><td><code>measure</code></td><td>Optional filter while in Measure column.</td></tr>
+                  <tr><td><code>learn</code></td><td>Optional filter while in Learn / Validate.</td></tr>
+                  <tr><td><code>persevere</code></td><td><strong>Learn only</strong> — evidence supports continuing current strategy.</td></tr>
+                  <tr><td><code>pivot</code></td><td><strong>Learn only</strong> — change hypothesis or approach; new or revised experiment.</td></tr>
+                  <tr><td><code>kill-candidate</code></td><td><strong>Learn only</strong> — kill criteria hit or bet should stop (kill is success).</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Columns own phase. Phase labels are optional filters. Decision labels apply at Learn only — never at Backlog or Build.</p>
           </div>
 
           <div class="section-card">
             <h3>BookIQ — five initial experiments</h3>
-            <div class="ticket-card"><strong>1. Core Value (OMI insights)</strong><span>≥60% open+click weekly · kill &lt;40% · 4 weeks</span></div>
-            <div class="ticket-card"><strong>2. Human Review Value</strong><span>Higher trust/usage for human-reviewed vs AI · 3 weeks · kill if no difference</span></div>
-            <div class="ticket-card"><strong>3. Feature Usage (Forecast / Runway)</strong><span>Top 3 features ≥70% usage · 30 days</span></div>
-            <div class="ticket-card"><strong>4. Pricing Sensitivity</strong><span>Renewal at $399+/mo · day 45–60 · kill on strong pushback</span></div>
-            <div class="ticket-card"><strong>5. Onboarding Completion</strong><span>Completers vs non-completers engagement · kill &lt;50% completion</span></div>
+            <p>Each card below is one experiment ticket on the board. Read the one-line summary now — you will check yourself without reopening the docs.</p>
+            <div class="ticket-card"><strong>1. Core Value (OMI insights)</strong><span>Hypothesis: customers act on weekly insights · Measure: ≥60% open+click weekly · kill &lt;40% · 4 weeks</span></div>
+            <div class="ticket-card"><strong>2. Human Review Value</strong><span>Hypothesis: human-reviewed insights trusted more · Measure: trust/usage by variant · 3 weeks · kill if no difference</span></div>
+            <div class="ticket-card"><strong>3. Feature Usage (Forecast / Runway)</strong><span>Hypothesis: Forecast/Runway are top-valued · Measure: top 3 features ≥70% usage · 30 days</span></div>
+            <div class="ticket-card"><strong>4. Pricing Sensitivity</strong><span>Hypothesis: customers pay $399+/mo after 60 days · Measure: renewal without heavy discount · kill on pushback</span></div>
+            <div class="ticket-card"><strong>5. Onboarding Completion</strong><span>Hypothesis: completers engage more · Measure: ≥50% complete in 14 days · kill &lt;50% completion</span></div>
             <p>Full drafts: <a href="reference/issues/01-core-value-omi-insights.md">01</a> · <a href="reference/issues/04-human-review-value.md">04</a> · <a href="reference/issues/03-feature-usage-reality-check.md">03</a> · <a href="reference/issues/05-pricing-sensitivity.md">05</a> · <a href="reference/issues/02-onboarding-completion-impact.md">02</a></p>
           </div>
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>Pick one of the five tickets. State its <strong>kill criteria</strong> in one line without opening the doc.</p>
+            <p>Pick <strong>one</strong> of the five tickets above. In your own words, write its hypothesis and kill criteria in one line each — without opening the draft links.</p>
           </div>
 
           <div class="failure-modes">
             <h3>Failure modes</h3>
             <ul>
               <li>Cards skip Measure — “we’ll know when we ship.”</li>
-              <li>Learn holds vague retrospectives — no <code>persevere</code> / <code>pivot</code> / <code>kill-candidate</code>.</li>
-              <li>Five half-baked experiments instead of one good loop.</li>
+              <li>Learn holds vague retrospectives — no <code>persevere</code>, <code>pivot</code>, or <code>kill-candidate</code> label.</li>
+              <li>Five half-baked experiments in Build instead of one good loop through Learn.</li>
             </ul>
           </div>
 
@@ -169,7 +211,12 @@
             <div class="self-check-item">
               <p>What must happen before a card leaves Backlog?</p>
               <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc2-1">Show answer</button>
-              <div class="reveal-answer" id="sc2-1">Written hypothesis and numeric kill criteria.</div>
+              <div class="reveal-answer" id="sc2-1">Written hypothesis and numeric kill criteria on the issue.</div>
+            </div>
+            <div class="self-check-item">
+              <p>When do you apply <code>kill-candidate</code>?</p>
+              <button type="button" class="btn btn-ghost btn-sm" data-reveal="sc2-2">Show answer</button>
+              <div class="reveal-answer" id="sc2-2">At Learn / Validate only — when kill criteria are hit or the bet should stop.</div>
             </div>
           </div>
         </section>
@@ -178,9 +225,20 @@
           <div class="module-header">
             <div class="module-badge">3</div>
             <div>
-              <h2>GitHub setup</h2>
-              <p class="module-time">~15 min</p>
+              <h2>Meet the board</h2>
+              <p class="module-time">~10 min</p>
             </div>
+          </div>
+
+          <div class="section-card">
+            <h3>This module (board orientation)</h3>
+            <p>The BML Board is already set up for Practical AI. You are <strong>not</strong> creating labels or projects in this module — you are learning to read the board you will run experiments on.</p>
+            <ul>
+              <li>Open the live BookIQ project board.</li>
+              <li>Confirm Stage columns include <strong>Learn / Validate</strong>.</li>
+              <li>Identify one experiment card and note its Stage and labels.</li>
+            </ul>
+            <p>Full run checklist: <a href="experiment-sop.html">Experiment SOP</a> · Lead/ops setup (optional): <a href="reference/Build_Loop_Kanban_Setup.md">Build_Loop_Kanban_Setup.md</a></p>
           </div>
 
           <div class="hard-truth">
@@ -189,40 +247,47 @@
           </div>
 
           <div class="section-card">
-            <h3>What you need</h3>
+            <h3>What the board is</h3>
             <ul>
-              <li><strong>GitHub Issues</strong> — one issue per experiment (source of truth).</li>
-              <li><strong>GitHub Project</strong> — Kanban view grouped by <strong>Stage</strong>.</li>
-              <li><strong>Live board:</strong> <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ/projects/1</a></li>
+              <li><strong>GitHub Issues</strong> — one issue per experiment; the issue body is source of truth.</li>
+              <li><strong>GitHub Project</strong> — Kanban view grouped by <strong>Stage</strong> (not Status).</li>
+              <li><strong>Live board:</strong> <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ/projects/1</a> — Build-Measure-Learn Experiments.</li>
             </ul>
             <div class="diagram-wrap">
-              <img src="assets/diagrams/board-placeholder.svg" alt="GitHub board placeholder with Backlog, Build, Measure, Learn Validate, Done" width="640" height="360" />
-              <p class="diagram-caption">Replace placeholder with a live screenshot after setup. Group by → Stage · Filter → <code>label:experiment</code></p>
+              <img src="assets/diagrams/board-mock.svg" alt="GitHub Projects board with Stage columns and BookIQ experiment cards" width="640" height="360" loading="lazy" />
+              <p class="diagram-caption">Group by → <strong>Stage</strong> · Filter → <code>label:experiment</code> · One issue per card; body is source of truth.</p>
             </div>
           </div>
 
           <div class="section-card">
-            <h3>Create labels (~2 min)</h3>
-            <pre><code>gh label create experiment --description "BML experiment ticket" --color 0E8A16
-gh label create hypothesis --description "Optional filter" --color C5DEF5
-gh label create measure --description "Optional filter" --color FEF2C0
-gh label create learn --description "Optional filter" --color D4C5F9
-gh label create persevere --description "Learn — keep going" --color 0E8A16
-gh label create pivot --description "Learn — change approach" --color FBCA04
-gh label create kill-candidate --description "Learn — kill" --color D93F0B</code></pre>
-            <p>Full setup: <a href="reference/Build_Loop_Kanban_Setup.md">Build_Loop_Kanban_Setup.md</a></p>
+            <h3>Three live experiments to find</h3>
+            <p>These are our week-one bets. Find them on the board (usually Backlog or active columns):</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Issue</th><th>Experiment</th><th>Why it matters</th></tr></thead>
+                <tbody>
+                  <tr><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a></td><td>Core Value — OMI insights</td><td>Do customers act on weekly insights?</td></tr>
+                  <tr><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a></td><td>Onboarding completion</td><td>Do completers engage more?</td></tr>
+                  <tr><td><a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a></td><td>Feature usage — Forecast / Runway</td><td>Which features are actually used?</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>If you cannot see the project (org permissions), ask your lead for access or use the board screenshot in <a href="module-2.html">Module 2</a> and read issue bodies via links above.</p>
           </div>
 
           <div class="section-card">
-            <h3>Create an experiment (&lt;2 min)</h3>
-            <pre><code>gh issue create --title "BML: …" --label experiment --body-file path/to/body.md
-gh project item-add &lt;PROJECT_NUMBER&gt; --owner Book-IQ --url &lt;ISSUE_URL&gt;</code></pre>
-            <p>Or: <strong>New issue → Build-Measure-Learn Experiment</strong> template → add to project → Backlog.</p>
+            <h3>Where new tickets come from</h3>
+            <p>When you draft an experiment later, use the teaching template in this repo: <a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/build-loop-experiment.md" target="_blank" rel="noopener noreferrer">build-loop-experiment.md</a>. You will practice filling it in <a href="module-4.html">Module 4</a>.</p>
           </div>
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>Open the live board. Confirm Stage columns include <strong>Learn / Validate</strong>. Find issues #1083–#1085 in Backlog.</p>
+            <ol>
+              <li>Open <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ/projects/1</a>.</li>
+              <li>Confirm columns: Backlog → Build → Measure → <strong>Learn / Validate</strong> → Done.</li>
+              <li>Pick one of #1083, #1084, or #1085 (or any <code>experiment</code> card). Write down: issue number, current Stage, and visible labels.</li>
+            </ol>
+            <p><strong>Done when:</strong> you can point to one card and say which column it is in and what bet it tests.</p>
           </div>
 
           <div class="failure-modes">
@@ -230,7 +295,7 @@ gh project item-add &lt;PROJECT_NUMBER&gt; --owner Book-IQ --url &lt;ISSUE_URL&g
             <ul>
               <li>Board grouped by Status instead of Stage — columns drift.</li>
               <li>Issues without <code>experiment</code> label — filter breaks.</li>
-              <li>Skipping project link — invisible experiments.</li>
+              <li>Treating this module as “set up GitHub” — setup is lead/ops; you orient and run.</li>
             </ul>
           </div>
 
@@ -238,8 +303,8 @@ gh project item-add &lt;PROJECT_NUMBER&gt; --owner Book-IQ --url &lt;ISSUE_URL&g
             <h3>Checklist</h3>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m3-c1" data-module="module-3" /><span>I opened the live BookIQ project board.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m3-c2" data-module="module-3" /><span>I know how to create a BML issue from the template.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m3-c3" data-module="module-3" /><span>I can list all seven labels.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m3-c2" data-module="module-3" /><span>I confirmed Stage columns include Learn / Validate.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m3-c3" data-module="module-3" /><span>I identified one experiment card and noted its Stage and labels.</span></label></li>
             </ul>
           </div>
         </section>
@@ -251,6 +316,16 @@ gh project item-add &lt;PROJECT_NUMBER&gt; --owner Book-IQ --url &lt;ISSUE_URL&g
               <h2>Ticket template &amp; Build skills</h2>
               <p class="module-time">~25 min</p>
             </div>
+          </div>
+
+          <div class="section-card">
+            <h3>This module (SOP steps 2 &amp; 4)</h3>
+            <ul>
+              <li>Copy the exact six-section ticket template.</li>
+              <li>Fill a scratch Ticket 1 with pass/kill metrics (before peeking at the example).</li>
+              <li>Recite the four-skill Build chain and know when to skip to <code>/implement</code> only.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
           </div>
 
           <div class="hard-truth">
@@ -279,11 +354,27 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
 
 ## Acceptance Criteria
 - [ ] ...
+- [ ] ...
 
 ## Technical Context / References
 @relevant-files @folders (for /grill-with-docs)</code></pre>
             </div>
-            <p><strong>How to fill Measure:</strong> add a table with pass/kill thresholds, duration, and sample — see <a href="reference/issues/01-core-value-omi-insights.md">Ticket 1 example</a>. Repo template: <a href="https://github.com/Practical-Office/bml-onboarding/blob/main/.github/ISSUE_TEMPLATE/build-loop-experiment.md">build-loop-experiment.md</a></p>
+            <p><strong>How to fill Measure:</strong> add numeric pass threshold, kill threshold, duration, and sample size. Example format: “≥60% weekly open+click · kill &lt;40% · 4 weeks.”</p>
+          </div>
+
+          <div class="section-card">
+            <h3>How to write Acceptance Criteria</h3>
+            <p>ACs describe observable “done” for the <strong>Build</strong> slice — what must ship so Measure can start. They do <strong>not</strong> replace Measure pass/kill numbers.</p>
+            <ul>
+              <li>Good: “Weekly insight email sends for all active tenants.” “<code>omi.insight.opened</code> and <code>omi.insight.acted</code> events fire.”</li>
+              <li>Bad: “Improve engagement” (not observable). “≥60% open rate” (belongs in Measure, not AC).</li>
+            </ul>
+          </div>
+
+          <div class="section-card">
+            <h3>Do this now — draft before you peek</h3>
+            <p>Copy the template above. Paste into a scratch doc or issue. Fill <strong>Hypothesis</strong>, <strong>Build</strong>, <strong>Measure</strong> (with pass/kill), and <strong>Acceptance Criteria</strong> for BookIQ Ticket 1 (Core Value — OMI insights) <strong>without</strong> opening the example or draft links below.</p>
+            <p>Ticket 1 tests whether customers actively read and act on OMI weekly insights — use what you learned in <a href="module-2.html">Module 2</a>.</p>
           </div>
 
           <div class="section-card">
@@ -307,17 +398,13 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
           </div>
 
           <div class="section-card">
-            <h3>BookIQ example — Ticket 1 (Core Value)</h3>
+            <h3>Check your draft — BookIQ Ticket 1 (Core Value)</h3>
+            <p>After you draft, compare your scratch ticket to this walkthrough. Adjust anything you missed.</p>
             <p><strong>Hypothesis:</strong> Customers actively read and act on OMI’s weekly insights.</p>
             <p><strong>Build:</strong> Confirm weekly delivery + <code>omi.insight.*</code> events — no new product scope.</p>
             <p><strong>Measure:</strong> ≥60% weekly open+click · kill &lt;40% after 4 weeks.</p>
             <p><strong>Learn:</strong> Persevere / Pivot / Kill with evidence + <code>kill-candidate</code> if dead.</p>
             <p><a href="reference/issues/01-core-value-omi-insights.md">Full draft</a> · Live <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a></p>
-          </div>
-
-          <div class="section-card">
-            <h3>Do this now</h3>
-            <p>Copy the template. Paste into a scratch issue. Fill Hypothesis + Measure (with pass/kill) for Ticket 1 without looking at the draft.</p>
           </div>
 
           <div class="failure-modes">
@@ -347,6 +434,17 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
               <h2>Running an experiment</h2>
               <p class="module-time">~25 min</p>
             </div>
+          </div>
+
+          <div class="section-card">
+            <h3>This module (SOP step 5)</h3>
+            <p>You already drafted a ticket and know the Build skill chain (<a href="module-4.html">Module 4</a>). Now add <strong>Measure</strong> — collecting only the evidence you pre-registered, and knowing what must exist before each column move.</p>
+            <ul>
+              <li>Know the gate for each column transition.</li>
+              <li>Walk Ticket 1, 2, or 3 through all five columns on paper.</li>
+              <li>Know Measure is data collection, not a dev queue.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
           </div>
 
           <div class="hard-truth">
@@ -379,6 +477,15 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
           </div>
 
           <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 3 (Feature Usage)</h3>
+            <p><strong>Hypothesis:</strong> Forecast &amp; Runway tools are the most valuable features.</p>
+            <p><strong>Build:</strong> Tag routes with <code>feature.viewed</code> / <code>feature.used</code> / <code>feature.returned</code> for <code>forecast</code>, <code>runway</code>, plus baselines — measurement only, no new Forecast/Runway scope.</p>
+            <p><strong>Measure (30 days):</strong> top 3 features ≥70% of usage; Forecast and/or Runway in top tier if hypothesis holds. <strong>Kill:</strong> low usage and low <code>feature.returned</code>.</p>
+            <p><strong>Learn:</strong> Double-down on winners, pivot messaging, or kill roadmap emphasis on zombie features.</p>
+            <p><a href="reference/issues/03-feature-usage-reality-check.md">Full draft</a> · Live <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a></p>
+          </div>
+
+          <div class="section-card">
             <h3>Build column — when code ships</h3>
             <p>Non-trivial: <code>/grill-with-docs</code> → <code>/to-spec</code> → <code>/to-tickets</code> → <code>/implement</code>.</p>
             <p>Measure column: <strong>no code</strong> unless instrumentation is broken — update issue with weekly numbers.</p>
@@ -386,7 +493,7 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>On paper, walk Ticket 1 (#1083) through all five columns. What artifact exists in each column?</p>
+            <p>Take your scratch Ticket 1 from Module 4 (or pick Ticket 2 or 3 below). On paper, walk it through all five columns. For each column, write one artifact that must exist before the card can move (e.g. Backlog: hypothesis + kill on issue; Measure: weekly numbers posted).</p>
           </div>
 
           <div class="failure-modes">
@@ -402,7 +509,7 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
             <h3>Checklist</h3>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m5-c1" data-module="module-5" /><span>I know the gate for each column transition.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /><span>I walked Ticket 1 or 2 through all five columns.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m5-c2" data-module="module-5" /><span>I walked Ticket 1, 2, or 3 through all five columns.</span></label></li>
               <li><label><input type="checkbox" data-progress="m5-c3" data-module="module-5" /><span>I know Measure is data collection, not a dev queue.</span></label></li>
             </ul>
           </div>
@@ -426,6 +533,17 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP steps 6 &amp; 7)</h3>
+            <p>You know column gates and Measure discipline (<a href="module-5.html">Module 5</a>). This module adds <strong>Learn decisions</strong>, weekly ops, and what happens after Done — including when to kill, pivot, or persevere.</p>
+            <ul>
+              <li>Know the WIP limit and weekly rhythm.</li>
+              <li>Walk through Tickets 4 and 5 sequencing rules.</li>
+              <li>Count active cards on the live board.</li>
+            </ul>
+            <p>Full checklist: <a href="experiment-sop.html">Experiment SOP</a></p>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
             <p>If you have not killed something in 60 days, you failed the system. One good experiment beats five half-baked features.</p>
@@ -447,6 +565,24 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
               <li>For each Learn card: Decision + Evidence on issue; apply decision label; → Done.</li>
               <li>If Learn had zero decisions for 2+ weeks → fix Learn before shipping more.</li>
             </ol>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 5 (Onboarding Completion)</h3>
+            <p><strong>Hypothesis:</strong> Customers who complete full onboarding will have significantly higher engagement.</p>
+            <p><strong>Build:</strong> Define canonical steps (<code>invite_accepted</code> → <code>tenant_connected</code> → <code>first_dashboard_view</code> → <code>first_omi_interaction</code>). Instrument <code>onboarding.*</code> — no UX redesign until Measure shows &lt;50% completion or no lift.</p>
+            <p><strong>Measure (3–4 weeks):</strong> ≥50% completion within 14 days; completers higher on <code>omi.insight.acted</code> vs non-completers. <strong>Kill:</strong> &lt;50% completion rate.</p>
+            <p><strong>Learn:</strong> Week-1 priority alongside Core Value — sequence before Pricing (#4) and Human Review (#2) if engagement is unknown.</p>
+            <p><a href="reference/issues/02-onboarding-completion-impact.md">Full draft</a> · Live <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a></p>
+          </div>
+
+          <div class="section-card">
+            <h3>BookIQ walkthrough — Ticket 4 (Pricing Sensitivity)</h3>
+            <p><strong>Hypothesis:</strong> Customers are willing to pay $399+/month after the first 60 days.</p>
+            <p><strong>Build:</strong> Renewal conversation script + structured feedback capture at day 45–60. No new pricing UI unless required.</p>
+            <p><strong>Measure (45–60 days):</strong> renewal rate without heavy discounting; price objection themes. <strong>Kill:</strong> strong pushback on pricing from multiple customers.</p>
+            <p><strong>Learn:</strong> Do <strong>not</strong> start until cohort approaches renewal window — starting early is theater.</p>
+            <p><a href="reference/issues/05-pricing-sensitivity.md">Full draft</a> · Backlog until day 45–60 data exists.</p>
           </div>
 
           <div class="section-card">
@@ -477,7 +613,7 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
             <h3>Checklist</h3>
             <ul class="checklist">
               <li><label><input type="checkbox" data-progress="m6-c1" data-module="module-6" /><span>I know the WIP limit and weekly rhythm.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /><span>I can spot vanity metrics on BookIQ experiments.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m6-c2" data-module="module-6" /><span>I can walk through Tickets 4 and 5 sequencing rules.</span></label></li>
               <li><label><input type="checkbox" data-progress="m6-c3" data-module="module-6" /><span>I counted active cards on the live board.</span></label></li>
             </ul>
           </div>
@@ -487,14 +623,38 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
           <div class="module-header">
             <div class="module-badge">7</div>
             <div>
-              <h2>Sandbox — your first ticket</h2>
+              <h2>Sandbox — full SOP dry-run</h2>
               <p class="module-time">~30 min</p>
             </div>
           </div>
 
+          <div class="section-card">
+            <h3>This module (SOP steps 1–7)</h3>
+            <p>Run the full <a href="experiment-sop.html">Experiment SOP</a> once in Sandbox — not on the live BookIQ board until a lead graduates you.</p>
+            <ul>
+              <li>Bring forward your Module 1 riskiest-assumption sentence.</li>
+              <li>Bring forward your Module 4 scratch ticket (or start fresh from one of the five bets).</li>
+              <li>Create a sandbox issue with all six template sections and submit for lead review.</li>
+            </ul>
+          </div>
+
           <div class="hard-truth">
             <h3>Hard truth</h3>
-            <p>Reading this course does not certify you. A lead must review a real ticket you wrote — with kill criteria sharp enough to actually kill the bet.</p>
+            <p>Finishing this module proves you can run the checklist — it does not auto-certify you. A lead reviews your sandbox ticket (kill criteria sharp enough to actually kill the bet) and graduates you to the live board.</p>
+          </div>
+
+          <div class="section-card">
+            <h3>SOP dry-run — what to produce</h3>
+            <ol>
+              <li><strong>Assumption</strong> — paste your Module 1 one-sentence statement (or refine it).</li>
+              <li><strong>Ticket</strong> — six sections with numeric pass/kill in Measure and placeholder Learn.</li>
+              <li><strong>Backlog</strong> — note which labels you would apply (<code>experiment</code> required).</li>
+              <li><strong>Build</strong> — smallest test described; note if you would use the skill chain.</li>
+              <li><strong>Measure</strong> — what you would post weekly; duration and kill threshold.</li>
+              <li><strong>Learn</strong> — write a sample decision (persevere / pivot / kill) as if data landed on kill day.</li>
+              <li><strong>Done</strong> — one line on what happens next per your decision.</li>
+            </ol>
+            <p>You can capture steps 3–7 as comments on your sandbox issue or in a short “SOP walkthrough” section at the bottom.</p>
           </div>
 
           <div class="section-card">
@@ -514,19 +674,31 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
           </div>
 
           <div class="section-card">
-            <h3>Your task</h3>
-            <ol>
-              <li>Copy the <a href="module-4.html">exact template</a> (or use Copy button there).</li>
-              <li>Draft a <strong>new</strong> sandbox issue in <code>Practical-Office/bml-onboarding</code> Discussions or a scratch repo — <strong>not</strong> the live BookIQ board until certified.</li>
-              <li>Fill all six sections. Measure must include pass/kill numbers and duration.</li>
-              <li>Submit link to your lead for <a href="certification.html">certification</a>.</li>
-            </ol>
-            <p>Alternative: improve one section on an existing draft (e.g. sharpen Ticket 4 pricing kill criteria) and explain what changed.</p>
+            <h3>Fill guides (H / B / M / L)</h3>
+            <div class="ticket-card"><strong>Ticket 1 — Core Value</strong><span><a href="module-4.html">Module 4</a> walkthrough</span></div>
+            <p><strong>H:</strong> Customers actively read and act on OMI weekly insights. <strong>B:</strong> Weekly delivery + <code>omi.insight.*</code> events. <strong>M:</strong> ≥60% open+click weekly · kill &lt;40% · 4 weeks. <strong>L:</strong> Persevere / Pivot / Kill + decision label.</p>
+
+            <div class="ticket-card"><strong>Ticket 2 — Human Review</strong><span><a href="module-5.html">Module 5</a> walkthrough</span></div>
+            <p><strong>H:</strong> Higher trust when human-reviewed. <strong>B:</strong> A/B badge on same insight content. <strong>M:</strong> trust ratings + <code>omi.insight.acted</code> by variant · 3 weeks · kill if no difference. <strong>L:</strong> Stop review marketing or expand surfacing.</p>
+
+            <div class="ticket-card"><strong>Ticket 3 — Feature Usage</strong><span><a href="module-5.html">Module 5</a> walkthrough</span></div>
+            <p><strong>H:</strong> Forecast &amp; Runway are top-valued features. <strong>B:</strong> <code>feature.used</code> / <code>feature.returned</code> tags only. <strong>M:</strong> top 3 ≥70% usage · 30 days · kill low Forecast/Runway + low return. <strong>L:</strong> Double-down, pivot messaging, or kill roadmap emphasis.</p>
+
+            <div class="ticket-card"><strong>Ticket 4 — Pricing</strong><span><a href="module-6.html">Module 6</a> walkthrough</span></div>
+            <p><strong>H:</strong> Customers pay $399+/mo after 60 days. <strong>B:</strong> Renewal script + structured feedback at day 45–60. <strong>M:</strong> renewal without heavy discount · kill on strong price pushback. <strong>L:</strong> Hold price, adjust packaging, or pilot tier — start only at renewal window.</p>
+
+            <div class="ticket-card"><strong>Ticket 5 — Onboarding</strong><span><a href="module-6.html">Module 6</a> walkthrough</span></div>
+            <p><strong>H:</strong> Completers engage significantly more. <strong>B:</strong> Canonical onboarding steps + <code>onboarding.*</code> events. <strong>M:</strong> ≥50% complete in 14 days · kill &lt;50% · compare <code>omi.insight.acted</code> cohorts. <strong>L:</strong> Week-1 priority with Core Value; sequence before Pricing (#4).</p>
           </div>
 
           <div class="section-card">
             <h3>Do this now</h3>
-            <p>Create the sandbox issue. Paste the URL in your certification checklist.</p>
+            <ol>
+              <li>Copy the <a href="module-4.html">exact template</a> (or use Copy button there).</li>
+              <li>Create a sandbox issue in <code>Practical-Office/bml-onboarding</code> <a href="https://github.com/Practical-Office/bml-onboarding/discussions" target="_blank" rel="noopener noreferrer">Discussions</a> or a scratch repo — <strong>not</strong> the live BookIQ board.</li>
+              <li>Complete the SOP dry-run (steps 1–7 above). Measure must include pass/kill numbers and duration.</li>
+              <li>Submit the link on the <a href="certification.html">certification</a> page for lead review.</li>
+            </ol>
           </div>
 
           <div class="failure-modes">
@@ -535,15 +707,16 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
               <li>Sandbox issue filed on live board without lead approval.</li>
               <li>Measure section without numeric kill threshold.</li>
               <li>Technical Context empty — grill-with-docs has nothing to prime.</li>
+              <li>Skipping the SOP walkthrough — ticket only, no column/label/decision practice.</li>
             </ul>
           </div>
 
           <div class="section-card">
             <h3>Checklist</h3>
             <ul class="checklist">
-              <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /><span>I picked one of the five tickets as my base.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /><span>I created a sandbox issue with all six template sections.</span></label></li>
-              <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /><span>I submitted the link for certification review.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c1" data-module="module-7" /><span>I brought forward my Module 1 assumption and Module 4 draft (or equivalent).</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c2" data-module="module-7" /><span>I created a sandbox issue with all six template sections and SOP steps 3–7 noted.</span></label></li>
+              <li><label><input type="checkbox" data-progress="m7-c3" data-module="module-7" /><span>I submitted the link for lead review and certification.</span></label></li>
             </ul>
           </div>
         </section>
@@ -552,6 +725,10 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
           <div class="module-header">
             <div class="module-badge">⚡</div>
             <div><h2>Build-Measure-Learn quick reference</h2><p class="module-time">printable one-pager</p></div>
+          </div>
+
+          <div class="section-card no-print">
+            <p><strong>Running an experiment?</strong> Use the full numbered checklist: <a href="experiment-sop.html">Experiment SOP →</a></p>
           </div>
 
           <div class="section-card">
@@ -592,11 +769,23 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
               <span class="copy-feedback" aria-live="polite"></span>
             </div>
             <pre id="qr-template"><code>## Hypothesis
+What do we believe will happen?
+
 ## Build
+What exactly are we building? What is the smallest version we can ship to test this?
+
 ## Measure
+What specific metrics or data will we collect? How will we know if the hypothesis is validated or invalidated?
+
 ## Learn
+What did we actually learn? What decision are we making? (Persevere / Pivot / Kill)
+
 ## Acceptance Criteria
-## Technical Context / References</code></pre>
+- [ ] ...
+- [ ] ...
+
+## Technical Context / References
+@relevant-files @folders (for /grill-with-docs)</code></pre>
             <p>Fill Measure with pass/kill table + duration. Prime grill: <code>@folders</code> in Technical Context.</p>
           </div>
 
@@ -617,13 +806,13 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
           </div>
 
           <div class="section-card">
-            <h3>BookIQ — five tickets</h3>
+            <h3>BookIQ — five tickets (handoff §6)</h3>
             <ol>
-              <li>OMI insights engagement (#1083)</li>
-              <li>Human review A/B (backlog)</li>
-              <li>Forecast / Runway usage (#1085)</li>
-              <li>Pricing $399+ (backlog, day 45–60)</li>
-              <li>Onboarding completion (#1084)</li>
+              <li><strong>Core Value:</strong> ≥60% open+click weekly · kill &lt;40% · 4 weeks (#1083)</li>
+              <li><strong>Human Review:</strong> higher trust/usage for human-reviewed vs AI · 3 weeks · kill if no difference</li>
+              <li><strong>Feature Usage:</strong> top 3 features ≥70% usage · 30 days (#1085)</li>
+              <li><strong>Pricing:</strong> renewal at $399+/mo · day 45–60 · kill on strong pushback</li>
+              <li><strong>Onboarding:</strong> completers vs non-completers engagement · kill &lt;50% completion (#1084)</li>
             </ol>
           </div>
         </section>

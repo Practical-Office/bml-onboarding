@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="GitHub Projects board: Build-Measure-Learn Experiments grouped by Stage">
+  <defs>
+    <linearGradient id="headerBg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-4%" y="-4%" width="108%" height="108%">
+      <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#94a3b8" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="640" height="360" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2" rx="12"/>
+  <rect x="0" y="0" width="640" height="72" fill="url(#headerBg)" rx="12"/>
+  <text x="24" y="32" font-family="IBM Plex Sans, sans-serif" font-size="16" font-weight="600" fill="#1e293b">Build-Measure-Learn Experiments</text>
+  <text x="24" y="52" font-family="IBM Plex Sans, sans-serif" font-size="11" fill="#64748b">Book-IQ/projects/1 | Group by: Stage | Filter: label:experiment</text>
+  <rect x="520" y="22" width="100" height="28" rx="14" fill="#ecfdf5" stroke="#15803d" stroke-width="1"/>
+  <text x="570" y="40" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" font-weight="600" fill="#15803d">experiment</text>
+
+  <rect x="16" y="84" width="112" height="260" rx="6" fill="#fff" stroke="#e2e8f0"/>
+  <text x="72" y="104" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" font-weight="600" fill="#475569">Backlog</text>
+  <text x="72" y="118" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#94a3b8">2</text>
+  <g filter="url(#cardShadow)">
+    <rect x="26" y="128" width="92" height="52" rx="4" fill="#faf0e5" stroke="#e0a53b"/>
+    <text x="72" y="148" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" font-weight="600" fill="#34495d">#1084 Onboarding</text>
+    <text x="72" y="162" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="#64748b">kill &lt;50% completion</text>
+    <rect x="26" y="190" width="92" height="44" rx="4" fill="#faf0e5" stroke="#e0a53b"/>
+    <text x="72" y="210" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" font-weight="600" fill="#34495d">Human Review</text>
+    <text x="72" y="224" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="#64748b">after #1083 signal</text>
+  </g>
+
+  <rect x="140" y="84" width="112" height="260" rx="6" fill="#fff" stroke="#e2e8f0"/>
+  <text x="196" y="104" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" font-weight="600" fill="#475569">Build</text>
+  <text x="196" y="118" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#94a3b8">1</text>
+  <g filter="url(#cardShadow)">
+    <rect x="150" y="128" width="92" height="64" rx="4" fill="#eff6ff" stroke="#1d4ed8"/>
+    <text x="196" y="148" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" font-weight="600" fill="#1e40af">#1085 Feature Usage</text>
+    <text x="196" y="162" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="#64748b">feature.used events</text>
+    <text x="196" y="176" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="#64748b">Forecast / Runway</text>
+  </g>
+
+  <rect x="264" y="84" width="112" height="260" rx="6" fill="#fff" stroke="#e2e8f0"/>
+  <text x="320" y="104" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" font-weight="600" fill="#475569">Measure</text>
+  <text x="320" y="118" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#94a3b8">1</text>
+  <g filter="url(#cardShadow)">
+    <rect x="274" y="128" width="92" height="72" rx="4" fill="#fef7ec" stroke="#e0a53b"/>
+    <text x="320" y="148" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" font-weight="600" fill="#34495d">#1083 Core Value</text>
+    <text x="320" y="162" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="#64748b">omi.insight.* weekly</text>
+    <text x="320" y="176" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="#64748b">pass &gt;=60% | kill &lt;40%</text>
+    <text x="320" y="190" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="8" fill="#b45309">week 2 of 4</text>
+  </g>
+
+  <rect x="388" y="84" width="120" height="260" rx="6" fill="#fff" stroke="#e2e8f0"/>
+  <text x="448" y="100" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" font-weight="600" fill="#475569">Learn / Validate</text>
+  <text x="448" y="118" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#94a3b8">0</text>
+
+  <rect x="520" y="84" width="104" height="260" rx="6" fill="#fff" stroke="#e2e8f0"/>
+  <text x="572" y="104" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="11" font-weight="600" fill="#475569">Done</text>
+  <text x="572" y="118" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="9" fill="#94a3b8">0</text>
+
+  <text x="320" y="340" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#64748b">Issue body is source of truth - board is visual only</text>
+</svg>
