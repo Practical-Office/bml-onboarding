@@ -12,21 +12,6 @@
     { id: "module-7", href: "module-7.html", num: "7", label: "Sandbox", meta: "30m" },
   ];
 
-  const SKILLS_CORE = [
-    { id: "skill-grill-with-docs", href: "skills/grill-with-docs.html", label: "grill-with-docs" },
-    { id: "skill-to-spec", href: "skills/to-spec.html", label: "to-spec" },
-    { id: "skill-to-tickets", href: "skills/to-tickets.html", label: "to-tickets" },
-    { id: "skill-implement", href: "skills/implement.html", label: "implement" },
-  ];
-
-  const SKILLS_OPTIONAL = [
-    { id: "skill-grilling", href: "skills/grilling.html", label: "grilling" },
-    { id: "skill-tdd", href: "skills/tdd.html", label: "tdd" },
-    { id: "skill-code-review", href: "skills/code-review.html", label: "code-review" },
-    { id: "skill-prototype", href: "skills/prototype.html", label: "prototype" },
-    { id: "skill-wayfinder", href: "skills/wayfinder.html", label: "wayfinder" },
-  ];
-
   const REFERENCE = [
     { id: "appendix", href: "appendix.html", num: "A", label: "BookIQ links" },
     { id: "next-steps", href: "next-steps.html", num: "→", label: "Next steps" },
@@ -49,8 +34,6 @@
     "experiment-sop.html",
     "quick-reference.html",
     ...MODULES.map((m) => m.href),
-    ...SKILLS_CORE.map((s) => s.href),
-    ...SKILLS_OPTIONAL.map((s) => s.href),
     "appendix.html",
     "next-steps.html",
     "certification.html",
@@ -76,6 +59,7 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
 @relevant-files @folders (for /grill-with-docs)`;
 
   const HUB_URL = "https://practical-office.github.io/dev-sops/";
+  const HUB_SKILLS_URL = "https://practical-office.github.io/dev-sops/skills.html";
 
   const body = document.body;
   const base = body.dataset.base || "";
@@ -147,16 +131,6 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
         `<a class="nav-link${pageId === m.id ? " is-active" : ""}" data-module="${m.id}" href="${href(m.href)}"><span class="nav-num">${m.num}</span> ${m.label} <span class="nav-meta">${m.meta}</span></a>`
     ).join("");
 
-    const skillCoreLinks = SKILLS_CORE.map(
-      (s) =>
-        `<a class="nav-link${pageId === s.id ? " is-active" : ""}" data-module="${s.id}" href="${href(s.href)}"><span class="nav-num">/</span> ${s.label}</a>`
-    ).join("");
-
-    const skillOptionalLinks = SKILLS_OPTIONAL.map(
-      (s) =>
-        `<a class="nav-link${pageId === s.id ? " is-active" : ""}" data-module="${s.id}" href="${href(s.href)}"><span class="nav-num">·</span> ${s.label}</a>`
-    ).join("");
-
     const refLinks = REFERENCE.map(
       (r) =>
         `<a class="nav-link${pageId === r.id ? " is-active" : ""}" data-module="${r.id}" href="${href(r.href)}"><span class="nav-num">${r.num}</span> ${r.label}</a>`
@@ -187,11 +161,8 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
         <a class="nav-link${pageId === "quick-reference" ? " is-active" : ""}" data-module="quick-reference" href="${href("quick-reference.html")}"><span class="nav-num">⚡</span> Quick reference</a>
         <p class="nav-section-label">Modules</p>
         ${moduleLinks}
-        <p class="nav-section-label">Build skills (required)</p>
-        ${skillCoreLinks}
-        <p class="nav-section-label">Optional deep-dives</p>
-        ${skillOptionalLinks}
         <p class="nav-section-label">Reference</p>
+        <a class="nav-link" href="${HUB_SKILLS_URL}"><span class="nav-num">/</span> Skills</a>
         ${refLinks}
         <a class="nav-link" href="${href("course-full.html")}"><span class="nav-num">PDF</span> Save as PDF</a>
       </nav>

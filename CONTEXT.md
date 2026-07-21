@@ -69,5 +69,5 @@ When an Update reveals a risky assumption → relabel **BML**, rewrite as experi
 _Avoid_: keeping a bet as an Update to skip Measure
 
 **Dev SOPs hub**:
-Index at `Practical-Office/dev-sops` linking Bug, Update, and BML courses plus shared skills.
-_Avoid_: duplicating course content inside the hub repo
+Index at `Practical-Office/dev-sops` linking Bug, Update, and BML courses. **Owns** the canonical Skills browser (`skills.html` + full write-ups) and Preflight+Run checklists (`checklists.html`). Courses link to the hub for skills — they do not duplicate skill pages locally.
+_Avoid_: duplicating skill reference or checklists inside course repos
