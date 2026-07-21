@@ -1,6 +1,6 @@
 # Build-Measure-Learn (Practical AI)
 
-Shared experiment system for Practical AI. One board holds learning bets across product and support surfaces; delivery work that is not an experiment stays off the board.
+Shared experiment system for Practical AI. Learning bets run on the BML Board; Bug and Update work stay on Team Work (project 2). See the [Dev SOPs hub](https://practical-office.github.io/dev-sops/) for all three loops.
 
 ## Language
 
@@ -51,3 +51,23 @@ _Avoid_: ad-hoc module tasks that are not on the SOP; treating board setup as pa
 **Board orientation**:
 The learner Module 3 job: open the existing BML Board, confirm Stage columns, and identify a live experiment card. Not board creation.
 _Avoid_: GitHub setup (when meaning the learner path); stand up labels/project as onboarding
+
+**Team Work**:
+Practical Office GitHub Project 2 — intake board for per-teammate **Bug**, **Update**, and **BML** ticket types. Bug and Update cards stay here; BML cards move to the BML Board after intake.
+_Avoid_: BML Board (when meaning experiment-only kanban); using Team Work for full Measure/Learn
+
+**Update**:
+Known-good change where the outcome is already decided. Uses the Update skill chain and acceptance verify — not Measure / Learn / kill. Course: `Practical-Office/update-sop`.
+_Avoid_: experiment, feature bet; running fake BML on decided work
+
+**Ticket Type** (Team Work):
+Exactly one of `Bug` | `Update` | `BML` on every new Team Work card.
+_Avoid_: `Build` as a label (Build is a BML column name); `experiment` as the intake label string
+
+**Promotion**:
+When an Update reveals a risky assumption → relabel **BML**, rewrite as experiment, move to BML Board.
+_Avoid_: keeping a bet as an Update to skip Measure
+
+**Dev SOPs hub**:
+Index at `Practical-Office/dev-sops` linking Bug, Update, and BML courses plus shared skills.
+_Avoid_: duplicating course content inside the hub repo

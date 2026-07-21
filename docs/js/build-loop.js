@@ -180,6 +180,7 @@ What did we actually learn? What decision are we making? (Persevere / Pivot / Ki
       <nav class="sidebar-nav">
         <p class="nav-section-label">Start</p>
         <a class="nav-link${pageId === "hub" ? " is-active" : ""}" data-module="hub" href="${href("index.html")}"><span class="nav-num">⌂</span> Course hub</a>
+        <a class="nav-link" href="https://practical-office.github.io/dev-sops/" target="_blank" rel="noopener noreferrer"><span class="nav-num">◎</span> All SOPs</a>
         <a class="nav-link${pageId === "experiment-sop" ? " is-active" : ""}" data-module="experiment-sop" href="${href("experiment-sop.html")}"><span class="nav-num">☑</span> Experiment SOP</a>
         <a class="nav-link${pageId === "quick-reference" ? " is-active" : ""}" data-module="quick-reference" href="${href("quick-reference.html")}"><span class="nav-num">⚡</span> Quick reference</a>
         <p class="nav-section-label">Modules</p>
