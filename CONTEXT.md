@@ -40,9 +40,9 @@ _Avoid_: BookIQ feature, customer product
 Build-Measure-Learn onboarding and related teaching work (e.g. `bml-onboarding`).
 _Avoid_: BookIQ, course content as an experiment by default
 
-**Sandbox**:
-Practice experiment drafting that must not sit on the live BML Board until a lead graduates it. Module 7 is the full Experiment SOP dry-run in Sandbox; a lead graduates the learner to the live BML Board.
-_Avoid_: live experiment, board card; “certification” as automatic on course completion
+**Cert prep**:
+Module 7 packages certification evidence — draft ticket, SOP walkthrough, and Build skill chain plan — for lead review before any live board move. Homework F (next steps) is one self-chosen live experiment through Build on the BML Board.
+_Avoid_: sandbox issue on the live board; cert as automatic on course completion without lead review
 
 **Experiment SOP**:
 The single numbered checklist for running one experiment end-to-end on an existing BML Board: risky assumption → ticket → backlog → build → measure → learn decision (persevere / pivot / kill) → done or next loop. Module checklists are slices that reuse the same step IDs. Maps to Lean Startup Build–Measure–Learn; kill is Practical AI’s third Learn outcome.
