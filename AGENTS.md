@@ -18,7 +18,7 @@ Live BookIQ product experiments (#1083–#1085), the BML Experiments Project boa
 2. **BookIQ worked examples** belong in core modules (especially 2, 4, 5, 7) and `docs/reference/issues/`; appendix is live ops links + sync notes only.
 3. **No Lean Startup book excerpts** — concepts + attribution only ([`docs/research/lean-startup-build-loop-teaching-points.md`](docs/research/lean-startup-build-loop-teaching-points.md)).
 4. **Teaching template mirrors handoff one-way** — [`Build_Loop_Kanban_Handoff.md`](docs/reference/Build_Loop_Kanban_Handoff.md) is source of truth; live BookIQ sync is follow-on.
-5. **Module 7 is cert prep** — draft ticket + skill chain plan for lead review; no live board moves until certified. Homework F (next steps) is one real experiment through Build.
+5. **Module 7 is a real live board ticket** — pick from BML backlog (lead approves), sharpen on the live issue, run SOP through Build; certification reviews that issue. Next steps = Measure, Learn, ongoing ops.
 6. **Do not edit BookIQ product code, ledger, or live experiment issues** from this workspace.
 7. **Cursor Build chain:** `/grill-with-docs` → `/to-spec` → `/to-tickets` → `/implement` (with `/tdd` + `/code-review` inside implement). No substitutions.
 
