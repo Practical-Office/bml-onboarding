@@ -9,7 +9,7 @@
     { id: "module-4", href: "module-4.html", num: "4", label: "Template & Skills", meta: "25m" },
     { id: "module-5", href: "module-5.html", num: "5", label: "Run Experiment", meta: "25m" },
     { id: "module-6", href: "module-6.html", num: "6", label: "Operate Board", meta: "20m" },
-    { id: "module-7", href: "module-7.html", num: "7", label: "Sandbox", meta: "30m" },
+    { id: "module-7", href: "module-7.html", num: "7", label: "Live ticket", meta: "30m+" },
   ];
 
   const REFERENCE = [

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Next Steps | Build-Measure-Learn Onboarding</title>
+  <title>Next steps | Build-Measure-Learn Onboarding</title>
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,26 +21,76 @@
         <div class="topbar-actions"><button type="button" class="btn btn-ghost btn-sm" id="resetProgress">Reset progress</button></div>
       </header>
       <main class="content" id="top">
-        <section class="module">
-          <div class="module-header">
-            <div class="module-badge">→</div>
-            <div><h2>First week on the live board</h2></div>
-          </div>
-          <div class="section-card">
-            <h3>After certification</h3>
-            <ol>
-              <li>Join <a href="https://github.com/orgs/Book-IQ/projects/1" target="_blank" rel="noopener noreferrer">Book-IQ/projects/1</a> — confirm Stage grouping.</li>
-              <li>Pick up one live ticket (#1083, #1084, or #1085) — do not exceed WIP 3.</li>
-              <li>Run weekly Learn review — decisions before new Builds.</li>
-              <li>Keep <a href="quick-reference.html">quick reference</a> bookmarked.</li>
-            </ol>
-          </div>
-          <div class="section-card">
-            <h3>Skills deep-dives</h3>
-            <p>Required chain: <a href="https://practical-office.github.io/dev-sops/skills/grill-with-docs.html">grill-with-docs</a> · <a href="https://practical-office.github.io/dev-sops/skills/to-spec.html">to-spec</a> · <a href="https://practical-office.github.io/dev-sops/skills/to-tickets.html">to-tickets</a> · <a href="https://practical-office.github.io/dev-sops/skills/implement.html">implement</a></p>
-            <p>Optional: <a href="https://practical-office.github.io/dev-sops/skills/tdd.html">tdd</a> · <a href="https://practical-office.github.io/dev-sops/skills/code-review.html">code-review</a> · <a href="https://practical-office.github.io/dev-sops/skills/grilling.html">grilling</a></p>
-          </div>
+        <section class="hero">
+          <span class="status-chip">After certification</span>
+          <h1>Keep the board <em>honest</em></h1>
+          <p class="hero-lede">Module 7 started your first real experiment. After lead sign-off, stay on the BML board — finish Build, run Measure, make Learn decisions, claim the next bet when WIP allows.</p>
         </section>
+
+        <div class="section-card">
+          <p class="eyebrow">1 · Finish your first ticket</p>
+          <h3>Measure → Learn → Done</h3>
+          <p>Your Module 7 live issue does not stop at Build. When the smallest test ships:</p>
+          <ol>
+            <li><strong>Measure</strong> — post weekly numbers on the issue; no new scope unless instrumentation is broken.</li>
+            <li><strong>Learn</strong> — when duration elapses, decide persevere / pivot / kill; apply decision label.</li>
+            <li><strong>Done</strong> — record next action; archive theater.</li>
+          </ol>
+          <p style="margin-top:0.75rem"><a class="btn btn-primary btn-sm" href="certification.html">Open Certification →</a></p>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">2 · Operate the board</p>
+          <h3>Weekly rhythm + WIP</h3>
+          <ul>
+            <li>Max <strong>3</strong> active cards in Build + Measure combined.</li>
+            <li>Weekly Learn review — decisions before new Builds.</li>
+            <li>If Learn produces no persevere / pivot / kill for 2+ weeks, fix the system before shipping more scope.</li>
+            <li>Claim the next live experiment only when WIP allows — lead approves pick and sequencing.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">3 · BookIQ live resources</p>
+          <h3>Board, tickets, metrics</h3>
+          <ul>
+            <li><a href="https://github.com/orgs/Practical-Office/projects/2" target="_blank" rel="noopener noreferrer">Team Work</a> — filter <strong>Ticket Type = BML</strong> (or <strong>My work</strong> view)</li>
+            <li>Live tickets: <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1083" target="_blank" rel="noopener noreferrer">#1083</a> Core Value · <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1084" target="_blank" rel="noopener noreferrer">#1084</a> Onboarding · <a href="https://github.com/Book-IQ/bookiqv1-rc/issues/1085" target="_blank" rel="noopener noreferrer">#1085</a> Feature usage</li>
+            <li><a href="reference/Build_Loop_Metrics_Tracking.md">Metrics dictionary</a> — event IDs for Measure tables</li>
+            <li><a href="appendix.html">Appendix</a> — full BookIQ ops links</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">4 · Improve the course</p>
+          <h3>Tickets + retro</h3>
+          <ul>
+            <li>Propose course or SOP improvements as issues on <a href="https://github.com/Practical-Office/bml-onboarding" target="_blank" rel="noopener noreferrer">Practical-Office/bml-onboarding</a>.</li>
+            <li>Bring one Learn decision that worked (or did not) to the next BML ops retro.</li>
+          </ul>
+        </div>
+
+        <div class="failure-modes">
+          <h3>Board failure modes</h3>
+          <ul>
+            <li>Practice or duplicate issues instead of working the live backlog card.</li>
+            <li>Copy-pasting teaching draft text without sharpening for the real bet.</li>
+            <li>Measure without numeric kill threshold or vanity metrics as success criteria.</li>
+            <li>Skipping Measure or Learn — parking cards with no decision label.</li>
+            <li>WIP &gt;3 — claiming another experiment before finishing or parking active cards.</li>
+          </ul>
+        </div>
+
+        <div class="section-card">
+          <p class="eyebrow">Shortcuts</p>
+          <ul>
+            <li><a href="quick-reference.html">Quick reference</a> — print one-pager</li>
+            <li><a href="experiment-sop.html">Experiment SOP</a> — seven-step checklist</li>
+            <li><a href="https://practical-office.github.io/dev-sops/skills/grill-with-docs.html">grill-with-docs</a> · <a href="https://practical-office.github.io/dev-sops/skills/to-spec.html">to-spec</a> · <a href="https://practical-office.github.io/dev-sops/skills/to-tickets.html">to-tickets</a> · <a href="https://practical-office.github.io/dev-sops/skills/implement.html">implement</a></li>
+            <li><a href="course-full.html">Printable full course</a></li>
+          </ul>
+        </div>
+
         <div class="page-nav no-print" id="pageNav"></div>
       </main>
     </div>
