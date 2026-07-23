@@ -49,7 +49,7 @@ The single numbered checklist for running one experiment end-to-end on an existi
 _Avoid_: ad-hoc module tasks that are not on the SOP; treating board setup as part of the learner run
 
 **Board orientation**:
-The learner Module 3 job: open the existing BML Board, confirm Stage columns, and identify a live experiment card. Not board creation.
+The learner Module 3 job: confirm Stage columns and identify one experiment bet. Default path uses teaching drafts (`reference/issues/index.html`) and the board mock; Book-IQ members may open the live BML Board via appendix. Not board creation.
 _Avoid_: GitHub setup (when meaning the learner path); stand up labels/project as onboarding
 
 **Team Work**:
