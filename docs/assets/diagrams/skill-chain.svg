@@ -21,6 +21,6 @@
   <line x1="330" y1="95" x2="348" y2="95" stroke="#5a6b7e" stroke-width="2" marker-end="url(#arr)"/>
   <line x1="440" y1="90" x2="458" y2="72" stroke="#94a3b8" stroke-width="1.5"/>
   <line x1="440" y1="100" x2="458" y2="118" stroke="#94a3b8" stroke-width="1.5"/>
-  <text x="260" y="30" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="#34495d">Build column  non-trivial work only</text>
+  <text x="260" y="30" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="12" font-weight="600" fill="#34495d">Build column — non-trivial work only</text>
   <text x="260" y="175" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="10" fill="#848484">Tiny builds: skip to implement (optional light grill)</text>
 </svg>

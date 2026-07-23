@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from check_doc_links import ISSUE_DRAFTS, check_docs
+from check_doc_links import ISSUE_DRAFTS, check_docs, check_svgs
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 DOCS = REPO_ROOT / "docs"
@@ -27,6 +27,18 @@ class CheckDocLinksTests(unittest.TestCase):
             (docs / "page.html").write_text("<a href='module-1.html'>x</a>", encoding="utf-8")
             errors = check_docs(docs)
             self.assertTrue(any("index.html is required" in e for e in errors))
+
+    def test_malformed_svg_fails(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            docs = Path(tmp) / "docs"
+            diagrams = docs / "assets" / "diagrams"
+            diagrams.mkdir(parents=True)
+            (diagrams / "bad.svg").write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg"><text>bad \x14 char</text></svg>',
+                encoding="utf-8",
+            )
+            errors = check_svgs(docs)
+            self.assertTrue(any("bad.svg" in e and "malformed" in e for e in errors))
 
     def test_directory_issues_link_fails(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
