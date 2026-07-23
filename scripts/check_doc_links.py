@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import sys
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import urlparse
@@ -51,6 +52,23 @@ def _local_target_exists(docs_dir: Path, page: Path, url: str) -> bool:
     return resolved.is_file()
 
 
+def check_svgs(docs_dir: Path) -> list[str]:
+    """Ensure course SVG assets are UTF-8 and well-formed XML (browsers reject otherwise)."""
+    errors: list[str] = []
+    for svg_path in sorted(docs_dir.rglob("*.svg")):
+        rel = svg_path.relative_to(docs_dir)
+        try:
+            text = svg_path.read_text(encoding="utf-8")
+        except UnicodeDecodeError as exc:
+            errors.append(f"{rel}: not valid UTF-8 ({exc})")
+            continue
+        try:
+            ET.fromstring(text)
+        except ET.ParseError as exc:
+            errors.append(f"{rel}: malformed SVG XML ({exc})")
+    return errors
+
+
 def check_docs(docs_dir: Path) -> list[str]:
     errors: list[str] = []
     if not docs_dir.is_dir():
@@ -83,6 +101,7 @@ def check_docs(docs_dir: Path) -> list[str]:
             if not _local_target_exists(docs_dir, html_path, url):
                 errors.append(f"{rel_page}: {kind} {url!r} does not resolve under docs/")
 
+    errors.extend(check_svgs(docs_dir))
     return errors
 
 
